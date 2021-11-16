@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="{{asset('css/responsive.css')}}">
 <link rel="stylesheet" href="{{asset('css/font-icon.css')}}">
 <link rel="stylesheet" href="{{asset('css/animate.min.css')}}">
-<link rel="stylesheet" href="{{asset('css/ionicons.min.css')}}">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 {{-- <link rel="stylesheet" href="../../../maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> --}}
 </head>
 
