@@ -121,7 +121,7 @@ ul li {
 	position: fixed;
 	width: 100%;
 	z-index: 999;
-	background: #00000066;
+	background: #000;
 	min-height: 60px;
 }
 #header .header-content {
