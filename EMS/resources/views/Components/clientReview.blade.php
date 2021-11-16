@@ -8,7 +8,7 @@
         <div class="col-md-3 col-sm-6">
           <div class="person"><img src="images/team-1.jpg" alt="" class="img-responsive">
             <div class="person-content">
-              <h4>Jonh Dow</h4>
+              <h4>Rumman</h4>
               <h5 class="role">Event Name</h5>
               <p>Reviews</p>
             </div>
