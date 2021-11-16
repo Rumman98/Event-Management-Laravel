@@ -7,7 +7,7 @@
 <meta name="description" content="">
 <meta name="author" content="webthemez.com">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Best - Music Event Website Template html5 bootstrap</title>
+<title>Events Management</title>
 <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
 <link rel="stylesheet" href="{{asset('css/flexslider.css')}}">
 <link rel="stylesheet" href="{{asset('css/jquery.fancybox.css')}}">
