@@ -1,4 +1,4 @@
-
+<section id="services" class="services">
 <footer id="footer" class="footer-1">
     <div class="main-footer widgets-dark typo-light">
     <div class="container">
@@ -77,3 +77,4 @@
     </div>
     </div>
     </footer>
+</section>
