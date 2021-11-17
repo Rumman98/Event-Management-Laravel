@@ -18,3 +18,7 @@ Hello
 Route::get('/', function () {
     return view('Home');
 });
+
+Route::get('/running-events', function () {
+    return view('RunningEventsPage');
+});
