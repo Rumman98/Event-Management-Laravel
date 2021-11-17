@@ -2,7 +2,7 @@
 <div class="header-content clearfix"> <span class="logo"><a href="/">BEST<b>Events</b></a></span>
 <nav class="navigation" role="navigation">
     <ul class="primary-nav">
-      <li><a href="#banner">Home</a></li>
+      <li><a href="{{'/'}}">Home</a></li>
       <li><a href="{{'/running-events'}}">Running Events</a></li>
       <li><a href="#gallery">Gallery</a></li>
       <li><a href="#package">Login/Signup</a></li>
