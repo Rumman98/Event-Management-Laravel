@@ -5,8 +5,7 @@
       <li><a href="{{'/'}}">Home</a></li>
       <li><a href="{{'/running-events'}}">Running Events</a></li>
       <li><a href="{{'/gallery'}}">Gallery</a></li>
-      <li><a href="#package">Login/Signup</a></li>
-      <li><a href="#package">Login/Signup As a Host</a></li>
+      <li><a href="{{'/login'}}">Login/Signup</a></li>
       <li><a href="#contact">Contact Us</a></li>
     </ul>
   </nav>

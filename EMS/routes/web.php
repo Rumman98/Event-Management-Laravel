@@ -27,3 +27,7 @@ Route::get('/gallery', function () {
     return view('AllGallery');
 });
 
+Route::get('/login', function () {
+    return view('login');
+});
+
