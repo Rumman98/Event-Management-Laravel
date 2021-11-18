@@ -1,7 +1,7 @@
 @extends('layout.app')
 @section('title','Events')
 @section('content')
-@include('Components.eventsBanner')
+@include('Components.GalleryBanner')
 
-@include('Components.AllEvent')
+@include('Components.Allgallery')
 @endsection

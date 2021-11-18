@@ -47,14 +47,14 @@ margin-left: 15px;
 	color: rgba(255, 255, 255, 0.72);
 	font-size: 16px;
 	font-weight: 600;
-	border: 0;
 	-moz-border-radius: 2px;
 	-webkit-border-radius: 2px;
-	border-radius: 2px;
+	border-radius: 5px;
 	display: inline-block;
 	text-transform: uppercase;
 	border: 1px solid #3a3a3a;
 	margin-top: 20px;
+    border: 1px solid #3a3a3a;
 }
 .btn:hover, .btn:focus {
 	background-color: #ff5518;
@@ -99,6 +99,10 @@ ul li {
 }
 .section {
 	padding: 20px 0;
+}
+.section1 {
+	padding: 0px 0;
+    margin-top: -35px;
 }
 
 .sectionEvent {
@@ -1157,6 +1161,27 @@ box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 -o-transition: all 250ms ease-in-out 0s;
 transition: all 250ms ease-in-out 0s;
 
+}
+
+#loadMore {
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: center;
+    width: 100%;
+}
+#loadMore a {
+    background: #ff5518;
+    border-radius: 5px;
+    color: white;
+    display: inline-block;
+    padding: 10px 30px;
+    transition: all 0.25s ease-out;
+    -webkit-font-smoothing: antialiased;
+    margin-top: 10px;
+    border: 1px solid #3a3a3a;
+}
+#loadMore a:hover {
+    background-color: #fa875d;
 }
 
 

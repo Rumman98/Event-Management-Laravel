@@ -1,4 +1,4 @@
-<section id="intro" class="sectionEvent intro">
+<section id="intro" class="sectionEvent intro" >
     <div class="container">
       <div class="col-md-8 col-md-offset-2 text-center">
         <h3>Don't Miss This Event</h3>

@@ -3,8 +3,8 @@
 
 @include('Components.homeBanner')
 @include('Components.motivation')
-@include('Components.runningEvent')
-@include('Components.gallery')
+@include('Components.HomerunningEvent')
+@include('Components.Homegallery')
 @include('Components.clientReview')
 
 @endsection

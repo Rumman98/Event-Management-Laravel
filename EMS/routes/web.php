@@ -22,3 +22,8 @@ Route::get('/', function () {
 Route::get('/running-events', function () {
     return view('RunningEventsPage');
 });
+
+Route::get('/gallery', function () {
+    return view('AllGallery');
+});
+

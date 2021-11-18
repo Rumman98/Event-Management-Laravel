@@ -1,8 +1,5 @@
-<section id="gallery" class="gallery section">
-    <div class="container-fluid">
-      <div class="section-header">
-                  <h2 class="fadeInDown animated">Gallery</h2>
-              </div>
+
+      <section id="gallery" class="gallery section">
       <div class="row no-gutter">
         <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="images/portfolio/01.jpg" class="work-box"> <img src="images/portfolio/01.jpg" alt="">
 
@@ -69,7 +66,10 @@
             </div>
           </div>
           <!-- overlay -->
-          </a> </div>
+          </a>
+        </div>
+
+
       </div>
     </div>
   </section>
