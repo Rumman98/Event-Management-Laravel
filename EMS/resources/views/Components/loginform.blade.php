@@ -2,41 +2,32 @@
 <div class="main">
 
         <div class="sign-up-content">
-            <h2 style="text-size: 100px; text-color:#ffffff">Login</h2>
+            <span class="logo"><a href="/">Unity<b>Events</b></a></span>
+            <h2 style="text-size: 100px;">Sign in</h2>
             <br>
 
             <form method="POST" class="signup-form">
-                <h6 style="font-size: 20px; text-color:#202020">What type of user are you ?</h6>
-                <div class="form-radio">
-                    <input type="radio" name="member_level" value="newbie" id="newbie" checked="checked" />
-                    <label for="newbie">User</label>
-
-                    <input type="radio" name="member_level" value="average" id="average" />
-                    <label for="average">Host</label>
-                </div>
-
                 <div class="form-textbox">
                     <label for="email">Mobile Number</label>
-                    <input type="email" name="email" id="email" />
+                    <input type="text" name="mobile" id="mobile" />
                 </div>
 
                 <div class="form-textbox">
                     <label for="pass">Password</label>
                     <input type="password" name="pass" id="pass" />
                 </div>
-
-                <div class="form-group">
-                    <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
-                    <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
-                </div>
-
+                <br>
                 <div class="form-textbox">
-                    <input type="submit" name="submit" id="submit" class="submit" value="Login" />
+                    <input type="submit" name="submit" id="submit" class="submit" value="Sign in" />
                 </div>
+                <br>
+                <p>
+                    <a href="#" class="loginhere-link"> Forgotten Password </a>
+                </p>
             </form>
-
+            <br>
             <p class="loginhere">
-                Dont have an account ?<a href="#" class="loginhere-link"> Sign up Here</a>
+                Dont have an account ?<a href="{{('/registration')}}" class="loginhere-link"> Signup Here</a>
             </p>
         </div>
     </div>

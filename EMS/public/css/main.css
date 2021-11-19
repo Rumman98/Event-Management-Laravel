@@ -16,7 +16,7 @@ h1 {
 }
 h2 {
 	font-size: 40px;
-	color: #2d3033;
+	color: #474747;
 }
 h3 {
 	font-size: 28px;
@@ -1318,6 +1318,8 @@ transition: all 250ms ease-in-out 0s;
                 background-image: -webkit-linear-gradient(white, white);
                 background-image: linear-gradient(white, white); }
 
+
+
               input[type=checkbox]:not(old):checked + label > span:before {
                 content: '\f26b';
                 display: block;
@@ -1327,6 +1329,15 @@ transition: all 250ms ease-in-out 0s;
                 text-align: center;
                 font-family: 'Material-Design-Iconic-Font';
                 font-weight: bold; }
+
+                .label-agree-term {
+                    color: #888; }
+
+                    .term-service {
+                        color: #ff5518;
+                        text-decoration: none; }
+                        .term-service:hover {
+                          text-decoration: underline; }
 
                 .submit {
                     background: #ff5518;
