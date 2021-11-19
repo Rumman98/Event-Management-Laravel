@@ -1,6 +1,5 @@
 @extends('layout.app')
-@section('title','Events')
+@section('title','Login')
 @section('content')
-
 @include('Components.loginform')
 @endsection

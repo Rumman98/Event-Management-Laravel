@@ -1184,6 +1184,178 @@ transition: all 250ms ease-in-out 0s;
     background-color: #fa875d;
 }
 
+.container1 {
+    width: 520px;
+    background: rgb(204, 204, 204);
+    margin: 0 auto;
+}
+
+.main {
+    padding: 100px 0;
+    position: relative;
+
+}
+
+    .sign-up-content {
+        padding: 40px 60px 32px 60px;
+        position: relative;
+        z-index: 99;
+        margin-bottom: -123px;
+        margin-top: -47px;
+    }
+
+        .form-radio {
+            margin: 0 -10px;
+            margin-bottom: 40px; }
+            .form-radio input {
+              width: 0;
+              height: 0;
+              position: absolute;
+              left: -9999px; }
+            .form-radio input + label {
+              margin: 0 8px;
+              padding: 11px 31px;
+              box-sizing: border-box;
+              position: relative;
+              display: inline-block;
+              border: solid 2px #ebebeb;
+              background-color: #FFF;
+              font-size: 14px;
+              font-weight: 600;
+              color: #888;
+              text-align: center;
+              transition: border-color .15s ease-out,  color .25s ease-out,  background-color .15s ease-out, box-shadow .15s ease-out;
+              border-radius: 5px;
+              -moz-border-radius: 5px;
+              -webkit-border-radius: 5px;
+              -o-border-radius: 5px;
+              -ms-border-radius: 5px; }
+            .form-radio input:checked + label {
+              background-color: #ff5518;
+              color: #FFF;
+              border-color: #ff5518;
+              z-index: 1; }
+            .form-radio input:focus + label {
+              outline: none; }
+            .form-radio input:hover {
+              background-color: #ff5518;
+              color: #FFF;
+              border-color:#ff5518; }
+
+              input {
+                border: solid 2px #ebebeb;
+                box-sizing: border-box;
+                width: 100%;
+                font-weight: 700;
+                font-size: 14px;
+                font-family: Poppins;
+                padding: 16px 30px 16px 140px; }
+
+              .form-textbox {
+                position: relative; }
+                .form-textbox label {
+                  position: absolute;
+                  left: 28px;
+                  top: 50%;
+                  transform: translateY(-50%);
+                  -moz-transform: translateY(-50%);
+                  -webkit-transform: translateY(-50%);
+                  -o-transform: translateY(-50%);
+                  -ms-transform: translateY(-50%);
+                  font-weight: 600;
+                  color: #888;
+                  font-size: 14px; }
+
+              #name {
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px; }
+
+              #pass {
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px; }
+
+              #email {
+                border: none;
+                border-left: solid 2px #ebebeb;
+                border-right: solid 2px #ebebeb; }
+
+              input[type=checkbox]:not(old) {
+                width: 2em;
+                margin: 0;
+                padding: 0;
+                font-size: 1em;
+                display: none; }
+
+              input[type=checkbox]:not(old) + label {
+                display: inline-block;
+                margin-top: 27px;
+                margin-bottom: 45px; }
+
+              input[type=checkbox]:not(old) + label > span {
+                display: inline-block;
+                width: 12px;
+                height: 12px;
+                margin-right: 15px;
+                margin-bottom: 5px;
+                border: 2px solid #ebebeb;
+                border-radius: 2px;
+                -moz-border-radius: 2px;
+                -webkit-border-radius: 2px;
+                -o-border-radius: 2px;
+                -ms-border-radius: 2px;
+                background: white;
+                background-image: -moz-linear-gradient(white, white);
+                background-image: -ms-linear-gradient(white, white);
+                background-image: -o-linear-gradient(white, white);
+                background-image: -webkit-linear-gradient(white, white);
+                background-image: linear-gradient(white, white);
+                vertical-align: bottom; }
+
+              input[type=checkbox]:not(old):checked + label > span {
+                background-image: -moz-linear-gradient(white, white);
+                background-image: -ms-linear-gradient(white, white);
+                background-image: -o-linear-gradient(white, white);
+                background-image: -webkit-linear-gradient(white, white);
+                background-image: linear-gradient(white, white); }
+
+              input[type=checkbox]:not(old):checked + label > span:before {
+                content: '\f26b';
+                display: block;
+                color: #222;
+                font-size: 11px;
+                line-height: 1.1;
+                text-align: center;
+                font-family: 'Material-Design-Iconic-Font';
+                font-weight: bold; }
+
+                .submit {
+                    background: #ff5518;
+                    color: #FFF;
+                    border: none;
+                    padding: 15px 20px;
+                    font-size: 13px;
+                    font-weight: 600;
+                    font-family: Poppins;
+                    border-radius: 5px;
+                    -moz-border-radius: 5px;
+                    -webkit-border-radius: 5px;
+                    -o-border-radius: 5px;
+                    -ms-border-radius: 5px; }
+                    .submit:hover {
+                      background: #f57e53; }
+
+                      .loginhere {
+                        text-align: center;
+                        color: #888;
+                        margin-top: 63px; }
+
+                      .loginhere-link {
+                        color: #ff5518;
+                        text-decoration: none; }
+                        .loginhere-link:hover {
+                          text-decoration: underline; }
+
+
 
 
 
