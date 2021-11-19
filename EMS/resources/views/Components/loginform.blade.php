@@ -2,6 +2,10 @@
 <div class="main">
 
         <div class="sign-up-content">
+            <br>
+            <br>
+            <br>
+
             <span class="logo"><a href="/">Unity<b>Events</b></a></span>
             <h2 style="text-size: 100px;">Sign in</h2>
             <br>
