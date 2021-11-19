@@ -6,7 +6,7 @@
             <h2 style="text-size: 100px;">Sign in</h2>
             <br>
 
-            <form method="POST" class="signup-form">
+            <form action="" class="signup-form" id = "signin">
                 <div class="form-textbox">
                     <label for="email">Mobile Number</label>
                     <input type="text" name="mobile" id="mobile" />
@@ -14,11 +14,12 @@
 
                 <div class="form-textbox">
                     <label for="pass">Password</label>
-                    <input type="password" name="pass" id="pass" />
+                    <input type="password" name="password" id="password" />
                 </div>
                 <br>
                 <div class="form-textbox">
-                    <input type="submit" name="submit" id="submit" class="submit" value="Sign in" />
+                    <!--<input type="submit" name="submit" id="submit" class="submit" value="Sign in" />-->
+                    <button name="submit" type="submit" class="btn btn-block btn-danger">Signin</button>
                 </div>
                 <br>
                 <p>
@@ -33,4 +34,5 @@
     </div>
 </div>
 
-</div>
+
+

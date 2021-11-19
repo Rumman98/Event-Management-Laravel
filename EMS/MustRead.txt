@@ -1,1 +1,2 @@
-Before Run Change Database Name Inside .env file to "EMS"
+Push 1 by Niloy: Before Run the Project Change Database Name Inside .env file to "EMS".
+Push 2 by Niloy: Login System Implemented. For Testing purpose, Middleware set on "Running Event" Page. 

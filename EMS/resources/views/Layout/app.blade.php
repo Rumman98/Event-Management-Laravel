@@ -32,17 +32,19 @@
 
 
 
-<script src="../../../ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="{{ asset('js/jquery-3.4.1.min.js') }}"></script>
 <script src="{{asset('js/bootstrap.min.js')}}"></script>
 <script src="{{asset('js/jquery.flexslider-min.js')}}"></script>
 <script src="{{asset('js/jquery.fancybox.pack.js')}}"></script>
 <script src="{{asset('js/modernizr.js')}}"></script>
 <script src="{{asset('js/main.js')}}"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script type="text/javascript" src="{{asset('js/jquery.countdown.js')}}"></script>
 <script type="text/javascript" src="{{asset('js/global.js')}}"></script>
 <script type="text/javascript" src="{{asset('js/jquery.contact.js')}}"></script>
+@yield('script')
 <script type="text/javascript">
-
+    
 </script>
 </body>
 </html>
