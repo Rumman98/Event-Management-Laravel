@@ -122,7 +122,7 @@ ul li {
 	Header
 -------------------------------------------------------------------------------*/
 #header {
-	position: fixed;
+	position: relative;
 	width: 100%;
 	z-index: 999;
 	background: #000;
@@ -1356,7 +1356,221 @@ transition: all 250ms ease-in-out 0s;
                         .loginhere-link:hover {
                           text-decoration: underline; }
 
+/* Profile CSS */
+.profile-nav, .profile-info{
+    margin-top:30px;
+}
+
+.profile-nav .user-heading {
+    background: #212121;
+    color: #fff;
+    border-radius: 4px 4px 0 0;
+    -webkit-border-radius: 4px 4px 0 0;
+    padding: 30px;
+    text-align: center;
+}
+
+.profile-nav .user-heading.round a  {
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border: 10px solid rgba(255,255,255,0.3);
+    display: inline-block;
+}
+
+.profile-nav .user-heading a img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+}
+
+.profile-nav .user-heading h1 {
+    font-size: 22px;
+    font-weight: 300;
+    margin-bottom: 5px;
+}
+
+.profile-nav .user-heading p {
+    font-size: 12px;
+}
+
+.bio-graph-info {
+    color: #ffffff;
+    padding: 30px;
+    background-color: #212121;
+}
+
+.bio-graph-info h1 {
+    font-size: 22px;
+    font-weight: 300;
+    margin: 0 0 20px;
+}
+
+.bio-row {
+    width: 50%;
+    float: left;
+    margin-bottom: 10px;
+    padding:0 15px;
+}
+
+.bio-row p span {
+    width: 100px;
+    display: inline-block;
+}
+
+.bio-chart, .bio-desk {
+    float: left;
+}
+
+.bio-chart {
+    width: 40%;
+}
+
+.bio-desk {
+    width: 60%;
+}
+
+/* Table CSS */
+.limiter {
+    width: 100%;
+    margin: 0 auto;
+  }
 
 
+  .wrap-table100 {
+    width: 1170px;
+  }
+
+  table {
+    border-spacing: 2;
+    background: #353535;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    border:3px solid ;
+    border-color: #00bdbd;
+
+  }
+  table * {
+    position: relative;
+  }
+  table td, table th {
+    padding-left: 8px;
+    text-align: center;
+  }
+  table thead tr {
+    height: 60px;
+    background: #ff5518;
+  }
+  table tbody tr {
+    height: 50px;
+  }
+  table tbody tr:last-child {
+    border: 0;
+  }
+  table td, table th {
+    text-align: center;
+  }
+  table td.l, table th.l {
+    text-align: center;
+  }
+  table td.c, table th.c {
+    text-align: center;
+  }
+  table td.r, table th.r {
+    text-align: center;
+  }
 
 
+  .table100-head th{
+    font-family: OpenSans-Regular;
+    font-size: 18px;
+    color: #fff;
+    line-height: 1.2;
+    font-weight: unset;
+    text-align: center;
+  }
+
+  tbody tr:nth-child(even) {
+    background-color: #212121;
+  }
+
+  tbody tr {
+    font-family: OpenSans-Regular;
+    font-size: 15px;
+    color: #ffffff;
+    line-height: 1.2;
+    font-weight: unset;
+  }
+
+  tbody tr:hover {
+    background-color: #616161;
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 992px) {
+    table {
+      display: block;
+    }
+    table > *, table tr, table td, table th {
+      display: block;
+    }
+    table thead {
+      display: none;
+      text-align: center;
+    }
+    table tbody tr {
+      height: auto;
+      padding: 37px 0;
+    }
+    table tbody tr td {
+      padding-left: 40% !important;
+      margin-bottom: 24px;
+    }
+    table tbody tr td:last-child {
+      margin-bottom: 0;
+    }
+    table tbody tr td:before {
+      font-family: OpenSans-Regular;
+      font-size: 14px;
+      color: #999999;
+      line-height: 1.2;
+      font-weight: unset;
+      position: absolute;
+      width: 40%;
+      left: 30px;
+      top: 0;
+    }
+    table tbody tr td:nth-child(1):before {
+      content: "Event Name";
+    }
+    table tbody tr td:nth-child(2):before {
+      content: "Event Time";
+    }
+    table tbody tr td:nth-child(3):before {
+      content: "Venue";
+    }
+    table tbody tr td:nth-child(4):before {
+      content: "Payment Amount";
+    }
+    table tbody tr td:nth-child(5):before {
+      content: "Confirmation Status";
+    }
+    table tbody tr td:nth-child(6):before {
+      content: "Invitation Card";
+    }
+
+
+    tbody tr {
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .container-table100 {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }

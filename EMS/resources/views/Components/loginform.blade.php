@@ -13,12 +13,12 @@
             <form action="" class="signup-form" id = "signin">
                 <div class="form-textbox">
                     <label for="email">Mobile Number</label>
-                    <input type="text" name="mobile" id="mobile" />
+                    <input type="text" name="mobile" id="mobile" required/>
                 </div>
 
                 <div class="form-textbox">
                     <label for="pass">Password</label>
-                    <input type="password" name="password" id="password" />
+                    <input type="password" name="password" id="password" required/>
                 </div>
                 <br>
                 <div class="form-textbox">
