@@ -17,11 +17,10 @@ class UserHostTable extends Migration
         {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->string('password');
-            $table->string('address');
-            $table->string('email');
             $table->string('phone_number');
-            $table->string('photo_location');
+            $table->string('email');
+            $table->string('address');
+            $table->string('password');
             $table->string('user_type');
         });
     }
