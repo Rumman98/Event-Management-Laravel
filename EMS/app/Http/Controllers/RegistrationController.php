@@ -16,23 +16,31 @@ class RegistrationController extends Controller
         $address = $request->input('address');
         $password = $request->input('password');
 
-        $status = UserHostModel::insert([
-            'name'=>$name,
-            'phone_number'=>$mobileNo,
-            'email'=>$email,
-            'address'=>$address,
-            'password'=>$password,
-            'user_type'=> $member_type
-        ]);
+        $checkPhoneNo = UserHostModel::where('phone_number',$mobileNo)->count();
 
-        if($status == true)
+        if($checkPhoneNo == 1)
         {
-            return 1;
+            return 2;
         }
         else
         {
-            return 0;
+            $status = UserHostModel::insert([
+                'name'=>$name,
+                'phone_number'=>$mobileNo,
+                'email'=>$email,
+                'address'=>$address,
+                'password'=>$password,
+                'user_type'=> $member_type
+            ]);
+    
+            if($status == true)
+            {
+                return 1;
+            }
+            else
+            {
+                return 0;
+            }
         }
-
     }
 }
