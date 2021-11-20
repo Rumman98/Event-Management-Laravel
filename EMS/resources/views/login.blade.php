@@ -26,7 +26,7 @@
             }
             else
             {
-                alret('Not Matched');
+                alert('Problem');
             }
         }).catch(function(error){
             console.log("Catch");
