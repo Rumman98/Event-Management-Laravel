@@ -33,6 +33,10 @@
             {
                 window.location.href="/login";
             }
+            else if(response.data == 2)
+            {
+                alert("This Phone Number is Alerady Registerd, try with another Number");
+            }
             else
             {
                 alert("Random Error");
