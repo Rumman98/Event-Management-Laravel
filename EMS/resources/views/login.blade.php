@@ -22,7 +22,7 @@
         }).then(function(response){
             if(response.status == 200 && response.data == 1)
             {
-                window.location.href="/running-events";
+                window.location.href="/profile";
             }
             else
             {

@@ -25,4 +25,9 @@ class HomeController extends Controller
     {
         return view('registration');
     }
+
+    function UserHostProfile()
+    { 
+        return View('UserProfile'); 
+    }
 }
