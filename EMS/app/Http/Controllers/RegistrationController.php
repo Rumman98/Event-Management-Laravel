@@ -18,7 +18,7 @@ class RegistrationController extends Controller
 
         $checkPhoneNo = UserHostModel::where('phone_number',$mobileNo)->count();
 
-        if($checkPhoneNo == 1)
+        if($checkPhoneNo >= 1)
         {
             return 2;
         }
