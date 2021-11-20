@@ -40,7 +40,7 @@
                     </div>
                     <div class="form-textbox">
                         <!--<input type="submit" name="submit" id="submitId" class="submit" value="Create Account" />-->
-                        <button id="submitId" type="submit" class="submit">Create Account</button>
+                       <center> <button id="submitId" type="submit" class="submit" style="width: 400px">Create Account</button></center>
                     </div>
 
                 <p class="loginhere">
@@ -51,4 +51,3 @@
     </div>
 
     </div>
- 
