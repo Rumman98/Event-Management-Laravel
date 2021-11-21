@@ -24,7 +24,7 @@
             {
 
                 var mobile_number = response.data;
-                window.location.href="/profile/"+mobile_number;
+                window.location.href="/userprofile/"+mobile_number;
                 flash('Login Successfull',{'bgColor' : '#00b859'});
 
             }
