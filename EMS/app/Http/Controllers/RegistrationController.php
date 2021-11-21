@@ -7,6 +7,11 @@ use App\UserHostModel;
 
 class RegistrationController extends Controller
 {
+    function RegistrationPage()
+    {
+        return view('registration');
+    }
+    
     function UserRegistration(Request $request)
     {
         $member_type = $request->input('member_type');
