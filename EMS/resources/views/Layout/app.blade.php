@@ -18,6 +18,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 
 </head>
 
@@ -33,6 +35,7 @@
 
 
 <script src="{{ asset('js/jquery-3.4.1.min.js') }}"></script>
+<script src="{{asset('js/flash.js')}}"></script>
 <script src="{{asset('js/bootstrap.min.js')}}"></script>
 <script src="{{asset('js/jquery.flexslider-min.js')}}"></script>
 <script src="{{asset('js/jquery.fancybox.pack.js')}}"></script>
@@ -42,9 +45,10 @@
 <script type="text/javascript" src="{{asset('js/jquery.countdown.js')}}"></script>
 <script type="text/javascript" src="{{asset('js/global.js')}}"></script>
 <script type="text/javascript" src="{{asset('js/jquery.contact.js')}}"></script>
+
 @yield('script')
 <script type="text/javascript">
-    
+
 </script>
 </body>
 </html>

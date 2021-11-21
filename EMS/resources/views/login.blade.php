@@ -23,10 +23,13 @@
             if(response.status == 200 && response.data == 1)
             {
                 window.location.href="/profile";
+                flash('Login Successfully',{'bgColor' : '#00b859'});
             }
+
             else
             {
-                alert('Mobile No or Password Not Matched');
+                flash('Login Error',{'bgColor' : '#f74134'});
+
             }
         }).catch(function(error){
             console.log("Catch");

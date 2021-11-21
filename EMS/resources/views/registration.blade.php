@@ -31,15 +31,17 @@
         }).then(function(response){
             if(response.data == 1)
             {
+                flash('Registration Completed Successfully',{'bgColor' : '#00b859'});
                 window.location.href="/login";
             }
             else if(response.data == 2)
             {
-                alert("This Phone Number is Alerady Registerd, try with another Number");
+            flash('Mobile Number is Alerady Exist',{'bgColor' : '#f74134'});
+
             }
             else
             {
-                alert("Random Error");
+                iqwerty.toast.toast("Random Error");
             }
         }).catch(function(error){
             alert('Catch');
