@@ -22,7 +22,7 @@ class LoginController extends Controller
         if($checkUser == 1)
         {
             $request->session()->put('phone_number',$phone_number);
-            return 1;
+            return $phone_number;
         }
         else
         {

@@ -13,4 +13,4 @@ Route::post('/user-reg', 'RegistrationController@UserRegistration');
 Route::get('/login', 'LoginController@loginPage');
 Route::post('/loginClick', 'LoginController@OnLogin');
 
-Route::get("/profile", 'HomeController@UserHostProfile')->middleware('loginCheck');
+Route::get("/profile/{mobile_number}", 'ProfileController@UserHostProfile')->middleware('loginCheck');

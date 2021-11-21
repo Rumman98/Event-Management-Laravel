@@ -3,4 +3,5 @@
 @section('content')
 
 @include('Components.UserProfileComponent')
+
 @endsection

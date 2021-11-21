@@ -20,15 +20,16 @@
             mobile:mobile,
             password:password
         }).then(function(response){
-            if(response.status == 200 && response.data == 1)
+            if(response.status == 200 && response.data >= 1)
             {
-                window.location.href="/profile";
-                flash('Login Successfully',{'bgColor' : '#00b859'});
+                var mobile_number = response.data;
+                window.location.href="/profile/"+mobile_number; 
+                flash('Login Successfull',{'bgColor' : '#00b859'});
             }
 
             else
             {
-                flash('Login Error',{'bgColor' : '#f74134'});
+                flash('Wrong Login Cardinals',{'bgColor' : '#f74134'});
 
             }
         }).catch(function(error){

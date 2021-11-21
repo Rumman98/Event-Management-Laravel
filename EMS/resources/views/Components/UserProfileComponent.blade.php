@@ -12,30 +12,32 @@
       <div class="profile-info col-md-9">
           <div class="panel">
               <div class="panel-body bio-graph-info">
-                 <b> <h1 style="color: white">Profile Type<span>: User/Host</span></h1></b>
+                 <b> <h1 style="color: white">Profile Type<span>: User</span></h1></b>
+                 @foreach ($UserData as $UserData)
                   <div class="row">
                       <div class="bio-row">
-                          <p style="color: white"><span style="color: white">Name </span>: Camila</p>
+                          <p style="color: white"><span style="color: white">Name </span>: {{$UserData->name}}</p>
                       </div>
                       <div class="bio-row">
-                          <p style="color: white"><span style="color: white">Email </span>: jsmith@flatlab.com</p>
+                          <p style="color: white"><span style="color: white">Email </span>: {{$UserData->email}}</p>
                       </div>
 
                       <div class="bio-row">
-                        <p style="color: white"><span style="color: white">Address</span>: Dhaka</p>
+                        <p style="color: white"><span style="color: white">Address</span>: {{$UserData->address}}</p>
                     </div>
 
                       <div class="bio-row">
-                          <p style="color: white"><span style="color: white">Phone</span>: 88 (02) 123456</p>
+                          <p style="color: white"><span style="color: white">Phone</span>: {{$UserData->phone_number}}</p>
                       </div>
 
                       <div class="bio-row">
-              <button name="submit" type="submit" class="submit" style="width: 100%">Update Profile</button>
+                      <button name="submit" type="submit" class="submit" style="width: 100%">Update Profile</button>
                     </div>
                     <div class="bio-row">
                         <button name="submit" type="submit" class="submit" style="width: 100%">Change Password</button>
                               </div>
                   </div>
+                  @endforeach
               </div>
           </div>
 
@@ -62,7 +64,7 @@
                                         <th class="column6">Invitation Card</th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                                <tbody id = "user_data">
                                         <tr>
                                             <td>Batch 13 Reunion</td>
                                             <td>11 january 2021</td>

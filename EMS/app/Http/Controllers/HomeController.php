@@ -20,9 +20,4 @@ class HomeController extends Controller
     {
         return view('AllGallery');
     }
-
-    function UserHostProfile()
-    { 
-        return View('UserProfile'); 
-    }
 }
