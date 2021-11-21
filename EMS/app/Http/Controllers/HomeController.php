@@ -21,11 +21,6 @@ class HomeController extends Controller
         return view('AllGallery');
     }
 
-    function RegistrationPage()
-    {
-        return view('registration');
-    }
-
     function UserHostProfile()
     { 
         return View('UserProfile'); 

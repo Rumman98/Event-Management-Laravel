@@ -4,14 +4,13 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', 'HomeController@Index');
-
-Route::get('/running-events', 'HomeController@RunningEventPage')->middleware('loginCheck');
+Route::get('/running-events', 'HomeController@RunningEventPage');
 Route::get('/gallery', 'HomeController@AllGalaryPage');
 
-Route::get('/registration', 'HomeController@RegistrationPage');
+Route::get('/registration', 'RegistrationController@RegistrationPage');
 Route::post('/user-reg', 'RegistrationController@UserRegistration');
 
 Route::get('/login', 'LoginController@loginPage');
 Route::post('/loginClick', 'LoginController@OnLogin');
 
-Route::get("/profile", 'HomeController@UserHostProfile');
+Route::get("/profile", 'HomeController@UserHostProfile')->middleware('loginCheck');
