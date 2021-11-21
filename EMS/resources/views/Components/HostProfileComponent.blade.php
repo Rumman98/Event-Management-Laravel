@@ -12,7 +12,7 @@
       <div class="profile-info col-md-9">
           <div class="panel">
               <div class="panel-body bio-graph-info">
-                 <b> <h1 style="color: white">Profile Type<span>: User/Host</span></h1></b>
+                 <b> <h1 style="color: white">Profile Type<span>:Host</span></h1></b>
                   <div class="row">
                       <div class="bio-row">
                           <p style="color: white"><span style="color: white">Name </span>: Camila</p>
