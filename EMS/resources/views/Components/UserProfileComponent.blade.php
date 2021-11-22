@@ -39,7 +39,7 @@
                               </div>
 
                     <div class="bio-row">
-                         <button name="submit" type="submit" class="submit" style="width: 100%">Logout</button>
+                         <button name="submit" type="submit" class="submit" style="width: 100%"><a href=""></a>Logout</button>
                                       </div>
                   </div>
                   @endforeach
