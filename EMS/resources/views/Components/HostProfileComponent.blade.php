@@ -29,16 +29,19 @@
                           <p style="color: white"><span style="color: white">Phone</span>: 88 (02) 123456</p>
                       </div>
 
-                      <div class="bio-row">
-              <button name="submit" type="submit" class="submit" style="width: 100%">Update Profile</button>
-                    </div>
-                    <div class="bio-row">
-                        <button name="submit" type="submit" class="submit" style="width: 100%">Change Password</button>
-                              </div>
+                      <div class="row">
+                        <div class="col-md-4">
+                        <button name="submit" type="submit" data-toggle="modal" data-target="#HostProfileModal" class="submit" style="width: 100%">Update Profile</button>
+                      </div>
+                      <div class="col-md-4">
+                          <button name="submit" type="submit" data-toggle="modal" data-target="#HostChngPasswordModal" class="submit" style="width: 100%">Change Password</button>
+                                </div>
 
-                              <div class="bio-row">
-                                <a href="{{'/logout'}}"><button onclick="flushmsg()" type="submit" class="submit" style="width: 100%">Logout</button></a>
-                             </div>
+                      <div class="col-md-4">
+                         <a href="{{'/logout'}}"><button onclick="flushmsg()" type="submit" class="submit" style="width: 100%">Logout</button></a>
+                      </div>
+
+                  </div>
                   </div>
               </div>
           </div>
@@ -46,6 +49,8 @@
 
 
       </div>
+
+
     </div>
 
     <div class="panel">
@@ -129,9 +134,69 @@
 
         </div>
     </div>
+
+
+    {{--Host Profile Update Modal --}}
+<div class="modal fade" id="HostProfileModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content" style="background-color: #212121">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Update Profile</h5>
+
+        </div>
+        <div class="modal-body" >
+            <input id="ProfileNameUpdateId" type="text" class="form-control mb-3" placeholder="Name" style="background-color: #212121; color: white;">
+            <input id="ProfileEmailUpdateId" type="text" class="form-control mb-3" placeholder="Email" style="background-color: #212121; color: white;">
+          <input id="ProfileAddressUpdateId" type="text" class="form-control mb-3" placeholder="Address" style="background-color: #212121; color: white;">
+         <input id="ProfilePhoneUpdateId" type="text" class="form-control mb-3" placeholder="Phone Number" style="background-color: #212121; color: white;">
+         <br>
+         <center><span style="color: white">Upload Profile Picture </span></center>
+         <input class="form-control mb-3" id="imgInput" type="file" style="background-color: #212121; color: white;">
+        <img class="imgPreview mt-3" id="imgPreview" src="{{asset('images/default-image.png')}}">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Update</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    {{--Host Change Password Modal --}}
+
+    <div class="modal fade" id="HostChngPasswordModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content" style="background-color: #212121">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Change Password</h5>
+
+            </div>
+            <div class="modal-body" >
+                <input id="ProfileNameUpdateId" type="text" class="form-control mb-3" placeholder="Old Password" style="background-color: #212121; color: white;">
+                <input id="ProfileEmailUpdateId" type="text" class="form-control mb-3" placeholder="New Password" style="background-color: #212121; color: white;">
+              <input id="ProfileAddressUpdateId" type="text" class="form-control mb-3" placeholder="Confirm New Password" style="background-color: #212121; color: white;">
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Confirm</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <script>
         function flushmsg(){
             flash('Successfully Logout',{'bgColor' : '#00b859'});
         }
+
+        $('#imgInput').change(function () {
+            var reader=new FileReader();
+            reader.readAsDataURL(this.files[0]);
+            reader.onload=function (event) {
+               var ImgSource= event.target.result;
+                $('#imgPreview').attr('src',ImgSource)
+            }
+        })
     </script>

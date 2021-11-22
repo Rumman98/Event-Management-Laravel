@@ -34,10 +34,10 @@
 
                 <div class="row">
                       <div class="col-md-4">
-                      <button name="submit" type="submit" data-toggle="modal" data-target="#ProfileModal" class="submit" style="width: 100%">Update Profile</button>
+                      <button name="submit" type="submit" data-toggle="modal" data-target="#UserProfileModal" class="submit" style="width: 100%">Update Profile</button>
                     </div>
                     <div class="col-md-4">
-                        <button name="submit" type="submit" data-toggle="modal" data-target="#ChngPasswordModal" class="submit" style="width: 100%">Change Password</button>
+                        <button name="submit" type="submit" data-toggle="modal" data-target="#UserChngPasswordModal" class="submit" style="width: 100%">Change Password</button>
                               </div>
 
                     <div class="col-md-4">
@@ -113,8 +113,8 @@
         </div>
     </div>
 
-{{-- Profile Update Modal --}}
-<div class="modal fade" id="ProfileModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+{{--User Profile Update Modal --}}
+<div class="modal fade" id="UserProfileModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content" style="background-color: #212121">
         <div class="modal-header">
@@ -142,7 +142,7 @@
 
   {{-- Change Password Modal --}}
 
-  <div class="modal fade" id="ChngPasswordModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal fade" id="UserChngPasswordModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content" style="background-color: #212121">
         <div class="modal-header">
