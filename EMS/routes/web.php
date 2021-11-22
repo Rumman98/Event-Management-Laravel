@@ -14,7 +14,6 @@ Route::get('/login', 'LoginController@loginPage');
 Route::post('/loginClick', 'LoginController@OnLogin');
 Route::get('/logout', 'LoginController@onLogout');
 
-Route::get("/userprofile/{mobile_number}", 'ProfileController@UserHostProfile')->middleware('loginCheck');
+Route::get("/userprofile", 'ProfileController@UserProfile')->middleware('loginCheck');
 
-Route::get("/hostprofile", function(){ return View("HostProfile"); });
-
+Route::get("/hostprofile", 'ProfileController@HostProfile')->middleware('loginCheck');

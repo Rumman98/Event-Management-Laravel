@@ -20,15 +20,18 @@
             mobile:mobile,
             password:password
         }).then(function(response){
-            if(response.status == 200 && response.data >= 1)
+            if(response.status == 200 && response.data == 1)
             {
-
                 var mobile_number = response.data;
-                window.location.href="/userprofile/"+mobile_number;
+                window.location.href="/userprofile";
                 flash('Login Successfull',{'bgColor' : '#00b859'});
-
             }
-
+            else if(response.status == 200 && response.data == 2)
+            {
+                var mobile_number = response.data;
+                window.location.href="/hostprofile";
+                flash('Login Successfull',{'bgColor' : '#00b859'});
+            }
             else
             {
                 flash('Wrong Login Cardinals',{'bgColor' : '#f74134'});

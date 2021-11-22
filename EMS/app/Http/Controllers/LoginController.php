@@ -17,13 +17,18 @@ class LoginController extends Controller
         $phone_number = $request->input('mobile');
         $password = $request->input('password');
 
-        $checkUser = UserHostModel::where('phone_number','=', $phone_number)->where('password', '=', $password)->count();
+        $checkUser = UserHostModel::where('phone_number','=', $phone_number)->where('password', '=', $password)->where('user_type', '=', 0)->count();
+        $checkHost = UserHostModel::where('phone_number','=', $phone_number)->where('password', '=', $password)->where('user_type', '=', 1)->count();
 
         if($checkUser == 1)
         {
-            $checkType = UserHostModel::where('phone_number', '=', $phone_number)->value('user_type');
             $request->session()->put('phone_number',$phone_number);
-            return $phone_number;
+            return 1;
+        }
+        else if($checkHost == 1)
+        {
+            $request->session()->put('phone_number',$phone_number);
+            return 2;
         }
         else
         {
