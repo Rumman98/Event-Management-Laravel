@@ -30,12 +30,17 @@
                           <p style="color: white"><span style="color: white">Phone</span>: {{$UserData->phone_number}}</p>
                       </div>
 
+
                       <div class="bio-row">
                       <button name="submit" type="submit" class="submit" style="width: 100%">Update Profile</button>
                     </div>
                     <div class="bio-row">
                         <button name="submit" type="submit" class="submit" style="width: 100%">Change Password</button>
                               </div>
+
+                    <div class="bio-row">
+                         <button name="submit" type="submit" class="submit" style="width: 100%">Logout</button>
+                                      </div>
                   </div>
                   @endforeach
               </div>

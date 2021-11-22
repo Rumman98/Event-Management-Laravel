@@ -15,7 +15,10 @@
 <link rel="stylesheet" href="{{asset('css/responsive.css')}}">
 <link rel="stylesheet" href="{{asset('css/font-icon.css')}}">
 <link rel="stylesheet" href="{{asset('css/animate.min.css')}}">
+{{-- <link rel="stylesheet" href="{{asset('css/mdb.min.css')}}"> --}}
 <link rel="preconnect" href="https://fonts.gstatic.com">
+
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
