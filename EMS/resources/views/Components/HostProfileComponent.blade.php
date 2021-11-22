@@ -35,6 +35,10 @@
                     <div class="bio-row">
                         <button name="submit" type="submit" class="submit" style="width: 100%">Change Password</button>
                               </div>
+
+                              <div class="bio-row">
+                                <a href="{{'/logout'}}"><button onclick="flushmsg()" type="submit" class="submit" style="width: 100%">Logout</button></a>
+                             </div>
                   </div>
               </div>
           </div>
@@ -126,3 +130,8 @@
         </div>
     </div>
     </div>
+    <script>
+        function flushmsg(){
+            flash('Successfully Logout',{'bgColor' : '#00b859'});
+        }
+    </script>

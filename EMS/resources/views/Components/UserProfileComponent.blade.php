@@ -1,3 +1,4 @@
+
 <div class="container bootstrap snippets bootdey">
     <div class="row">
       <div class="profile-nav col-md-3">
@@ -32,14 +33,14 @@
 
 
                       <div class="bio-row">
-                      <button name="submit" type="submit" class="submit" style="width: 100%">Update Profile</button>
+                      <button name="submit" type="submit" data-toggle="modal" data-target="#ProfileModal" class="submit" style="width: 100%">Update Profile</button>
                     </div>
                     <div class="bio-row">
-                        <button name="submit" type="submit" class="submit" style="width: 100%">Change Password</button>
+                        <button name="submit" type="submit" data-toggle="modal" data-target="#ChngPasswordModal" class="submit" style="width: 100%">Change Password</button>
                               </div>
 
                     <div class="bio-row">
-                       <a href="{{'/logout'}}"><button type="submit" class="submit" style="width: 100%">Logout</button></a>
+                       <a href="{{'/logout'}}"><button onclick="flushmsg()" type="submit" class="submit" style="width: 100%">Logout</button></a>
                     </div>
                   </div>
                   @endforeach
@@ -108,4 +109,59 @@
 
         </div>
     </div>
+
+{{-- Profile Update Modal --}}
+<div class="modal fade" id="ProfileModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content" style="background-color: #212121">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Update Profile</h5>
+
+        </div>
+        <div class="modal-body" >
+            <input id="ProfileNameUpdateId" type="text" class="form-control mb-3" placeholder="Name" style="background-color: #212121; color: white;">
+            <input id="ProfileEmailUpdateId" type="text" class="form-control mb-3" placeholder="Email" style="background-color: #212121; color: white;">
+          <input id="ProfileAddressUpdateId" type="text" class="form-control mb-3" placeholder="Address" style="background-color: #212121; color: white;">
+         <input id="ProfilePhoneUpdateId" type="text" class="form-control mb-3" placeholder="Phone Number" style="background-color: #212121; color: white;">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
     </div>
+  </div>
+
+
+  {{-- Change Password Modal --}}
+
+  <div class="modal fade" id="ChngPasswordModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content" style="background-color: #212121">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Change Password</h5>
+
+        </div>
+        <div class="modal-body" >
+            <input id="ProfileNameUpdateId" type="text" class="form-control mb-3" placeholder="Old Password" style="background-color: #212121; color: white;">
+            <input id="ProfileEmailUpdateId" type="text" class="form-control mb-3" placeholder="New Password" style="background-color: #212121; color: white;">
+          <input id="ProfileAddressUpdateId" type="text" class="form-control mb-3" placeholder="Confirm New Password" style="background-color: #212121; color: white;">
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Confirm</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    </div>
+
+
+    <script>
+        function flushmsg(){
+            flash('Successfully Logout',{'bgColor' : '#00b859'});
+        }
+
+    </script>
