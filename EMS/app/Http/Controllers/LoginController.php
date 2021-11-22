@@ -21,6 +21,7 @@ class LoginController extends Controller
 
         if($checkUser == 1)
         {
+            $checkType = UserHostModel::where('phone_number', '=', $phone_number)->value('user_type');
             $request->session()->put('phone_number',$phone_number);
             return $phone_number;
         }
@@ -28,5 +29,11 @@ class LoginController extends Controller
         {
             return 0;
         }
+    }
+
+    function onLogout(Request $request)
+    {
+        $request->session()->flush();
+        return redirect('login');
     }
 }
