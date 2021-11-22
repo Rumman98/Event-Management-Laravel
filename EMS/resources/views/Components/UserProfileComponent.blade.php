@@ -39,7 +39,7 @@
                               </div>
 
                     <div class="bio-row">
-                       <button type="submit" class="submit" style="width: 100%"><a style="color: white;" href="{{'/logout'}}">Logout</a></button>
+                       <a href="{{'/logout'}}"><button type="submit" class="submit" style="width: 100%">Logout</button></a>
                     </div>
                   </div>
                   @endforeach
