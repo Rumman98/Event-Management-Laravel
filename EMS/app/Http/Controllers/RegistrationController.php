@@ -22,8 +22,9 @@ class RegistrationController extends Controller
         $password = $request->input('password');
 
         $checkPhoneNo = UserHostModel::where('phone_number',$mobileNo)->count();
+        $checkEmail = UserHostModel::where('email',$email)->count();
 
-        if($checkPhoneNo >= 1)
+        if($checkPhoneNo >= 1 || $checkEmail >= 1)
         {
             return 2;
         }
