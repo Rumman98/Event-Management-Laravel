@@ -39,8 +39,8 @@
                               </div>
 
                     <div class="bio-row">
-                         <button name="submit" type="submit" class="submit" style="width: 100%"><a href=""></a>Logout</button>
-                                      </div>
+                       <button type="submit" class="submit" style="width: 100%"><a style="color: white;" href="{{'/gallery'}}">Logout</a></button>
+                    </div>
                   </div>
                   @endforeach
               </div>
