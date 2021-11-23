@@ -150,9 +150,9 @@
 
         </div>
         <div class="modal-body" >
-            <input id="ProfileNameUpdateId" type="text" class="form-control mb-3" placeholder="Old Password" style="background-color: #212121; color: white;">
-            <input id="ProfileEmailUpdateId" type="text" class="form-control mb-3" placeholder="New Password" style="background-color: #212121; color: white;">
-          <input id="ProfileAddressUpdateId" type="text" class="form-control mb-3" placeholder="Confirm New Password" style="background-color: #212121; color: white;">
+            <input id="OldasswordId" type="text" class="form-control mb-3" placeholder="Old Password" style="background-color: #212121; color: white;">
+            <input id="NewPasswordId" type="text" class="form-control mb-3" placeholder="New Password" style="background-color: #212121; color: white;">
+          <input id="ConfirmPasswordId" type="text" class="form-control mb-3" placeholder="Confirm New Password" style="background-color: #212121; color: white;">
 
         </div>
         <div class="modal-footer">
