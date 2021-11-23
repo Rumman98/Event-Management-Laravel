@@ -60,7 +60,7 @@
 
     <div class="panel">
         <div class="panel-body bio-graph-info">
-           <center><button stype="submit" class="submit" style="width: 30%; margin-bottom: 8px;">Add Events</button></center>
+           <center><button type="submit" class="submit" data-toggle="modal" data-target="#AddEventModal" style="width: 30%; margin-bottom: 8px;">Add Events</button></center>
 
             <div class="limiter">
 
@@ -75,6 +75,7 @@
                                         <th class="column3">Venue</th>
                                         <th class="column4">Registration Amount</th>
                                         <th class="column5">Last Date</th>
+                                        <th class="column5">Approval</th>
                                         <th class="column6">Action</th>
                                     </tr>
                                 </thead>
@@ -87,6 +88,7 @@
                                             <td>Grand Sultan restaurant</td>
                                             <td>200tk</td>
                                             <td>11 january 2021</td>
+                                            <td>Pending</td>
                                             <td>
                                                 <button type="submit" class="submit" style="padding: 11px;">Edit</button>
                                                 <button type="submit" class="submit" style="padding: 11px;">Delete</button>
@@ -101,6 +103,7 @@
                                             <td>Grand Sultan restaurant</td>
                                             <td>200tk</td>
                                             <td>11 january 2021</td>
+                                            <td>Pending</td>
                                             <td>
                                                 <button type="submit" class="submit" style="padding: 11px;">Edit</button>
                                                 <button type="submit" class="submit" style="padding: 11px;">Delete</button>
@@ -114,6 +117,7 @@
                                             <td>Grand Sultan restaurant</td>
                                             <td>200tk</td>
                                             <td>11 january 2021</td>
+                                            <td>Approved</td>
                                             <td>
                                                 <button type="submit" class="submit" style="padding: 11px;">Edit</button>
                                                 <button type="submit" class="submit" style="padding: 11px;">Delete</button>
@@ -127,6 +131,7 @@
                                             <td>Grand Sultan restaurant</td>
                                             <td>200tk</td>
                                             <td>11 january 2021</td>
+                                            <td>Approved</td>
                                             <td>
                                                 <button type="submit" class="submit" style="padding: 11px;">Edit</button>
                                                 <button type="submit" class="submit" style="padding: 11px;">Delete</button>
@@ -136,6 +141,8 @@
                             </table>
                         </div>
             </div>
+
+
 
         </div>
     </div>
@@ -169,7 +176,8 @@
 
 
     {{--Host Change Password Modal --}}
-    @foreach ($HostData as $HostData)
+@foreach ($HostData as $HostData)
+
     <div class="modal fade" id="HostChngPasswordModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content" style="background-color: #212121">
@@ -186,12 +194,57 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" id = 'host_confirm_pass' class="btn btn-primary">Confirm</button>
+              <button type="button" id="host_confirm_pass" class="btn btn-primary">Confirm</button>
             </div>
           </div>
         </div>
       </div>
+
       @endforeach
+
+
+
+
+    <div class="modal fade" id="AddEventModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content" style="background-color: #464646">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Add Event</h5>
+
+            </div>
+            <div class="modal-body" >
+                <input id="EventNameId" type="text" class="form-control mb-3" placeholder="Event Name" style="background-color: #464646; color: white;">
+                <textarea id="EventDesID" class="form-control mb-3" placeholder="Event Description"  maxlength="60" style="min-width: 100%; background-color: #464646; color: white; margin-top: 5px; margin-bottom: 5px;"></textarea>
+                <span style="color: white;">Choose Your Event Type</span>
+                <select id="EventTypeId" name="event type" class="form-control mb-3" style="background-color: #464646; color: white; margin-top: 5px; margin-bottom: 5px;">
+                    <option value="Reunion">Reunion</option>
+                    <option value="Seminar">Seminar</option>
+                </select>
+            <div class="row">
+                <div class="col-md-6">
+                <span style="color: white">Select Event Time </span>
+                <input id="EventTimeId" type="time" class="form-control mb-3" placeholder="Event Time" style="background-color: #464646; color: white;">
+            </div>
+            <div class="col-md-6">
+                <span style="color: white">Select Event Date </span>
+                <input id="EventDateId" type="date" class="form-control mb-3" placeholder="Event Date" style="background-color: #464646; color: white;">
+            </div>
+            </div>
+
+            <input id="EventVenueId" type="text" class="form-control mb-3" placeholder="Venue" style="background-color: #464646; color: white;">
+            <input id="EventRegAmountId" type="text" class="form-control mb-3" placeholder="Event Registration Amount" style="background-color: #464646; color: white; margin-bottom:5px;">
+            <span style="color: white;">Registration Last Date</span>
+            <input id="EventRegLastDateId" type="date" class="form-control mb-3" placeholder="Event Registration Last Date" style="background-color: #464646; color: white;">
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Create Event</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
     <script>
         function flushmsg(){

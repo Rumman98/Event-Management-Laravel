@@ -141,7 +141,7 @@
 
 
   {{-- Change Password Modal --}}
-  @foreach ($UserData as $Userdata)
+  @foreach ($UserData as $UserData)
   <div class="modal fade" id="UserChngPasswordModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content" style="background-color: #212121">
@@ -165,7 +165,7 @@
   </div>
   @endforeach
 
-    </div>
+</div>
 
 
     <script>
