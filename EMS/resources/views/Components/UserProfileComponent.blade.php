@@ -150,10 +150,10 @@
 
         </div>
         <div class="modal-body" >
-          <input type="hidden" id="phone_no" name="" value="{{$UserData->phone_number}}">
-          <input type="text" class="form-control mb-3" id = 'old_pass' placeholder="Old Password" style="background-color: #212121; color: white;">
-          <input type="text" class="form-control mb-3" id = 'new_pass' placeholder="New Password" style="background-color: #212121; color: white;">
-          <input type="text" class="form-control mb-3" id = 'conNewPass' placeholder="Confirm New Password" style="background-color: #212121; color: white;">
+          <input type="hidden" id="phone_no" name="" value="{{$value}}">
+          <input type="text" id = 'old_pass' class="form-control mb-3" placeholder="Old Password" style="background-color: #212121; color: white;">
+          <input type="text" id = 'new_pass' class="form-control mb-3" placeholder="New Password" style="background-color: #212121; color: white;">
+          <input type="text" id = 'conNewPass' class="form-control mb-3" placeholder="Confirm New Password" style="background-color: #212121; color: white;">
 
         </div>
         <div class="modal-footer">

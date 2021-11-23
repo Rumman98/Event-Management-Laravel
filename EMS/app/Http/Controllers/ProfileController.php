@@ -14,7 +14,8 @@ class ProfileController extends Controller
 
             $userData = UserHostModel::where('phone_number', '=', $value)->get();
             return View('UserProfile',[
-                'UserData'=>$userData
+                'UserData'=>$userData,
+                'value'=>$value
             ]);
     }
     function HostProfile()

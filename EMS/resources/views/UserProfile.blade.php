@@ -49,6 +49,6 @@ function ChangePassword(mobile_no, oldPass, newPass, ConNewPass)
     }).catch(function(error){
         flash('Catch',{'bgColor' : '#f74134'});
     })
-    
+}
 </script>
 @endsection
