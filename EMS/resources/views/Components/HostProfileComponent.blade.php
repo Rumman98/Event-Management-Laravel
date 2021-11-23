@@ -12,21 +12,25 @@
       <div class="profile-info col-md-9">
           <div class="panel">
               <div class="panel-body bio-graph-info">
+
                  <b> <h1 style="color: white">Profile Type<span>: Host</span></h1></b>
+
+                 @foreach ($HostData as $HostData)
+
                   <div class="row">
                       <div class="bio-row">
-                          <p style="color: white"><span style="color: white">Name </span>: Camila</p>
+                          <p style="color: white"><span style="color: white">Name </span>: {{$HostData->name}}</p>
                       </div>
                       <div class="bio-row">
-                          <p style="color: white"><span style="color: white">Email </span>: jsmith@flatlab.com</p>
+                          <p style="color: white"><span style="color: white">Email </span>: {{$HostData->email}}</p>
                       </div>
 
                       <div class="bio-row">
-                        <p style="color: white"><span style="color: white">Address</span>: Dhaka</p>
+                        <p style="color: white"><span style="color: white">Address</span>: {{$HostData->address}}</p>
                     </div>
 
                       <div class="bio-row">
-                          <p style="color: white"><span style="color: white">Phone</span>: 88 (02) 123456</p>
+                          <p style="color: white"><span style="color: white">Phone</span>: {{$HostData->phone_number}}</p>
                       </div>
 
                       <div class="row">
@@ -43,6 +47,7 @@
 
                   </div>
                   </div>
+                  @endforeach
               </div>
           </div>
 

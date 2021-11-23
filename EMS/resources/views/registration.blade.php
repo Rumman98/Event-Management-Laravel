@@ -36,7 +36,7 @@
             }
             else if(response.data == 2)
             {
-            flash('Mobile Number is Alerady Exist',{'bgColor' : '#f74134'});
+            flash('Mobile Number or Email is Alerady Exist',{'bgColor' : '#f74134'});
 
             }
             else
