@@ -176,6 +176,7 @@
 
 
     {{--Host Change Password Modal --}}
+@foreach ($HostData as $HostData)
 
     <div class="modal fade" id="HostChngPasswordModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -185,19 +186,21 @@
 
             </div>
             <div class="modal-body" >
-                <input id="OldasswordId" type="text" class="form-control mb-3" placeholder="Old Password" style="background-color: #212121; color: white;">
-                <input id="NewPasswordId" type="text" class="form-control mb-3" placeholder="New Password" style="background-color: #212121; color: white;">
-              <input id="ConfirmPasswordId" type="text" class="form-control mb-3" placeholder="Confirm New Password" style="background-color: #212121; color: white;">
+                <input type="hidden" id="host_phone_no" name="" value="{{$value}}">
+                <input id="host_old_pass" type="text" class="form-control mb-3" placeholder="Old Password" style="background-color: #212121; color: white;">
+                <input id="host_new_pass" type="text" class="form-control mb-3" placeholder="New Password" style="background-color: #212121; color: white;">
+              <input id="host_conNewPass" type="text" class="form-control mb-3" placeholder="Confirm New Password" style="background-color: #212121; color: white;">
 
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Confirm</button>
+              <button type="button" id="host_confirm_pass" class="btn btn-primary">Confirm</button>
             </div>
           </div>
         </div>
       </div>
 
+      @endforeach
 
 
 
