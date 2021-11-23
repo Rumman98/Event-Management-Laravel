@@ -15,5 +15,6 @@ Route::post('/loginClick', 'LoginController@OnLogin');
 Route::get('/logout', 'LoginController@onLogout');
 
 Route::get("/userprofile", 'ProfileController@UserProfile')->middleware('loginCheck');
-
 Route::get("/hostprofile", 'ProfileController@HostProfile')->middleware('loginCheck');
+Route::post("/changePassword", 'ProfileController@ChangePasswordUser')->middleware('loginCheck');
+Route::post("/changePasswordHost", 'ProfileController@ChangePasswordHost')->middleware('loginCheck');

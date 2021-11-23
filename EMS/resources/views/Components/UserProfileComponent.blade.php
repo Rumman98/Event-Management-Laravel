@@ -34,7 +34,7 @@
 
                 <div class="row">
                       <div class="col-md-4">
-                      <button name="submit" type="submit" data-toggle="modal" data-target="#UserProfileModal" class="submit" style="width: 100%">Update Profile</button>
+                      <button name="submit" type="submit" data-toggle="modal" data-target="#UserProfileModal"  class="submit" style="width: 100%">Update Profile</button>
                     </div>
                     <div class="col-md-4">
                         <button name="submit" type="submit" data-toggle="modal" data-target="#UserChngPasswordModal" class="submit" style="width: 100%">Change Password</button>
@@ -141,7 +141,7 @@
 
 
   {{-- Change Password Modal --}}
-
+  @foreach ($UserData as $Userdata)
   <div class="modal fade" id="UserChngPasswordModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content" style="background-color: #212121">
@@ -150,18 +150,20 @@
 
         </div>
         <div class="modal-body" >
-            <input id="ProfileNameUpdateId" type="text" class="form-control mb-3" placeholder="Old Password" style="background-color: #212121; color: white;">
-            <input id="ProfileEmailUpdateId" type="text" class="form-control mb-3" placeholder="New Password" style="background-color: #212121; color: white;">
-          <input id="ProfileAddressUpdateId" type="text" class="form-control mb-3" placeholder="Confirm New Password" style="background-color: #212121; color: white;">
+          <input type="hidden" id="phone_no" name="" value="{{$UserData->phone_number}}">
+          <input type="text" class="form-control mb-3" id = 'old_pass' placeholder="Old Password" style="background-color: #212121; color: white;">
+          <input type="text" class="form-control mb-3" id = 'new_pass' placeholder="New Password" style="background-color: #212121; color: white;">
+          <input type="text" class="form-control mb-3" id = 'conNewPass' placeholder="Confirm New Password" style="background-color: #212121; color: white;">
 
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Confirm</button>
+          <button type="button" id = 'confirm_change' class="btn btn-primary">Confirm</button>
         </div>
       </div>
     </div>
   </div>
+  @endforeach
 
     </div>
 

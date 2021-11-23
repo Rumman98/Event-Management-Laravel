@@ -23,7 +23,82 @@ class ProfileController extends Controller
 
             $hostData = UserHostModel::where('phone_number', '=', $value)->get();
             return View('HostProfile',[
-                'HostData'=>$hostData
+                'HostData'=>$hostData,
+                'value'=>$value
             ]);
+    }
+
+    function ChangePasswordUser(Request $request)
+    {
+        $mobile_no = $request->input('mobile_no');
+        $oldPass = $request->input('oldPass');
+        $newPass = $request->input('newPass');
+        $ConNewPass = $request->input('ConNewPass');
+
+        if($newPass == $ConNewPass)
+        {
+            $checkOldPass = UserHostModel::where('phone_number', '=', $mobile_no)->where('password', '=', $oldPass)->count();
+
+            if($checkOldPass == 1)
+            {
+                $changePass = UserHostModel::where('phone_number', '=', $mobile_no)->update([
+                    'password' => $newPass
+                ]);
+    
+                if($changePass == true)
+                {
+                    return 1;
+                }
+                else
+                {
+                    return 0;
+                }
+            }
+            else
+            {
+                return 2;
+            }
+        }
+        else
+        {
+            return 3;
+        }
+    }
+
+    function ChangePasswordHost(Request $request)
+    {
+        $mobile_no = $request->input('host_mobile_no');
+        $oldPass = $request->input('host_oldPass');
+        $newPass = $request->input('host_newPass');
+        $ConNewPass = $request->input('host_ConNewPass');
+
+        if($newPass == $ConNewPass)
+        {
+            $checkOldPass = UserHostModel::where('phone_number', '=', $mobile_no)->where('password', '=', $oldPass)->count();
+
+            if($checkOldPass == 1)
+            {
+                $changePass = UserHostModel::where('phone_number', '=', $mobile_no)->update([
+                    'password' => $newPass
+                ]);
+    
+                if($changePass == true)
+                {
+                    return 1;
+                }
+                else
+                {
+                    return 0;
+                }
+            }
+            else
+            {
+                return 2;
+            }
+        }
+        else
+        {
+            return 3;
+        }
     }
 }
