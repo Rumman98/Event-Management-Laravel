@@ -20,7 +20,6 @@
                 </div>
                 <br>
                 <div class="form-textbox">
-                    <!--<input type="submit" name="submit" id="submit" class="submit" value="Sign in" />-->
                    <center><button name="submit" type="submit" class="submit" style="width: 400px">Signin</button></center>
                 </div>
                 <br>
