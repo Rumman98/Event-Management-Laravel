@@ -126,7 +126,7 @@
           <input id="ProfileNameUpdateId" type="text" class="form-control mb-3" placeholder="Name" style="background-color: #212121; color: white;">
           <input id="ProfileEmailUpdateId" type="text" class="form-control mb-3" placeholder="Email" style="background-color: #212121; color: white;">
           <input id="ProfileAddressUpdateId" type="text" class="form-control mb-3" placeholder="Address" style="background-color: #212121; color: white;">
-          <input id="ProfilePhoneUpdateId" type="text" class="form-control mb-3" placeholder="Phone Number" style="background-color: #212121; color: white;" readonly>
+          <input id="ProfilePhoneUpdateId" type="text" onclick="notify()" class="form-control mb-3" placeholder="Phone Number" style="background-color: #212121; color: white;" readonly>
          <br>
          <center><span style="color: white">Upload Profile Picture </span></center>
          <input class="form-control mb-3" id="imgInput" type="file" style="background-color: #464646; color: white;">
@@ -182,5 +182,10 @@
                 $('#imgPreview').attr('src',ImgSource)
             }
         })
+
+        function notify()
+        {
+          flash('Phone Number is Not Changeable.',{'bgColor' : '#f74134'});
+        }
 
     </script>

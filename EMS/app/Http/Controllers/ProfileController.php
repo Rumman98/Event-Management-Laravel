@@ -31,10 +31,10 @@ class ProfileController extends Controller
 
     function ChangePasswordUser(Request $request)
     {
-        $mobile_no = $request->input('mobile_no');
-        $oldPass = $request->input('oldPass');
-        $newPass = $request->input('newPass');
-        $ConNewPass = $request->input('ConNewPass');
+        $mobile_no   = $request->input('mobile_no');
+        $oldPass     = $request->input('oldPass');
+        $newPass     = $request->input('newPass');
+        $ConNewPass  = $request->input('ConNewPass');
 
         if($newPass == $ConNewPass)
         {
@@ -68,10 +68,10 @@ class ProfileController extends Controller
 
     function ChangePasswordHost(Request $request)
     {
-        $mobile_no = $request->input('host_mobile_no');
-        $oldPass = $request->input('host_oldPass');
-        $newPass = $request->input('host_newPass');
-        $ConNewPass = $request->input('host_ConNewPass');
+        $mobile_no   = $request->input('host_mobile_no');
+        $oldPass     = $request->input('host_oldPass');
+        $newPass     = $request->input('host_newPass');
+        $ConNewPass  = $request->input('host_ConNewPass');
 
         if($newPass == $ConNewPass)
         {
@@ -114,10 +114,42 @@ class ProfileController extends Controller
 
     function UpdateUserDetails(Request $request)
     {
+        $id       = $request->input('user_id');
+        $name     = $request->input('Name');
+        $email    = $request->input('Email');
+        $address  = $request->input('Address');
+
+        $result = UserHostModel::where('id',$id)->update([
+            'name'=>$name,
+            'email'=>$email,
+            'address'=>$address
+        ]);
+
+        if($result == true)
+        {
+            return 1;
+        }
+        else
+        {
+            return 0;
+        }
+    }
+
+    function HostDetails(Request $request)
+    {
         $id = $request->input('user_id');
-        $name = $request->input('Name');
-        $email = $request->input('Email');
-        $address = $request->input('Address');
+
+        $details = UserHostModel::where('id', '=', $id)->get();
+
+        return $details;
+    }
+
+    function UpdateHostDetails(Request $request)
+    {
+        $id = $request->input('hostId');
+        $name = $request->input('HostName');
+        $email = $request->input('HostEmail');
+        $address = $request->input('HostAddress');
 
         $result = UserHostModel::where('id',$id)->update([
             'name'=>$name,

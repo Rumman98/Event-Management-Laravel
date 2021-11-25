@@ -22,3 +22,6 @@ Route::post("/changePasswordHost", 'ProfileController@ChangePasswordHost')->midd
 
 Route::post("/user-details", 'ProfileController@UserDetails')->middleware('loginCheck');
 Route::post("/user-update", 'ProfileController@UpdateUserDetails')->middleware('loginCheck');
+
+Route::post("/host-details", 'ProfileController@HostDetails')->middleware('loginCheck');
+Route::post("/host-update", 'ProfileController@UpdateHostDetails')->middleware('loginCheck');
