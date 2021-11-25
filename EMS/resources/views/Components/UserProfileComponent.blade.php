@@ -34,7 +34,7 @@
 
                 <div class="row">
                       <div class="col-md-4">
-                      <button name="submit" type="submit" data-toggle="modal" data-target="#UserProfileModal"  class="submit" style="width: 100%">Update Profile</button>
+                      <button name="submit" type="submit" id="userEditBtnClick" data-id="{{$UserData->id}}" data-target="#UserProfileModal" data-toggle="modal" class="submit" style="width: 100%">Update Profile</button>
                     </div>
                     <div class="col-md-4">
                         <button name="submit" type="submit" data-toggle="modal" data-target="#UserChngPasswordModal" class="submit" style="width: 100%">Change Password</button>
@@ -122,10 +122,11 @@
 
         </div>
         <div class="modal-body" >
-            <input id="ProfileNameUpdateId" type="text" class="form-control mb-3" placeholder="Name" style="background-color: #464646; color: white;">
-            <input id="ProfileEmailUpdateId" type="text" class="form-control mb-3" placeholder="Email" style="background-color: #464646; color: white;">
-          <input id="ProfileAddressUpdateId" type="text" class="form-control mb-3" placeholder="Address" style="background-color: #464646; color: white;">
-         <input id="ProfilePhoneUpdateId" type="text" class="form-control mb-3" placeholder="Phone Number" style="background-color: #464646; color: white;">
+          <input type="hidden" id="user_id">
+          <input id="ProfileNameUpdateId" type="text" class="form-control mb-3" placeholder="Name" style="background-color: #212121; color: white;">
+          <input id="ProfileEmailUpdateId" type="text" class="form-control mb-3" placeholder="Email" style="background-color: #212121; color: white;">
+          <input id="ProfileAddressUpdateId" type="text" class="form-control mb-3" placeholder="Address" style="background-color: #212121; color: white;">
+          <input id="ProfilePhoneUpdateId" type="text" class="form-control mb-3" placeholder="Phone Number" style="background-color: #212121; color: white;" readonly>
          <br>
          <center><span style="color: white">Upload Profile Picture </span></center>
          <input class="form-control mb-3" id="imgInput" type="file" style="background-color: #464646; color: white;">
@@ -133,7 +134,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Update</button>
+          <button type="button" id="UpdateConfirmBtn" class="btn btn-primary">Update</button>
         </div>
       </div>
     </div>

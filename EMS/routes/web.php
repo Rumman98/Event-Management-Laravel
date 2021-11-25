@@ -18,3 +18,7 @@ Route::get("/userprofile", 'ProfileController@UserProfile')->middleware('loginCh
 Route::get("/hostprofile", 'ProfileController@HostProfile')->middleware('loginCheck');
 Route::post("/changePassword", 'ProfileController@ChangePasswordUser')->middleware('loginCheck');
 Route::post("/changePasswordHost", 'ProfileController@ChangePasswordHost')->middleware('loginCheck');
+
+
+Route::post("/user-details", 'ProfileController@UserDetails')->middleware('loginCheck');
+Route::post("/user-update", 'ProfileController@UpdateUserDetails')->middleware('loginCheck');
