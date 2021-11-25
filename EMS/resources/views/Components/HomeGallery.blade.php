@@ -1,5 +1,5 @@
-<section id="gallery" class="gallery section">
-    <div class="container-fluid">
+<section id="gallery" class="gallery section" style="margin-bottom: -20px; margin-top: -20px;">
+    <div class="container-fluid" style="border: 1px solid;">
       <div class="section-header">
                   <h2 class="fadeInDown animated">Gallery</h2>
       </div>

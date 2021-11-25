@@ -1,4 +1,4 @@
-<section id="teams" class="section teams">
+<section id="teams" class="section teams" style="background-color: #1e1e1e;">
     <div class="container">
         <div class="section-header">
                   <h2 class="wow fadeInDown animated">Client Reviews</h2>
