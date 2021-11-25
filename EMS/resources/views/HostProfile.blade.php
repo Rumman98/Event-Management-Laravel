@@ -12,9 +12,9 @@
 
 //Host Password Change Start
 $('#host_confirm_pass').click(function() {
-    var host_mobile_no = $('#host_phone_no').val();
-    var host_oldPass = $('#host_old_pass').val();
-    var host_newPass = $('#host_new_pass').val();
+    var host_mobile_no  = $('#host_phone_no').val();
+    var host_oldPass    = $('#host_old_pass').val();
+    var host_newPass    = $('#host_new_pass').val();
     var host_ConNewPass = $('#host_conNewPass').val();
 
     HostChangePassword(host_mobile_no, host_oldPass, host_newPass, host_ConNewPass);

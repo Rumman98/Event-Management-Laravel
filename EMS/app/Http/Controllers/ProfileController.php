@@ -146,9 +146,9 @@ class ProfileController extends Controller
 
     function UpdateHostDetails(Request $request)
     {
-        $id = $request->input('hostId');
-        $name = $request->input('HostName');
-        $email = $request->input('HostEmail');
+        $id      = $request->input('hostId');
+        $name    = $request->input('HostName');
+        $email   = $request->input('HostEmail');
         $address = $request->input('HostAddress');
 
         $result = UserHostModel::where('id',$id)->update([
