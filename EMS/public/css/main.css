@@ -130,6 +130,7 @@ ul li {
 	z-index: 999;
 	background: #000;
 	height: 60px;
+    border: 1px solid;
 }
 #header .header-content {
 	margin: 0 auto;
@@ -362,7 +363,7 @@ ul li {
 
 
   .bg-image {
-    filter: blur(3px);
+    filter: blur(1px);
     background-position: center;
     height: 90%;
     background-color: #242323;
@@ -387,7 +388,7 @@ ul li {
 ========================================================================== */
 .intro {
 	background-color: #000;
-	/* color: #000; */
+    border: 1px solid;
 }
 .intro h3 {
 	color: #ffffff;
@@ -1071,11 +1072,11 @@ min-width: initial !important;
 	}
 }
 
-footer .main-footer{	padding-top: 50px; padding-bottom: 5px;	background: #252525;}
+footer .main-footer{	padding-top: 50px; padding-bottom: 5px;	background: #010101; border: 1px solid;}
 footer ul{	padding-left: 0;	list-style: none;}
 
 /* Copy Right Footer */
-.footer-copyright {	background: #222;	padding: 10px 0;}
+.footer-copyright {	background: #1e1e1e; padding: 10px 0;}
 .footer-copyright .logo {    display: inherit;}
 .footer-copyright nav {    float: right;    margin-top: 5px;}
 .footer-copyright nav ul {	list-style: none;	margin: 0;	padding: 0;}
