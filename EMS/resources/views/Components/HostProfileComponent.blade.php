@@ -151,19 +151,19 @@
     {{--Host Profile Update Modal --}}
 <div class="modal fade" id="HostProfileModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
     <div class="modal-dialog" role="document">
-      <div class="modal-content" style="background-color: #212121">
+      <div class="modal-content" style="background-color: #464646">
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLongTitle">Update Profile</h5>
 
         </div>
         <div class="modal-body" >
-            <input id="ProfileNameUpdateId" type="text" class="form-control mb-3" placeholder="Name" style="background-color: #212121; color: white;">
-            <input id="ProfileEmailUpdateId" type="text" class="form-control mb-3" placeholder="Email" style="background-color: #212121; color: white;">
-          <input id="ProfileAddressUpdateId" type="text" class="form-control mb-3" placeholder="Address" style="background-color: #212121; color: white;">
-         <input id="ProfilePhoneUpdateId" type="text" class="form-control mb-3" placeholder="Phone Number" style="background-color: #212121; color: white;">
+            <input id="ProfileNameUpdateId" type="text" class="form-control mb-3" placeholder="Name" style="background-color: #464646; color: white;">
+            <input id="ProfileEmailUpdateId" type="text" class="form-control mb-3" placeholder="Email" style="background-color: #464646; color: white;">
+          <input id="ProfileAddressUpdateId" type="text" class="form-control mb-3" placeholder="Address" style="background-color: #464646; color: white;">
+         <input id="ProfilePhoneUpdateId" type="text" class="form-control mb-3" placeholder="Phone Number" style="background-color: #464646; color: white;">
          <br>
          <center><span style="color: white">Upload Profile Picture </span></center>
-         <input class="form-control mb-3" id="imgInput" type="file" style="background-color: #212121; color: white;">
+         <input class="form-control mb-3" id="imgInput" type="file" style="background-color: #464646; color: white;">
         <img class="imgPreview mt-3" id="imgPreview" src="{{asset('images/default-image.png')}}">
         </div>
         <div class="modal-footer">
@@ -180,16 +180,16 @@
 
     <div class="modal fade" id="HostChngPasswordModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
         <div class="modal-dialog" role="document">
-          <div class="modal-content" style="background-color: #212121">
+          <div class="modal-content" style="background-color: #464646">
             <div class="modal-header">
               <h5 class="modal-title" id="exampleModalLongTitle">Change Password</h5>
 
             </div>
             <div class="modal-body" >
                 <input type="hidden" id="host_phone_no" name="" value="{{$value}}">
-                <input id="host_old_pass" type="text" class="form-control mb-3" placeholder="Old Password" style="background-color: #212121; color: white;">
-                <input id="host_new_pass" type="text" class="form-control mb-3" placeholder="New Password" style="background-color: #212121; color: white;">
-              <input id="host_conNewPass" type="text" class="form-control mb-3" placeholder="Confirm New Password" style="background-color: #212121; color: white;">
+                <input id="host_old_pass" type="text" class="form-control mb-3" placeholder="Old Password" style="background-color: #464646; color: white;">
+                <input id="host_new_pass" type="text" class="form-control mb-3" placeholder="New Password" style="background-color: #464646; color: white;">
+              <input id="host_conNewPass" type="text" class="form-control mb-3" placeholder="Confirm New Password" style="background-color: #464646; color: white;">
 
             </div>
             <div class="modal-footer">

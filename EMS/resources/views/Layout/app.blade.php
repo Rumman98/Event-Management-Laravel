@@ -15,7 +15,6 @@
 <link rel="stylesheet" href="{{asset('css/responsive.css')}}">
 <link rel="stylesheet" href="{{asset('css/font-icon.css')}}">
 <link rel="stylesheet" href="{{asset('css/animate.min.css')}}">
-{{-- <link rel="stylesheet" href="{{asset('css/mdb.min.css')}}"> --}}
 <link rel="preconnect" href="https://fonts.gstatic.com">
 
 

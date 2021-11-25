@@ -34,6 +34,7 @@ function HostChangePassword(host_mobile_no, host_oldPass, host_newPass, host_Con
         if(response.status == 200 && response.data == 1)
         {
             flash('Password Change Successfull',{'bgColor' : '#00b859'});
+            $('#HostChngPasswordModal').modal('hide');
         }
         else if(response.status == 200 && response.data == 2)
         {
@@ -52,5 +53,5 @@ function HostChangePassword(host_mobile_no, host_oldPass, host_newPass, host_Con
     })
 }
 </script>
-    
+
 @endsection

@@ -33,6 +33,8 @@ function ChangePassword(mobile_no, oldPass, newPass, ConNewPass)
         if(response.status == 200 && response.data == 1)
         {
             flash('Password Change Successfull',{'bgColor' : '#00b859'});
+            $('#UserChngPasswordModal').modal('hide');
+
         }
         else if(response.status == 200 && response.data == 2)
         {
