@@ -102,4 +102,36 @@ class ProfileController extends Controller
             return 3;
         }
     }
+
+    function UserDetails(Request $request)
+    {
+        $id = $request->input('user_id');
+
+        $details = UserHostModel::where('id', '=', $id)->get();
+
+        return $details;
+    }
+
+    function UpdateUserDetails(Request $request)
+    {
+        $id = $request->input('user_id');
+        $name = $request->input('Name');
+        $email = $request->input('Email');
+        $address = $request->input('Address');
+
+        $result = UserHostModel::where('id',$id)->update([
+            'name'=>$name,
+            'email'=>$email,
+            'address'=>$address
+        ]);
+
+        if($result == true)
+        {
+            return 1;
+        }
+        else
+        {
+            return 0;
+        }
+    }
 }
