@@ -9,10 +9,10 @@
                     <h6 style="font-size: 20px; text-color:#202020">What type of user are you ?</h6>
                     <div class="form-radio">
                         <input type="radio" name="member_level" value="0" id="newbie" checked="checked" />
-                        <label for="newbie">User</label>
+                        <label for="newbie" style="width: 192px;">User</label>
 
                         <input type="radio" name="member_level" value="1" id="average" />
-                        <label for="average">Host</label>
+                        <label for="average" style="width: 192px;">Host</label>
                     </div>
                     <div class="form-textbox">
                         <label for="name">Name</label>
