@@ -33,6 +33,7 @@ function HostChangePassword(host_mobile_no, host_oldPass, host_newPass, host_Con
     }).then(function(response){
         if(response.status == 200 && response.data == 1)
         {
+            $('#HostChngPasswordModal').modal('hide');
             flash('Password Change Successfull',{'bgColor' : '#00b859'});
             $('#HostChngPasswordModal').modal('hide');
         }
@@ -53,6 +54,8 @@ function HostChangePassword(host_mobile_no, host_oldPass, host_newPass, host_Con
     })
 }
 //Host Password Change Finish
+
+//********************************************************************************
 
 //Host Info Update Start
 $('#hostEditBtnClick').click(function(){
@@ -104,6 +107,7 @@ function HostDataUpdate(hostId, HostName, HostEmail, HostAddress, HostPhone)
     }).then(function(response){
         if(response.status == 200 &&response.data == 1)
         {
+            $('#HostProfileModal').modal('hide');
             flash('Details Updated',{'bgColor' : '#00b859'});
             window.location.href='/hostprofile';
         }
@@ -115,5 +119,7 @@ function HostDataUpdate(hostId, HostName, HostEmail, HostAddress, HostPhone)
         flash('Catch',{'bgColor' : '#cccc00'});
     })
 }
+//Host Info Edit Finish
+
 </script>
 @endsection

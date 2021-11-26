@@ -32,6 +32,7 @@ function ChangePassword(mobile_no, oldPass, newPass, ConNewPass)
     }).then(function(response){
         if(response.status == 200 && response.data == 1)
         {
+            $('#UserChngPasswordModal').modal('hide');
             flash('Password Change Successfull',{'bgColor' : '#00b859'});
             $('#UserChngPasswordModal').modal('hide');
 
@@ -54,6 +55,7 @@ function ChangePassword(mobile_no, oldPass, newPass, ConNewPass)
 }
 //User Password Reset Close
 
+//***************************************************************************************
 
 //User Info Update Start
 $('#userEditBtnClick').click(function(){
@@ -103,6 +105,7 @@ function UserDataUpdate(user_id, NameUpdateId, EmailUpdateId, AddressUpdateId)
     }).then(function(response){
         if(response.status == 200 &&response.data == 1)
         {
+            $('#UserProfileModal').modal("hide");
             flash('Details Updated',{'bgColor' : '#00b859'});
             window.location.href='/userprofile';
         }
