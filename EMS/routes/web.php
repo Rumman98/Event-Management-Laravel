@@ -25,3 +25,5 @@ Route::post("/user-update", 'ProfileController@UpdateUserDetails')->middleware('
 
 Route::post("/host-details", 'ProfileController@HostDetails')->middleware('loginCheck');
 Route::post("/host-update", 'ProfileController@UpdateHostDetails')->middleware('loginCheck');
+
+Route::post("/add-event", 'EventController@AddEvent')->middleware('loginCheck');

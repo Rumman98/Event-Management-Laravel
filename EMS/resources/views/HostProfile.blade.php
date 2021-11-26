@@ -121,5 +121,51 @@ function HostDataUpdate(hostId, HostName, HostEmail, HostAddress, HostPhone)
 }
 //Host Info Edit Finish
 
+//****************************************************************************
+
+//Add Event Start
+$('#saveEventBtnID').click(function(){
+    var eventName        = $('#EventNameId').val();
+    var eventDes         = $('#EventDesID').val();
+    var eventType        = $('#EventTypeId').val();
+    var eventTime        = $('#EventTimeId').val();
+    var eventDate        = $('#EventDateId').val();
+    var eventVenue       = $('#EventVenueId').val();
+    var eventRegFee      = $('#EventRegAmountId').val();
+    var eventRegLastDate = $('#EventRegLastDateId').val();
+
+    addNewEvent(eventName, eventDes, eventType, eventTime, eventDate, eventVenue, eventRegFee, eventRegLastDate);
+})
+
+function addNewEvent(eventName, eventDes, eventType, eventTime, eventDate, eventVenue, eventRegFee, eventRegLastDate)
+{
+    let url = '/add-event';
+    axios.post(url, {
+        eventName:eventName,
+        eventDes:eventDes,
+        eventType:eventType,
+        eventTime:eventTime,
+        eventDate:eventDate,
+        eventVenue:eventVenue,
+        eventRegFee:eventRegFee,
+        eventRegLastDate:eventRegLastDate
+    }).then(function(response){
+        if(response.status == 200 && response.data == 1)
+        {
+            $('#AddEventModal').modal('hide');
+            flash('Event Successfully Submited for Review. ',{'bgColor' : '#00b859'});
+        }
+        else
+        {
+            flash('Event Add failed',{'bgColor' : '#f74134'});
+        }
+    }).catch(function(error){
+        flash('Catch',{'bgColor' : '#cccc00'});
+    })
+}
+//Add Event End
+
+//****************************************************************************
+
 </script>
 @endsection

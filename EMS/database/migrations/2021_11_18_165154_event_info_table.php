@@ -16,13 +16,14 @@ class EventInfoTable extends Migration
         Schema::create('EventInfoTable',function(Blueprint $table)
         {
             $table->bigIncrements('id');
-            $table->string('name');
-            $table->string('description');
-            $table->string('type');
-            $table->string('event_time_date');
-            $table->string('venue');
-            $table->string('registration_fee');
-            $table->string('event_edit_count');
+            $table->string('event_name');
+            $table->string('event_description');
+            $table->string('event_type');
+            $table->string('event_time');
+            $table->string('event_date');
+            $table->string('event_venue');
+            $table->string('event_registration_fee');
+            $table->string('event_reg_last_date');
         });
     }
 
