@@ -59,7 +59,7 @@
     <div class="container">
     <div class="row">
     <div class="col-md-12 text-center">
-    <p>Copyright Unity Event © 2021. All rights reserved.</p>
+    <p>Copyright Unity Event © 2021. Developed By: Abdul Jabbar Gazi And Reajur Rahaman.</p>
     </div>
     </div>
     </div>
