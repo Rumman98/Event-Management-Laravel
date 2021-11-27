@@ -27,3 +27,6 @@ Route::post("/host-details", 'ProfileController@HostDetails')->middleware('login
 Route::post("/host-update", 'ProfileController@UpdateHostDetails')->middleware('loginCheck');
 
 Route::post("/add-event", 'EventController@AddEvent')->middleware('loginCheck');
+Route::get('/contact-us', function () {
+    return view('Contact');
+});

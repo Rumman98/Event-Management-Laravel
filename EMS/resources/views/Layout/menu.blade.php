@@ -6,7 +6,7 @@
       <li><a href="{{'/running-events'}}">Running Events</a></li>
       <li><a href="{{'/gallery'}}">Gallery</a></li>
       <li><a href="{{'/login'}}">Login/Signup</a></li>
-      <li><a href="#contact">Contact Us</a></li>
+      <li><a href="{{'/contact-us'}}">Contact Us</a></li>
     </ul>
   </nav>
 
