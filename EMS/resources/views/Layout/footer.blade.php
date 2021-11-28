@@ -32,7 +32,7 @@
     <div class="widget no-box">
     <h5 class="widget-title">Get Started<span></span></h5>
     <p>Get yourself into this system to use full features.</p>
-    <a class="btn" href="{{('/registration')}}" target="_blank">Register Now</a>
+    <a class="btn" href="{{('/registration')}}">Register Now</a>
     </div>
     </div>
 

@@ -16,26 +16,26 @@
                     </div>
                     <div class="form-textbox">
                         <label for="name">Name</label>
-                        <input type="text" name="name" id="nameId" />
+                        <input type="text" name="name" id="nameId" required/>
                     </div>
                     <div class="form-textbox">
                         <label for="email">Email</label>
-                        <input type="email" name="email" id="emailId" />
+                        <input type="email" name="email" id="emailId" required/>
                     </div>
                     <div class="form-textbox">
                         <label for="email">Mobile Number</label>
-                        <input type="text" name="mobilenumber" id="mobileNoId" />
+                        <input type="number" name="mobilenumber" id="mobileNoId" required/>
                     </div>
                     <div class="form-textbox">
                         <label for="address">Address</label>
-                        <input type="text" name="address" id="addressId" />
+                        <input type="text" name="address" id="addressId" required/>
                     </div>
                     <div class="form-textbox">
                         <label for="pass">Password</label>
-                        <input type="password" name="pass" id="passId" />
+                        <input type="password" name="pass" id="passId" required/>
                     </div>
                     <div class="form-group">
-                        <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
+                        <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" checked/>
                         <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
                     </div>
                     <div class="form-textbox">

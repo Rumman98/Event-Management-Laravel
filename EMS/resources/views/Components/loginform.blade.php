@@ -17,6 +17,7 @@
                 <div class="form-textbox">
                     <label for="pass">Password</label>
                     <input type="password" name="password" id="password" required/>
+
                 </div>
                 <br>
                 <div class="form-textbox">
