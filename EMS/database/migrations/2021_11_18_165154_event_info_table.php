@@ -24,6 +24,9 @@ class EventInfoTable extends Migration
             $table->string('event_venue');
             $table->string('event_registration_fee');
             $table->string('event_reg_last_date');
+            $table->string('event_creator_phone_no');
+            $table->string('event_approval');
+            
         });
     }
 
