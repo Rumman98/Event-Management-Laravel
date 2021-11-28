@@ -31,6 +31,7 @@ class ProfileController extends Controller
 
     function ChangePasswordUser(Request $request)
     {
+        $value = Session::get('phone_number');
         $mobile_no   = $request->input('mobile_no');
         $oldPass     = $request->input('oldPass');
         $newPass     = $request->input('newPass');
@@ -38,7 +39,7 @@ class ProfileController extends Controller
 
         if($newPass == $ConNewPass)
         {
-            $checkOldPass = UserHostModel::where('phone_number', '=', $mobile_no)->where('password', '=', $oldPass)->count();
+            $checkOldPass = UserHostModel::where('phone_number', '=', $value)->where('password', '=', $oldPass)->count();
 
             if($checkOldPass == 1)
             {
@@ -68,6 +69,7 @@ class ProfileController extends Controller
 
     function ChangePasswordHost(Request $request)
     {
+        $value = Session::get('phone_number');
         $mobile_no   = $request->input('host_mobile_no');
         $oldPass     = $request->input('host_oldPass');
         $newPass     = $request->input('host_newPass');
@@ -75,7 +77,7 @@ class ProfileController extends Controller
 
         if($newPass == $ConNewPass)
         {
-            $checkOldPass = UserHostModel::where('phone_number', '=', $mobile_no)->where('password', '=', $oldPass)->count();
+            $checkOldPass = UserHostModel::where('phone_number', '=', $value)->where('password', '=', $oldPass)->count();
 
             if($checkOldPass == 1)
             {
