@@ -10,6 +10,9 @@
 
 <script type = "text/javascript">
 
+getEventDetails();
+
+
 //Host Password Change Start
 $('#host_confirm_pass').click(function() {
     var host_mobile_no  = $('#host_phone_no').val();
@@ -166,6 +169,125 @@ function addNewEvent(eventName, eventDes, eventType, eventTime, eventDate, event
 //Add Event End
 
 //****************************************************************************
+
+//Event Data Show Start
+function getEventDetails()
+{
+    let url = '/get-event-data';
+    axios.get(url).then(function(response){
+        if(response.status == 200)
+        {
+            var jsonData = response.data;
+            $.each(jsonData, function(i, item) {
+                    $('<tr>').html(
+                        "<td>" + jsonData[i].event_name + "</td>" +
+                        "<td>" + jsonData[i].event_description + "</td>" +
+                        "<td>" + jsonData[i].event_type + "</td>" +
+                        "<td>" + jsonData[i].event_time + "</td>" +
+                        "<td>" + jsonData[i].event_venue + "</td>" +
+                        "<td>" + jsonData[i].event_registration_fee + "</td>" +
+                        "<td>" + jsonData[i].event_reg_last_date + "</td>" +
+                        "<td>" + jsonData[i].event_approval + "</td>" +
+                        "<td><button type='submit' class='submit' data-toggle='modal' id='editEventBtn' data-target='#EditEventModal' data-id=" + jsonData[i].id +"  style='padding: 11px;'>Edit</button> <button type='submit' class='submit' data-toggle='modal' id='deleteEventBtn' data-target='#DeleteEventModal' data-id=" + jsonData[i].id +" style='padding: 11px;'>Delete</button></td>"
+                        
+                    ).appendTo('#event_show');
+                });
+
+                $('#editEventBtn').click(function(){
+                    var event_id = $(this).data('id');
+                    eventDataShow(event_id);
+                })
+
+                $('#deleteEventBtn').click(function(){
+                    var event_id = $(this).data('id');
+                    eventDelete(event_id);
+                })
+
+        }
+        else
+        {
+
+        }
+    }).catch(function(error){
+
+    })
+}
+//Event Data Show End
+
+//****************************************************************************
+
+//Event Data Edit Start
+
+function eventDataShow(event_id)
+{
+    let url = '/event-details';
+    axios.post(url, {
+        eventId: event_id
+    }).then(function(response){
+        if(response.status == 200)
+        {
+            var JsonData = response.data;
+            $('#event_id').val(JsonData[0].id);
+            $('#EditEventNameId').val(JsonData[0].event_name);
+            $('#EditEventDesID').val(JsonData[0].event_description);
+            $('#EditEventTypeId').val(JsonData[0].event_type);
+            $('#EditEventTimeId').val(JsonData[0].event_time);
+            $('#EditEventDateId').val(JsonData[0].event_date);
+            $('#EditEventVenueId').val(JsonData[0].event_venue);
+            $('#EditEventRegAmountId').val(JsonData[0].event_registration_fee);
+            $('#EditEventRegLastDateId').val(JsonData[0].event_reg_last_date);
+        }
+        else
+        {
+            flash('Something Went Wrong. Try Again Later',{'bgColor' : '#f74134'});
+        }
+    }).catch(function(error){
+        flash('Catch',{'bgColor' : '#cccc00'});
+    })
+}
+
+$('#confirmEditEventBtnID').click(function(){
+    var event_id          = $('#event_id').val();
+    var EventName         = $('#EditEventNameId').val();
+    var EventDes          = $('#EditEventDesID').val();
+    var EventType         = $('#EditEventTypeId').val();
+    var EventTime         = $('#EditEventTimeId').val();
+    var EventDate         = $('#EditEventDateId').val();
+    var EventVenue        = $('#EditEventVenueId').val();
+    var EventRegAmount    = $('#EditEventRegAmountId').val();
+    var EventRegLastDate  = $('#EditEventRegLastDateId').val();
+
+    editEventDetails(event_id, EventName, EventDes, EventType, EventTime, EventDate, EventVenue, EventRegAmount, EventRegLastDate);
+})
+
+function editEventDetails(event_id, EventName, EventDes, EventType, EventTime, EventDate, EventVenue, EventRegAmount, EventRegLastDate)
+{
+    let url = '/event-update';
+
+    axios.post(url, {
+        event_id: event_id,
+        EventName:EventName,
+        EventDes:EventDes,
+        EventType:EventType,
+        EventTime:EventTime,
+        EventDate:EventDate,
+        EventVenue:EventVenue,
+        EventRegAmount:EventRegAmount,
+        EventRegLastDate:EventRegLastDate
+    }).then(function(response){
+        if(response.status == 200 && response.data == 1)
+        {
+            flash('Event Successfully Updated. ',{'bgColor' : '#00b859'});
+            window.location.href='/hostprofile';
+        }
+        else
+        {
+            flash('Something Went Wrong. Try Again Later',{'bgColor' : '#f74134'});
+        }
+    }).catch(function(error){
+        flash('Catch',{'bgColor' : '#cccc00'});
+    })
+}
 
 </script>
 @endsection

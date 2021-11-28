@@ -79,64 +79,8 @@
                                         <th class="column6">Action</th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                        <tr>
-                                            <td>Batch 13 Reunion</td>
-                                            <td>Batch 13 Reunion</td>
-                                            <td>Reunion</td>
-                                            <td>11 january 2021</td>
-                                            <td>Grand Sultan restaurant</td>
-                                            <td>200tk</td>
-                                            <td>11 january 2021</td>
-                                            <td>Pending</td>
-                                            <td>
-                                                <button type="submit" class="submit" data-toggle="modal" data-target="#EditEventModal"  style="padding: 11px;">Edit</button>
-                                                <button type="submit" class="submit" data-toggle="modal" data-target="#DeleteEventModal" style="padding: 11px;">Delete</button>
-                                            </td>
-
-                                        </tr>
-                                        <tr>
-                                            <td>Batch 13 Reunion</td>
-                                            <td>Batch 13 Reunion</td>
-                                            <td>Reunion</td>
-                                            <td>11 january 2021</td>
-                                            <td>Grand Sultan restaurant</td>
-                                            <td>200tk</td>
-                                            <td>11 january 2021</td>
-                                            <td>Pending</td>
-                                            <td>
-                                                <button type="submit" class="submit" data-toggle="modal" data-target="#EditEventModal"  style="padding: 11px;">Edit</button>
-                                                <button type="submit" class="submit" data-toggle="modal" data-target="#DeleteEventModal" style="padding: 11px;">Delete</button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Batch 13 Reunion</td>
-                                            <td>Batch 13 Reunion</td>
-                                            <td>Reunion</td>
-                                            <td>11 january 2021</td>
-                                            <td>Grand Sultan restaurant</td>
-                                            <td>200tk</td>
-                                            <td>11 january 2021</td>
-                                            <td>Approved</td>
-                                            <td>
-                                                <button type="submit" class="submit" data-toggle="modal" data-target="#EditEventModal"  style="padding: 11px;">Edit</button>
-                                                <button type="submit" class="submit" data-toggle="modal" data-target="#DeleteEventModal" style="padding: 11px;">Delete</button>
-                                            </td>
-                                        </tr>
-                                            <tr>
-                                                <td>Batch 13 Reunion</td>
-                                            <td>Batch 13 Reunion</td>
-                                            <td>Reunion</td>
-                                            <td>11 january 2021</td>
-                                            <td>Grand Sultan restaurant</td>
-                                            <td>200tk</td>
-                                            <td>11 january 2021</td>
-                                            <td>Approved</td>
-                                            <td>
-                                                <button type="submit" class="submit" data-toggle="modal" data-target="#EditEventModal"  style="padding: 11px;">Edit</button>
-                                                <button type="submit" class="submit" data-toggle="modal" data-target="#DeleteEventModal" style="padding: 11px;">Delete</button>
-                                            </td>
-                                            </tr>
+                                <tbody id="event_show">
+                                        
                                 </tbody>
                             </table>
                         </div>
@@ -204,7 +148,7 @@
       @endforeach
 
 
-{{-- Add Event Modal --}}
+{{-- Add Event Modal --}} 
 
     <div class="modal fade" id="AddEventModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -258,6 +202,7 @@
 
             </div>
             <div class="modal-body" >
+              <input type="hidden" id="event_id">
                 <input id="EditEventNameId" type="text" class="form-control mb-3" placeholder="Event Name" style="background-color: #464646; color: white;">
                 <textarea id="EditEventDesID" class="form-control mb-3" placeholder="Event Description"  maxlength="60" style="min-width: 100%; background-color: #464646; color: white; margin-top: 5px; margin-bottom: 5px;"></textarea>
                 <span style="color: white;">Update Your Event Type</span>
@@ -284,7 +229,7 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" id="saveEventBtnID" class="btn btn-primary">Update Event</button>
+              <button type="button" id="confirmEditEventBtnID" class="btn btn-primary">Update Event</button>
             </div>
           </div>
         </div>
