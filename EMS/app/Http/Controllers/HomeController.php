@@ -20,4 +20,9 @@ class HomeController extends Controller
     {
         return view('AllGallery');
     }
+
+    function ContactPage() 
+    {
+        return view('Contact');
+    }
 }
