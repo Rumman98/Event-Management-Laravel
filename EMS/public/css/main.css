@@ -454,12 +454,13 @@ color: #fff;
 .services .section-header p{color: #bcbcbc;}
 .services-content {
 	padding: 30px 30px 20px;
-	/* margin-top: 30px; */
-	border: 1px solid rgba(60, 60, 60, 0.53);
-	/* border-radius: 10px; */
+	border: 1px solid rgb(145 145 145);
+	border-radius: 7px;
 	text-align: center;
 	color: #fff;
 	background: #454444;
+    margin-top: 30px;
+
 }
 .services-content b {
     padding: 0;
@@ -1574,6 +1575,40 @@ transition: all 250ms ease-in-out 0s;
     height: 200px;
 }
 
+.modal-content p{
+    display: block;
+    width: 100%;
+
+   }
+
+   .modalbg {
+    animation:slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, #222222 50%, #727272 50%);
+    bottom:0;
+    left:-50%;
+    opacity:.5;
+    position:fixed;
+    right:-50%;
+    top:0;
+    z-index:-1;
+  }
+
+  .modalbg2 {
+    animation-direction:alternate-reverse;
+    animation-duration:4s;
+  }
+
+  .modalbg3 {
+    animation-duration:5s;
+  }
+  @keyframes slide {
+    0% {
+      transform:translateX(-25%);
+    }
+    100% {
+      transform:translateX(25%);
+    }
+  }
 
 
 

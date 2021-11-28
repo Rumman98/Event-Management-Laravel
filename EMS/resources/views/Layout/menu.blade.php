@@ -29,8 +29,6 @@ else {
     <li><a href="{{'/login'}}">Login/Signup</a></li>
     @php
 }
-
-
 @endphp
 
 
