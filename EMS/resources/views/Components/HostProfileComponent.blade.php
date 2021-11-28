@@ -90,8 +90,8 @@
                                             <td>11 january 2021</td>
                                             <td>Pending</td>
                                             <td>
-                                                <button type="submit" class="submit" style="padding: 11px;">Edit</button>
-                                                <button type="submit" class="submit" style="padding: 11px;">Delete</button>
+                                                <button type="submit" class="submit" data-toggle="modal" data-target="#EditEventModal"  style="padding: 11px;">Edit</button>
+                                                <button type="submit" class="submit" data-toggle="modal" data-target="#DeleteEventModal" style="padding: 11px;">Delete</button>
                                             </td>
 
                                         </tr>
@@ -105,8 +105,8 @@
                                             <td>11 january 2021</td>
                                             <td>Pending</td>
                                             <td>
-                                                <button type="submit" class="submit" style="padding: 11px;">Edit</button>
-                                                <button type="submit" class="submit" style="padding: 11px;">Delete</button>
+                                                <button type="submit" class="submit" data-toggle="modal" data-target="#EditEventModal"  style="padding: 11px;">Edit</button>
+                                                <button type="submit" class="submit" data-toggle="modal" data-target="#DeleteEventModal" style="padding: 11px;">Delete</button>
                                             </td>
                                         </tr>
                                         <tr>
@@ -119,8 +119,8 @@
                                             <td>11 january 2021</td>
                                             <td>Approved</td>
                                             <td>
-                                                <button type="submit" class="submit" style="padding: 11px;">Edit</button>
-                                                <button type="submit" class="submit" style="padding: 11px;">Delete</button>
+                                                <button type="submit" class="submit" data-toggle="modal" data-target="#EditEventModal"  style="padding: 11px;">Edit</button>
+                                                <button type="submit" class="submit" data-toggle="modal" data-target="#DeleteEventModal" style="padding: 11px;">Delete</button>
                                             </td>
                                         </tr>
                                             <tr>
@@ -133,8 +133,8 @@
                                             <td>11 january 2021</td>
                                             <td>Approved</td>
                                             <td>
-                                                <button type="submit" class="submit" style="padding: 11px;">Edit</button>
-                                                <button type="submit" class="submit" style="padding: 11px;">Delete</button>
+                                                <button type="submit" class="submit" data-toggle="modal" data-target="#EditEventModal"  style="padding: 11px;">Edit</button>
+                                                <button type="submit" class="submit" data-toggle="modal" data-target="#DeleteEventModal" style="padding: 11px;">Delete</button>
                                             </td>
                                             </tr>
                                 </tbody>
@@ -204,7 +204,7 @@
       @endforeach
 
 
-
+{{-- Add Event Modal --}}
 
     <div class="modal fade" id="AddEventModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -241,6 +241,68 @@
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
               <button type="button" id="saveEventBtnID" class="btn btn-primary">Create Event</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      {{-- Edit Event Modal --}}
+
+      <div class="modal fade" id="EditEventModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content" style="background-color: #464646">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Update Event Information</h5>
+
+            </div>
+            <div class="modal-body" >
+                <input id="EditEventNameId" type="text" class="form-control mb-3" placeholder="Event Name" style="background-color: #464646; color: white;">
+                <textarea id="EditEventDesID" class="form-control mb-3" placeholder="Event Description"  maxlength="60" style="min-width: 100%; background-color: #464646; color: white; margin-top: 5px; margin-bottom: 5px;"></textarea>
+                <span style="color: white;">Update Your Event Type</span>
+                <select id="EditEventTypeId" name="event type" class="form-control mb-3" style="background-color: #464646; color: white; margin-top: 5px; margin-bottom: 5px;">
+                    <option value="Reunion">Reunion</option>
+                    <option value="Seminar">Seminar</option>
+                </select>
+            <div class="row">
+                <div class="col-md-6">
+                <span style="color: white">Update Event Time </span>
+                <input id="EditEventTimeId" type="time" class="form-control mb-3" placeholder="Event Time" style="background-color: #464646; color: white;">
+            </div>
+            <div class="col-md-6">
+                <span style="color: white">Update Event Date </span>
+                <input id="EditEventDateId" type="date" class="form-control mb-3" placeholder="Event Date" style="background-color: #464646; color: white;">
+            </div>
+            </div>
+
+            <input id="EditEventVenueId" type="text" class="form-control mb-3" placeholder="Venue" style="background-color: #464646; color: white;">
+            <input id="EditEventRegAmountId" type="text" class="form-control mb-3" placeholder="Event Registration Amount" style="background-color: #464646; color: white; margin-bottom:5px;">
+            <span style="color: white;">Update Registration Last Date</span>
+            <input id="EditEventRegLastDateId" type="date" class="form-control mb-3" placeholder="Event Registration Last Date" style="background-color: #464646; color: white;">
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" id="saveEventBtnID" class="btn btn-primary">Update Event</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      {{-- Delete Modal --}}
+
+      <div class="modal fade" id="DeleteEventModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content" style="background-color: #464646">
+            <div class="modal-body" >
+                <h4 style="color: white;">Do you want to delete?</h4>
+                <h5 id="EventDeleteID" class=""></h5>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+              <button type="button" id="DeleteEventBtnID" class="btn btn-primary">Yes</button>
             </div>
           </div>
         </div>

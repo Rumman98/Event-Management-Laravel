@@ -40,7 +40,7 @@
 
         <div class="col-md-6 d-flex" style="border: 2px solid; padding-top: 19px; padding-bottom: 19px; background-color: #212121; margin-left: 0px;">
             <h5 style="color: white;font-weight: 400; text-align:center;">Our Location</h5>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7299.263547745853!2d90.41279297301557!3d23.831689652280193!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c65e78f46ee1%3A0x3e009fd37c89634f!2sNikunja%202%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1637991872956!5m2!1sen!2sbd" width="550" height="323" style="border:5; filter: invert(100%) contrast(100%);" allowfullscreen="" loading="lazy"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7299.263547745853!2d90.41279297301557!3d23.831689652280193!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c65e78f46ee1%3A0x3e009fd37c89634f!2sNikunja%202%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1637991872956!5m2!1sen!2sbd" width="550" height="323" style="border:10; filter: invert(100%) contrast(100%);" allowfullscreen="" loading="lazy"></iframe>
         </div>
       </div>
 
