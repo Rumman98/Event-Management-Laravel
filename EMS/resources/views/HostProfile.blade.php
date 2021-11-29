@@ -200,7 +200,7 @@ function getEventDetails()
 
                 $('#deleteEventBtn').click(function(){
                     var event_id = $(this).data('id');
-                    eventDelete(event_id);
+                    $('#deleteEventID').html(event_id);
                 })
 
         }
@@ -265,19 +265,51 @@ function editEventDetails(event_id, EventName, EventDes, EventType, EventTime, E
     let url = '/event-update';
 
     axios.post(url, {
-        event_id: event_id,
-        EventName:EventName,
-        EventDes:EventDes,
-        EventType:EventType,
-        EventTime:EventTime,
-        EventDate:EventDate,
-        EventVenue:EventVenue,
-        EventRegAmount:EventRegAmount,
-        EventRegLastDate:EventRegLastDate
+        event_id         : event_id,
+        EventName        :EventName,
+        EventDes         :EventDes,
+        EventType        :EventType,
+        EventTime        :EventTime,
+        EventDate        :EventDate,
+        EventVenue       :EventVenue,
+        EventRegAmount   :EventRegAmount,
+        EventRegLastDate :EventRegLastDate
     }).then(function(response){
         if(response.status == 200 && response.data == 1)
         {
             flash('Event Successfully Updated. ',{'bgColor' : '#00b859'});
+            window.location.href='/hostprofile';
+        }
+        else
+        {
+            flash('Something Went Wrong. Try Again Later',{'bgColor' : '#f74134'});
+        }
+    }).catch(function(error){
+        flash('Catch',{'bgColor' : '#cccc00'});
+    })
+}
+
+//Event Data Edit End
+
+//****************************************************************************
+
+//Event Delete Start
+
+$('#DeleteEventBtnID').click(function(){
+    var event_id = $('#deleteEventID').html();
+    eventDelete(event_id);
+})
+
+function eventDelete(event_id)
+{
+    let url = '/event-delete';
+    
+    axios.post(url, {
+        event_id: event_id
+    }).then(function(response){
+        if(response.status == 200 && response.data == 1)
+        {
+            flash('Event Successfully Deleted. ',{'bgColor' : '#00b859'});
             window.location.href='/hostprofile';
         }
         else
