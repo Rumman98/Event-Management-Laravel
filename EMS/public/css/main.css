@@ -1441,7 +1441,7 @@ transition: all 250ms ease-in-out 0s;
     text-align: center;
     font-family: "Open Sans", Arial, sans-serif;
     text-align: center;
-    font-size: 14px;
+        font-size: 14px;
 
   }
   table thead tr {
