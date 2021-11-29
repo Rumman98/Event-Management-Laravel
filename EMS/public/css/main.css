@@ -130,9 +130,7 @@ ul li {
 	position: relative;
 	width: 100%;
 	z-index: 999;
-	background: #000;
-	height: 60px;
-    border: 1px solid;
+    height: 60px;
 }
 #header .header-content {
 	margin: 0 auto;
@@ -149,7 +147,6 @@ ul li {
 	float: left;
 	font-size: 27px;
 	font-weight:700;
-	color: #000;
 	text-decoration:none;
 	text-transform:uppercase;
 	letter-spacing:7px;
@@ -187,7 +184,7 @@ ul li {
 	border-bottom: 1px solid #232323 !important;
 }
 #header.fixed a {
-	color: #c3c3c3;
+	color: #000000;
 }
 #header.fixed .header-content {
 	border-bottom: 0;
@@ -195,7 +192,7 @@ ul li {
 }
 #header.fixed .nav-toggle {
 	top: 18px;
-	color: #000;
+	color: rgb(155, 155, 155);
 }
 .navigation.open {
 	opacity: 0.9;

@@ -189,7 +189,7 @@ function getEventDetails()
                         "<td>" + jsonData[i].event_reg_last_date + "</td>" +
                         "<td>" + jsonData[i].event_approval + "</td>" +
                         "<td><button type='submit' class='submit' data-toggle='modal' id='editEventBtn' data-target='#EditEventModal' data-id=" + jsonData[i].id +"  style='padding: 11px;'>Edit</button> <button type='submit' class='submit' data-toggle='modal' id='deleteEventBtn' data-target='#DeleteEventModal' data-id=" + jsonData[i].id +" style='padding: 11px;'>Delete</button></td>"
-                        
+
                     ).appendTo('#event_show');
                 });
 
@@ -303,7 +303,7 @@ $('#DeleteEventBtnID').click(function(){
 function eventDelete(event_id)
 {
     let url = '/event-delete';
-    
+
     axios.post(url, {
         event_id: event_id
     }).then(function(response){

@@ -7,6 +7,7 @@ Route::get('/', 'HomeController@Index');
 Route::get('/running-events', 'HomeController@RunningEventPage');
 Route::get('/gallery', 'HomeController@AllGalaryPage');
 Route::get('/contact-us', 'HomeController@ContactPage');
+Route::get('/register-event', 'EventController@RegisterEventPage');
 
 Route::get('/registration', 'RegistrationController@RegistrationPage');
 Route::post('/user-reg', 'RegistrationController@UserRegistration');
@@ -34,5 +35,8 @@ Route::get("/get-event-data", "EventController@GetEventDetails")->middleware('lo
 Route::post("/event-details", 'EventController@EventDetailsforEdit')->middleware('loginCheck');
 Route::post("/event-update", 'EventController@EventUpdate')->middleware('loginCheck');
 Route::post("/event-delete", 'EventController@EventDelete')->middleware('loginCheck');
+
+
+
 
 
