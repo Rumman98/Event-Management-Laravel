@@ -56,7 +56,7 @@ class EventController extends Controller
 
         $details = EventInfoTable::where('id', '=', $eventId)->get();
 
-        return $details;
+        return $details; 
     }
 
     function EventUpdate(Request $request)
