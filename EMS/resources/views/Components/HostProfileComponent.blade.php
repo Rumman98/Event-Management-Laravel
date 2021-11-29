@@ -80,7 +80,7 @@
                                     </tr>
                                 </thead>
                                 <tbody id="event_show">
-                                        
+
                                 </tbody>
                             </table>
                         </div>
@@ -148,7 +148,7 @@
       @endforeach
 
 
-{{-- Add Event Modal --}} 
+{{-- Add Event Modal --}}
 
     <div class="modal fade" id="AddEventModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
         <div class="modal-dialog" role="document">

@@ -96,7 +96,7 @@ class EventController extends Controller
     function EventDelete(Request $request)
     {
         $id = $request->input('event_id');
-        
+
         $result = EventInfoTable::where('id', $id)->delete();
 
         if($result == true)
@@ -107,5 +107,10 @@ class EventController extends Controller
         {
             return 0;
         }
+    }
+
+    function RegisterEventPage()
+    {
+        return view('RegisterEvent');
     }
 }

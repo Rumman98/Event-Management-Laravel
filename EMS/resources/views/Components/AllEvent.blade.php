@@ -129,7 +129,8 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" id="saveEventBtnID" class="btn btn-primary">Register This Event</button>
+              <a href="{{'/register-event'}}"><button type="submit" id="RegisterEventID" class="btn btn-primary">Register This Event</button></a>
+              {{-- <button type="button" id="saveEventBtnID" class="btn btn-primary"><a href="{{'/gallery'}}"></a></button> --}}
             </div>
           </div>
         </div>
