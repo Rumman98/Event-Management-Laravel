@@ -69,7 +69,6 @@
                                 <thead>
                                     <tr class="table100-head">
                                         <th class="column1">Event Name</th>
-                                        <th class="column1">Event Description</th>
                                         <th class="column1">Event Type</th>
                                         <th class="column2">Event Time</th>
                                         <th class="column3">Venue</th>

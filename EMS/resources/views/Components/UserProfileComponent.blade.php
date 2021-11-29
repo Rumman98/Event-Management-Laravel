@@ -80,7 +80,7 @@
                                             <td>Grand Sultan restaurant</td>
                                             <td>200tk</td>
                                             <td>Pending</td>
-                                            <td><button type="submit" class="submit" style="width: 82%; padding: 11px;">Download Invitation Card</button></td>
+                                            <td><button type="submit" class="submit" style="width: 82%; padding: 10px;">Download Invitation Card</button></td>
 
                                         </tr>
                                         <tr>
@@ -89,21 +89,21 @@
                                             <td>Grand Sultan restaurant</td>
                                             <td>200tk</td>
                                             <td>Pending</td>
-                                            <td><button type="submit" class="submit" style="width: 82%; padding: 11px;">Download Invitation Card</button></td>                                        </tr>
+                                            <td><button type="submit" class="submit" style="width: 82%; padding: 10px;">Download Invitation Card</button></td>                                        </tr>
                                         <tr>
                                             <td>Batch 13 Reunion</td>
                                             <td>11 january 2021</td>
                                             <td>Grand Sultan restaurant</td>
                                             <td>200tk</td>
                                             <td>Approved</td>
-                                            <td><button type="submit" class="submit" style="width: 82%; padding: 11px;">Download Invitation Card</button></td>                                        </tr>
+                                            <td><button type="submit" class="submit" style="width: 82%; padding: 10px;">Download Invitation Card</button></td>                                        </tr>
                                         <tr>
                                             <td>Batch 13 Reunion</td>
                                             <td>11 january 2021</td>
                                             <td>Grand Sultan restaurant</td>
                                             <td>200tk</td>
                                             <td>Approved</td>
-                                            <td><button type="submit" class="submit" style="width: 82%; padding: 11px;">Download Invitation Card</button></td>                                        </tr>
+                                            <td><button type="submit" class="submit" style="width: 82%; padding: 10px;">Download Invitation Card</button></td>                                        </tr>
 
                                 </tbody>
                             </table>

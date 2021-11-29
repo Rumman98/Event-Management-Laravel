@@ -1434,23 +1434,26 @@ transition: all 250ms ease-in-out 0s;
   }
   table * {
     position: relative;
+
   }
   table td, table th {
     padding-left: 8px;
     text-align: center;
+    font-family: "Open Sans", Arial, sans-serif;
+    text-align: center;
+    font-size: 14px;
+
   }
   table thead tr {
     height: 60px;
     background: #ff5518;
+
   }
   table tbody tr {
     height: 50px;
   }
   table tbody tr:last-child {
     border: 0;
-  }
-  table td, table th {
-    text-align: center;
   }
   table td.l, table th.l {
     text-align: center;
@@ -1464,8 +1467,8 @@ transition: all 250ms ease-in-out 0s;
 
 
   .table100-head th{
-    font-family: OpenSans-Regular;
-    font-size: 18px;
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 16px;
     color: #fff;
     line-height: 1.2;
     font-weight: unset;

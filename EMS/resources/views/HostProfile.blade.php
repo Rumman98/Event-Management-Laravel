@@ -181,7 +181,6 @@ function getEventDetails()
             $.each(jsonData, function(i, item) {
                     $('<tr>').html(
                         "<td>" + jsonData[i].event_name + "</td>" +
-                        "<td>" + jsonData[i].event_description + "</td>" +
                         "<td>" + jsonData[i].event_type + "</td>" +
                         "<td>" + jsonData[i].event_time + "</td>" +
                         "<td>" + jsonData[i].event_venue + "</td>" +

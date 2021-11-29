@@ -10,14 +10,6 @@
                     <p style="color: white"><span style="color: rgb(255, 154, 87);; font-size: 18px;">Name </span>: Rumman</p>
                 </div>
                 <div class="bio-row">
-                    <p style="color: white"><span style="color: rgb(255, 154, 87);; font-size: 18px;">Email </span>:abc@gmail.com</p>
-                </div>
-
-                <div class="bio-row">
-                  <p style="color: white"><span style="color: rgb(255, 154, 87);; font-size: 18px;">Address</span>: abcd</p>
-              </div>
-
-                <div class="bio-row">
                     <p style="color: white"><span style="color: rgb(255, 154, 87);; font-size: 18px;">Phone</span>: 01111</p>
                 </div>
 
