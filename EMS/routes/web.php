@@ -34,6 +34,7 @@ Route::post("/add-event", 'EventController@AddEvent')->middleware('loginCheck');
 Route::get("/get-event-data", "EventController@GetEventDetails")->middleware('loginCheck');
 
 Route::post("/event-details", 'EventController@EventDetailsforEdit')->middleware('loginCheck');
+Route::post("/event-details-modal", 'EventController@EventDetailsforModal');
 Route::post("/event-update", 'EventController@EventUpdate')->middleware('loginCheck');
 Route::post("/event-delete", 'EventController@EventDelete')->middleware('loginCheck');
 

@@ -46,15 +46,17 @@ class EventController extends Controller
 
     function GetEventDetails()
     {
-        $eventData = json_encode(EventInfoTable::get());
+        $value            = Session::get('phone_number');
+        $eventData        = json_encode(EventInfoTable::where('event_creator_phone_no', $value)->get());
         return $eventData;
     }
 
     function EventDetailsforEdit(Request $request)
     {
-        $eventId = $request->input('eventId');
+        $eventId          = $request->input('eventId');
+        $value            = Session::get('phone_number');
 
-        $details = EventInfoTable::where('id', '=', $eventId)->get();
+        $details = EventInfoTable::where('id', '=', $eventId)->where('event_creator_phone_no', $value)->get();
 
         return $details;
     }
@@ -113,6 +115,18 @@ class EventController extends Controller
     {
         return view('RegisterEvent');
     }
+
+
+    function EventDetailsforModal(Request $request)
+    {
+        $id = $request->input('eventDetailsid');
+
+        $result = json_encode(EventInfoTable::where('id', $id)->get());
+
+        return $result;
+
+    }
+
 
     function EventSummary(){
         return view('EventSummary');
