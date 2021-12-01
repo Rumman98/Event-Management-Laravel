@@ -115,4 +115,14 @@ class EventController extends Controller
     {
         return view('RegisterEvent');
     }
+
+    function EventDetailsforModal(Request $request)
+    {
+        $id = $request->input('eventDetailsid');
+
+        $result = json_encode(EventInfoTable::where('id', $id)->get());
+
+        return $result;
+
+    }
 }
