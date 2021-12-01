@@ -157,6 +157,7 @@ function addNewEvent(eventName, eventDes, eventType, eventTime, eventDate, event
         {
             $('#AddEventModal').modal('hide');
             flash('Event Successfully Submited for Review. ',{'bgColor' : '#00b859'});
+            window.location.href='/hostprofile';
         }
         else
         {
@@ -187,19 +188,21 @@ function getEventDetails()
                         "<td>" + jsonData[i].event_registration_fee + "</td>" +
                         "<td>" + jsonData[i].event_reg_last_date + "</td>" +
                         "<td>" + jsonData[i].event_approval + "</td>" +
-                        "<td><button type='submit' class='submit' data-toggle='modal' id='editEventBtn' data-target='#EditEventModal' data-id=" + jsonData[i].id +"  style='padding: 11px;'>Edit</button> <button type='submit' class='submit' data-toggle='modal' id='deleteEventBtn' data-target='#DeleteEventModal' data-id=" + jsonData[i].id +" style='padding: 11px;'>Delete</button></td>"
+                        "<td><a class='editEventBtn' data-id=" + jsonData[i].id + "><i class='fas fa-edit'></i></a> <a class='deleteEventBtn' data-id=" + jsonData[i].id + "><i class='fas fa-trash-alt'></i></a></td>"
 
                     ).appendTo('#event_show');
                 });
 
-                $('#editEventBtn').click(function(){
+                $('.editEventBtn').click(function(){
                     var event_id = $(this).data('id');
                     eventDataShow(event_id);
+                    $('#EditEventModal').modal('show');
                 })
 
-                $('#deleteEventBtn').click(function(){
+                $('.deleteEventBtn').click(function(){
                     var event_id = $(this).data('id');
                     $('#deleteEventID').html(event_id);
+                    $('#DeleteEventModal').modal('show');
                 })
 
         }
