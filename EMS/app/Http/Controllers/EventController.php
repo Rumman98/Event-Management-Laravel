@@ -113,4 +113,8 @@ class EventController extends Controller
     {
         return view('RegisterEvent');
     }
+
+    function EventSummary(){
+        return view('EventSummary');
+    }
 }
