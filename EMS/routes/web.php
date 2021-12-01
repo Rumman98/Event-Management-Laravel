@@ -8,6 +8,7 @@ Route::get('/running-events', 'HomeController@RunningEventPage');
 Route::get('/gallery', 'HomeController@AllGalaryPage');
 Route::get('/contact-us', 'HomeController@ContactPage');
 Route::get('/register-event', 'EventController@RegisterEventPage');
+Route::get('/event-summary', 'EventController@EventSummary');
 
 Route::get('/registration', 'RegistrationController@RegistrationPage');
 Route::post('/user-reg', 'RegistrationController@UserRegistration');

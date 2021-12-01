@@ -116,6 +116,7 @@ class EventController extends Controller
         return view('RegisterEvent');
     }
 
+
     function EventDetailsforModal(Request $request)
     {
         $id = $request->input('eventDetailsid');
@@ -124,5 +125,10 @@ class EventController extends Controller
 
         return $result;
 
+    }
+
+
+    function EventSummary(){
+        return view('EventSummary');
     }
 }
