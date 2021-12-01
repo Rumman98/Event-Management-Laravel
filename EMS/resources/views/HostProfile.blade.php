@@ -189,7 +189,7 @@ function getEventDetails()
                         "<td>" + jsonData[i].event_reg_last_date + "</td>" +
                         "<td>" + jsonData[i].event_approval + "</td>" +
 
-                        "<td><a class='editEventBtn' data-id=" + jsonData[i].id + "><i class='fas fa-edit'></i></a> <a class='deleteEventBtn' data-id=" + jsonData[i].id + "><i class='fas fa-trash-alt'></i></a></td>"
+                        "<td><a class='editEventBtn' data-id=" + jsonData[i].id + "><i class='fas fa-edit' style='color:antiquewhite;'></i></a><a class='deleteEventBtn' data-id=" + jsonData[i].id + "><i class='fas fa-trash-alt' style='color:antiquewhite; padding:13px;'></i></a> <a href='{{'/event-summary'}}'><i class='fas fa-eye' style='color:antiquewhite;'></i></a></td>"
 
                     ).appendTo('#event_show');
                 });
