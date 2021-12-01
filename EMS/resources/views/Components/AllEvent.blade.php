@@ -1,82 +1,17 @@
 <section id="services" class="services service-section">
     <div class="container">
       <div class="row">
+
+        @foreach ($eventData as $eventData)  
         <div class="col-md-4 col-sm-6 services text-center">
           <div class="services-content">
-            <h4>Event Name</h4>
-            <h6 style="overflow: hidden;text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 4;line-clamp: 2; -webkit-box-orient: vertical;">
-                No matter how authentic your description is, it’s still only content. When you present an event description that is well designed and eye-catching and pair your content strategy with in-person events you are organising, both tactics will be more effective and will result in an increase in your event attendance.
-                Events, by their very nature, are about connections. Through your bright event description, you can boost attendance, sponsorship, or hosting of an event; make new connections; or strengthen the old ones. Learn how to write an event description that will attract the media’s attention.</h6>
-            <p>Event time on <time datetime="2008-02-14 20:00">Valentines day</time>.</p>
-            <button type="button" id="ViewEventDetailsId" class="btn btn-primary" data-toggle="modal" data-target="#ShowEventDetailsModal">View Details</button>
+            <h4>{{$eventData->event_name}}</h4>
+            <h6 style="overflow: hidden;text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 4;line-clamp: 2; -webkit-box-orient: vertical;">{{$eventData->event_description}}</h6>
+            <p>Event time on <time datetime="">{{$eventData->event_time}}</time>.</p>
+            <button type="button" id="ViewEventDetailsId" class="btn btn-primary" data-id="{{$eventData->id}}" data-toggle="modal" data-target="#ShowEventDetailsModal">View Details</button>
           </div>
         </div>
-
-        <div class="col-md-4 col-sm-6 services text-center">
-            <div class="services-content">
-              <h4>Event Name</h4>
-              <h6 style="overflow: hidden;text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 4;line-clamp: 2; -webkit-box-orient: vertical;">
-                  No matter how authentic your description is, it’s still only content. When you present an event description that is well designed and eye-catching and pair your content strategy with in-person events you are organising, both tactics will be more effective and will result in an increase in your event attendance.
-                  Events, by their very nature, are about connections. Through your bright event description, you can boost attendance, sponsorship, or hosting of an event; make new connections; or strengthen the old ones. Learn how to write an event description that will attract the media’s attention.</h6>
-              <p>Event time on <time datetime="2008-02-14 20:00">Valentines day</time>.</p>
-              <button type="button" id="ViewEventDetailsId" class="btn btn-primary" data-toggle="modal" data-target="#ShowEventDetailsModal">View Details</button>
-            </div>
-          </div>
-
-          <div class="col-md-4 col-sm-6 services text-center">
-            <div class="services-content">
-              <h4>Event Name</h4>
-              <h6 style="overflow: hidden;text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 4;line-clamp: 2; -webkit-box-orient: vertical;">
-                  No matter how authentic your description is, it’s still only content. When you present an event description that is well designed and eye-catching and pair your content strategy with in-person events you are organising, both tactics will be more effective and will result in an increase in your event attendance.
-                  Events, by their very nature, are about connections. Through your bright event description, you can boost attendance, sponsorship, or hosting of an event; make new connections; or strengthen the old ones. Learn how to write an event description that will attract the media’s attention.</h6>
-              <p>Event time on <time datetime="2008-02-14 20:00">Valentines day</time>.</p>
-              <button type="button" id="ViewEventDetailsId" class="btn btn-primary" data-toggle="modal" data-target="#ShowEventDetailsModal">View Details</button>
-            </div>
-          </div>
-
-          <div class="col-md-4 col-sm-6 services text-center">
-            <div class="services-content">
-              <h4>Event Name</h4>
-              <h6 style="overflow: hidden;text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 4;line-clamp: 2; -webkit-box-orient: vertical;">
-                  No matter how authentic your description is, it’s still only content. When you present an event description that is well designed and eye-catching and pair your content strategy with in-person events you are organising, both tactics will be more effective and will result in an increase in your event attendance.
-                  Events, by their very nature, are about connections. Through your bright event description, you can boost attendance, sponsorship, or hosting of an event; make new connections; or strengthen the old ones. Learn how to write an event description that will attract the media’s attention.</h6>
-              <p>Event time on <time datetime="2008-02-14 20:00">Valentines day</time>.</p>
-              <button type="button" id="ViewEventDetailsId" class="btn btn-primary" data-toggle="modal" data-target="#ShowEventDetailsModal">View Details</button>
-            </div>
-          </div>
-
-          <div class="col-md-4 col-sm-6 services text-center">
-            <div class="services-content">
-              <h4>Event Name</h4>
-              <h6 style="overflow: hidden;text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 4;line-clamp: 2; -webkit-box-orient: vertical;">
-                  No matter how authentic your description is, it’s still only content. When you present an event description that is well designed and eye-catching and pair your content strategy with in-person events you are organising, both tactics will be more effective and will result in an increase in your event attendance.
-                  Events, by their very nature, are about connections. Through your bright event description, you can boost attendance, sponsorship, or hosting of an event; make new connections; or strengthen the old ones. Learn how to write an event description that will attract the media’s attention.</h6>
-              <p>Event time on <time datetime="2008-02-14 20:00">Valentines day</time>.</p>
-              <button type="button" id="ViewEventDetailsId" class="btn btn-primary" data-toggle="modal" data-target="#ShowEventDetailsModal">View Details</button>
-            </div>
-          </div>
-
-          <div class="col-md-4 col-sm-6 services text-center">
-            <div class="services-content">
-              <h4>Event Name</h4>
-              <h6 style="overflow: hidden;text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 4;line-clamp: 2; -webkit-box-orient: vertical;">
-                  No matter how authentic your description is, it’s still only content. When you present an event description that is well designed and eye-catching and pair your content strategy with in-person events you are organising, both tactics will be more effective and will result in an increase in your event attendance.
-                  Events, by their very nature, are about connections. Through your bright event description, you can boost attendance, sponsorship, or hosting of an event; make new connections; or strengthen the old ones. Learn how to write an event description that will attract the media’s attention.</h6>
-              <p>Event time on <time datetime="2008-02-14 20:00">Valentines day</time>.</p>
-              <button type="button" id="ViewEventDetailsId" class="btn btn-primary" data-toggle="modal" data-target="#ShowEventDetailsModal">View Details</button>
-            </div>
-          </div>
-
-          <div class="col-md-4 col-sm-6 services text-center">
-            <div class="services-content">
-              <h4>Event Name</h4>
-              <h6 style="overflow: hidden;text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 4;line-clamp: 2; -webkit-box-orient: vertical;">
-                  No matter how authentic your description is, it’s still only content. When you present an event description that is well designed and eye-catching and pair your content strategy with in-person events you are organising, both tactics will be more effective and will result in an increase in your event attendance.
-                  Events, by their very nature, are about connections. Through your bright event description, you can boost attendance, sponsorship, or hosting of an event; make new connections; or strengthen the old ones. Learn how to write an event description that will attract the media’s attention.</h6>
-              <p>Event time on <time datetime="2008-02-14 20:00">Valentines day</time>.</p>
-              <button type="button" id="ViewEventDetailsId" class="btn btn-primary" data-toggle="modal" data-target="#ShowEventDetailsModal">View Details</button>
-            </div>
-          </div>
+        @endforeach
 
       </div>
 

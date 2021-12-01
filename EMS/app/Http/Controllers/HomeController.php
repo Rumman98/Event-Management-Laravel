@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\EventInfoTable;
 
 class HomeController extends Controller
 {
@@ -13,7 +14,9 @@ class HomeController extends Controller
 
     function RunningEventPage()
     {
-        return view('RunningEventsPage');
+        $eventData = EventInfoTable::get();
+
+        return view('RunningEventsPage', ['eventData'=>$eventData]);
     }
 
     function AllGalaryPage()
