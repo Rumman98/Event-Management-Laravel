@@ -63,9 +63,10 @@
            <center><button type="submit" class="submit" data-toggle="modal" data-target="#AddEventModal" style="width: 30%; margin-bottom: 8px;">Add Events</button></center>
 
             <div class="limiter">
-
+                <div class="row">
+                    <div class="col-md-12 p-3">
                         <div class="table100">
-                            <table>
+                            <table id="EventShowTable" >
                                 <thead>
                                     <tr class="table100-head">
                                         <th class="column1">Event Name</th>
@@ -83,6 +84,8 @@
                                 </tbody>
                             </table>
                         </div>
+                    </div>
+                </div>
             </div>
 
 

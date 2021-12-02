@@ -16,6 +16,8 @@
 <link rel="stylesheet" href="{{asset('css/font-icon.css')}}">
 <link rel="stylesheet" href="{{asset('css/animate.min.css')}}">
 <link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="stylesheet" href="{{asset('css/datatables.min.css')}}">
+<link rel="stylesheet" href="{{asset('css/datatables-select.min.css')}}">
 
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -47,6 +49,8 @@
 <script type="text/javascript" src="{{asset('js/jquery.countdown.js')}}"></script>
 <script type="text/javascript" src="{{asset('js/global.js')}}"></script>
 <script type="text/javascript" src="{{asset('js/jquery.contact.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/datatables.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/datatables-select.min.js')}}"></script>
 
 @yield('script')
 <script type="text/javascript">

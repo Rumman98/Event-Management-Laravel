@@ -118,7 +118,8 @@ function UserDataUpdate(user_id, NameUpdateId, EmailUpdateId, AddressUpdateId)
     })
 }
 // User Info Update End
-
+$('#RegisteredEventShowTable').DataTable({"order":false});
+$('.dataTables_length').addClass('bs-select');
 
 </script>
 @endsection

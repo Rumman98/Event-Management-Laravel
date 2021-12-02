@@ -62,7 +62,7 @@
             <div class="limiter">
 
                         <div class="table100">
-                            <table>
+                            <table id="RegisteredEventShowTable">
                                 <thead>
                                     <tr class="table100-head">
                                         <th class="column1">Event Name</th>
@@ -80,7 +80,7 @@
                                             <td>Grand Sultan restaurant</td>
                                             <td>200tk</td>
                                             <td>Pending</td>
-                                            <td><button type="submit" class="submit" style="width: 82%; padding: 10px;">Download Invitation Card</button></td>
+                                            <td><button type="submit" class="submit">Download Invitation Card</button></td>
 
                                         </tr>
                                         <tr>
@@ -89,21 +89,21 @@
                                             <td>Grand Sultan restaurant</td>
                                             <td>200tk</td>
                                             <td>Pending</td>
-                                            <td><button type="submit" class="submit" style="width: 82%; padding: 10px;">Download Invitation Card</button></td>                                        </tr>
+                                            <td><button type="submit" class="submit">Download Invitation Card</button></td>                                        </tr>
                                         <tr>
                                             <td>Batch 13 Reunion</td>
                                             <td>11 january 2021</td>
                                             <td>Grand Sultan restaurant</td>
                                             <td>200tk</td>
                                             <td>Approved</td>
-                                            <td><button type="submit" class="submit" style="width: 82%; padding: 10px;">Download Invitation Card</button></td>                                        </tr>
+                                            <td><button type="submit" class="submit">Download Invitation Card</button></td>                                        </tr>
                                         <tr>
                                             <td>Batch 13 Reunion</td>
                                             <td>11 january 2021</td>
                                             <td>Grand Sultan restaurant</td>
                                             <td>200tk</td>
                                             <td>Approved</td>
-                                            <td><button type="submit" class="submit" style="width: 82%; padding: 10px;">Download Invitation Card</button></td>                                        </tr>
+                                            <td><button type="submit" class="submit">Download Invitation Card</button></td>                                        </tr>
 
                                 </tbody>
                             </table>

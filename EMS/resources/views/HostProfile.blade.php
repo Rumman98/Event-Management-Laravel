@@ -206,6 +206,9 @@ function getEventDetails()
                     $('#DeleteEventModal').modal('show');
                 })
 
+                $('#EventShowTable').DataTable({"order":false});
+                $('.dataTables_length').addClass('bs-select');
+
         }
         else
         {
