@@ -32,7 +32,7 @@
             <b> <h1 style="color: white">Participants List</h1></b>
 
                     <div class="table100">
-                        <table>
+                        <table id="SummaryTable">
                             <thead>
                                 <tr class="table100-head">
                                     <th class="column1">User Name</th>
