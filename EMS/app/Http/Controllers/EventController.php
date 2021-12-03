@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use App\EventInfoTable;
+use App\UserHostModel;
 
 class EventController extends Controller
 {
@@ -113,7 +114,21 @@ class EventController extends Controller
 
     function RegisterEventPage()
     {
-        return view('RegisterEvent');
+        $value            = Session::get('phone_number');
+
+        if($value == null)
+        {
+            return view('login');
+        }
+        else
+        {
+            $userData = UserHostModel::where('phone_number', $value)->get();
+
+
+            return view('RegisterEvent', [
+                'userData' => $userData
+            ]);
+        }
     }
 
 

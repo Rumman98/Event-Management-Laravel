@@ -103,7 +103,7 @@ function UserDataUpdate(user_id, NameUpdateId, EmailUpdateId, AddressUpdateId)
         Email:EmailUpdateId,
         Address:AddressUpdateId
     }).then(function(response){
-        if(response.status == 200 &&response.data == 1)
+        if(response.status == 200 && response.data == 1)
         {
             $('#UserProfileModal').modal("hide");
             flash('Details Updated',{'bgColor' : '#00b859'});
