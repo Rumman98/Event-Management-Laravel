@@ -114,7 +114,7 @@ class EventController extends Controller
 
     function RegisterEventPage()
     {
-        $value            = Session::get('phone_number');
+        $value = Session::get('phone_number');
 
         if($value == null)
         {
