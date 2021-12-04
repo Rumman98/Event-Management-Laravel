@@ -176,7 +176,7 @@
                 </select>
 
                 <span style="color: white">Account Number </span>
-                <input id="AccountNumber" type="number" class="form-control mb-3" placeholder="Enter Account Number" style="background-color: #464646; color: white;">
+                <input id="AccountNumberID" type="number" class="form-control mb-3" placeholder="Enter Account Number" style="background-color: #464646; color: white;">
             <div class="row">
                 <div class="col-md-6">
                 <span style="color: white">Select Event Time </span>
@@ -223,14 +223,14 @@
                     <option value="Seminar">Seminar</option>
                 </select>
                 <span style="color: white;">Choose Payment Option</span>
-                <select id="PaymentMethodID" class="form-control mb-3" style="background-color: #464646; color: white; margin-top: 5px; margin-bottom: 5px;">
+                <select id="EditPaymentMethodID" class="form-control mb-3" style="background-color: #464646; color: white; margin-top: 5px; margin-bottom: 5px;">
                     <option value="Bkash">Bkash</option>
                     <option value="Nagad">Nagad</option>
                     <option value="Rocket">Rocket</option>
                 </select>
 
                 <span style="color: white">Account Number </span>
-                <input id="AccountNumber" type="number" class="form-control mb-3" placeholder="Enter Account Number" style="background-color: #464646; color: white;">
+                <input id="EditAccountNumberID" type="number" class="form-control mb-3" placeholder="Enter Account Number" style="background-color: #464646; color: white;">
             <div class="row">
                 <div class="col-md-6">
                 <span style="color: white">Update Event Time </span>

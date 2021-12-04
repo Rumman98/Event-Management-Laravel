@@ -131,22 +131,26 @@ $('#saveEventBtnID').click(function(){
     var eventName        = $('#EventNameId').val();
     var eventDes         = $('#EventDesID').val();
     var eventType        = $('#EventTypeId').val();
+    var eventPayMethod   = $('#PaymentMethodID').val();
+    var eventPayAccNo    = $('#AccountNumberID').val();
     var eventTime        = $('#EventTimeId').val();
     var eventDate        = $('#EventDateId').val();
     var eventVenue       = $('#EventVenueId').val();
     var eventRegFee      = $('#EventRegAmountId').val();
     var eventRegLastDate = $('#EventRegLastDateId').val();
 
-    addNewEvent(eventName, eventDes, eventType, eventTime, eventDate, eventVenue, eventRegFee, eventRegLastDate);
+    addNewEvent(eventName, eventDes, eventType, eventPayMethod, eventPayAccNo, eventTime, eventDate, eventVenue, eventRegFee, eventRegLastDate);
 })
 
-function addNewEvent(eventName, eventDes, eventType, eventTime, eventDate, eventVenue, eventRegFee, eventRegLastDate)
+function addNewEvent(eventName, eventDes, eventType, eventPayMethod, eventPayAccNo, eventTime, eventDate, eventVenue, eventRegFee, eventRegLastDate)
 {
     let url = '/add-event';
     axios.post(url, {
         eventName:eventName,
         eventDes:eventDes,
         eventType:eventType,
+        eventPayMethod:eventPayMethod,
+        eventPayAccNo:eventPayAccNo,
         eventTime:eventTime,
         eventDate:eventDate,
         eventVenue:eventVenue,
@@ -237,6 +241,8 @@ function eventDataShow(event_id)
             $('#EditEventNameId').val(JsonData[0].event_name);
             $('#EditEventDesID').val(JsonData[0].event_description);
             $('#EditEventTypeId').val(JsonData[0].event_type);
+            $('#EditPaymentMethodID').val(JsonData[0].event_payment_method);
+            $('#EditAccountNumberID').val(JsonData[0].event_pay_acc_no);
             $('#EditEventTimeId').val(JsonData[0].event_time);
             $('#EditEventDateId').val(JsonData[0].event_date);
             $('#EditEventVenueId').val(JsonData[0].event_venue);
@@ -257,16 +263,18 @@ $('#confirmEditEventBtnID').click(function(){
     var EventName         = $('#EditEventNameId').val();
     var EventDes          = $('#EditEventDesID').val();
     var EventType         = $('#EditEventTypeId').val();
+    var EventPayMethod    = $('#EditPaymentMethodID').val();
+    var EventPayAccNo     = $('#EditAccountNumberID').val();
     var EventTime         = $('#EditEventTimeId').val();
     var EventDate         = $('#EditEventDateId').val();
     var EventVenue        = $('#EditEventVenueId').val();
     var EventRegAmount    = $('#EditEventRegAmountId').val();
     var EventRegLastDate  = $('#EditEventRegLastDateId').val();
 
-    editEventDetails(event_id, EventName, EventDes, EventType, EventTime, EventDate, EventVenue, EventRegAmount, EventRegLastDate);
+    editEventDetails(event_id, EventName, EventDes, EventType, EventPayMethod, EventPayAccNo, EventTime, EventDate, EventVenue, EventRegAmount, EventRegLastDate);
 })
 
-function editEventDetails(event_id, EventName, EventDes, EventType, EventTime, EventDate, EventVenue, EventRegAmount, EventRegLastDate)
+function editEventDetails(event_id, EventName, EventDes, EventType, EventPayMethod, EventPayAccNo, EventTime, EventDate, EventVenue, EventRegAmount, EventRegLastDate)
 {
     let url = '/event-update';
 
@@ -275,6 +283,8 @@ function editEventDetails(event_id, EventName, EventDes, EventType, EventTime, E
         EventName        :EventName,
         EventDes         :EventDes,
         EventType        :EventType,
+        EventPayMethod   :EventPayMethod,
+        EventPayAccNo   :EventPayAccNo,
         EventTime        :EventTime,
         EventDate        :EventDate,
         EventVenue       :EventVenue,

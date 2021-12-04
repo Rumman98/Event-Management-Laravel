@@ -15,6 +15,8 @@ class EventController extends Controller
         $eventName        =  $request->input('eventName');
         $eventDes         =  $request->input('eventDes');
         $eventType        =  $request->input('eventType');
+        $eventPayMethod   =  $request->input('eventPayMethod');
+        $eventPayAccNo    =  $request->input('eventPayAccNo');
         $eventTime        =  $request->input('eventTime');
         $eventDate        =  $request->input('eventDate');
         $eventVenue       =  $request->input('eventVenue');
@@ -25,6 +27,8 @@ class EventController extends Controller
             'event_name'             => $eventName,
             'event_description'      => $eventDes,
             'event_type'             => $eventType,
+            'event_payment_method'   => $eventPayMethod,
+            'event_pay_acc_no'       => $eventPayAccNo,
             'event_time'             => $eventTime,
             'event_date'             => $eventDate,
             'event_venue'            => $eventVenue,
@@ -69,6 +73,8 @@ class EventController extends Controller
         $EventName        = $request->input('EventName');
         $EventDes         = $request->input('EventDes');
         $EventType        = $request->input('EventType');
+        $EventPayMethod   = $request->input('EventPayMethod');
+        $EventPayAccNo    = $request->input('EventPayAccNo');
         $EventTime        = $request->input('EventTime');
         $EventDate        = $request->input('EventDate');
         $EventVenue       = $request->input('EventVenue');
@@ -79,6 +85,8 @@ class EventController extends Controller
             'event_name'             => $EventName,
             'event_description'      => $EventDes,
             'event_type'             => $EventType,
+            'event_payment_method'   => $EventPayMethod,
+            'event_pay_acc_no'       => $EventPayAccNo,
             'event_time'             => $EventTime,
             'event_date'             => $EventDate,
             'event_venue'            => $EventVenue,
