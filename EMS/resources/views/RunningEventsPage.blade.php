@@ -19,8 +19,16 @@
 
    $('#RegisterEventID').click(function(){
 
-      var event_name = $('#event_name').val();
-      alert(event_name);
+      var event_name = $('#event_name').html();
+      var event_des = $('#event_des').html();
+      var event_type = $('#event_type').html();
+      var event_date = $('#event_date').html();
+      var event_time = $('#event_time').html();
+      var event_venue = $('#event_venue').html();
+      var event_fee = $('#event_fee').html();
+
+      var event_data = {'event_name':event_name, 'event_des':event_des, 'event_type':event_type, 'event_date':event_date, 'event_time':event_time, 'event_venue':event_venue, 'event_fee':event_fee};
+      localStorage.setItem("eventObject", JSON.stringify(event_data));
    })
 
    function ViewEventDetails(eventDetailsid)
