@@ -28,3 +28,5 @@ Route::get('/Reports','ReportController@ReportIndex');
 Route::get('/Users','UsersController@UsersIndex');
 
 Route::get('/Visitors','VisitorsController@VisitorsIndex');
+
+Route::get('/Clients-Review','ClientReviewController@ClientReviewIndex');
