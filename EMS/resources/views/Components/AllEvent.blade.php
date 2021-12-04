@@ -58,6 +58,16 @@
                         <p style="color: white"><span style="color: rgb(255, 154, 87);; font-size: 18px;">Registration Fee</span>: <span id='event_fee'></p>
                     </div>
 
+                    <div class="">
+                        <p style="color: white"><span style="color: rgb(255, 154, 87);; font-size: 18px;">Payment Method</span>: <span id='event_payment_method'></p>
+                    </div>
+
+                    <div class="">
+                        <p style="color: white"><span style="color: rgb(255, 154, 87);; font-size: 18px;">Account Number</span>: <span id='event_payment_account_number'></p>
+                    </div>
+
+
+
 
                 </div>
 

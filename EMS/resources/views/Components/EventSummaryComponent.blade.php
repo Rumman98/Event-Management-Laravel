@@ -56,8 +56,8 @@
                                         <td>0162772</td>
                                         <td>0156544</td>
                                         <td>
-                                        <button name="submit" class="btn" style="background-color: green; font-size: 9px;">Approve</button>
-                                        <button name="submit" class="btn" style="background-color: red; font-size: 9px;">Reject</button>
+                                        <a><i style="color: rgb(255, 0, 0); padding-inline: 5px;" class="fas fa-times-circle"></i></a>
+                                        <a><i style="color: rgb(0, 255, 0); padding-inline: 5px;" class="fas fa-check-circle"></i></a>
                                         </td>
 
                                     </tr>

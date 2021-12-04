@@ -48,12 +48,8 @@
                 <center><b> <h1 style="color: white">Payment</h1></b></center>
                 <div class="row">
                     <div class="col-md-4">
-                    <span style="color: white;">Choose Payment Option</span>
-                    <select id="UserPaymentMethodID" class="form-control mb-3" style="background-color: #464646; color: white; margin-top: 5px;">
-                        <option value="Bkash">Bkash</option>
-                        <option value="Nagad">Nagad</option>
-                        <option value="Rocket">Rocket</option>
-                    </select>
+                    <span style="color: white;">Payment Method</span>
+                    <input disabled id="PaymentMethodId" type="text" class="form-control mb-3" placeholder="Bkash" style="background-color: #464646; color: white;">
                     </div>
                     <div class="col-md-4">
                     <span style="color: white">Enter Your Account Number</span>
