@@ -41,4 +41,7 @@ Route::post("/event-delete", 'EventController@EventDelete')->middleware('loginCh
 
 
 
+Route::get('/pdf', function () {
+    return view('pdf');
+});
 
