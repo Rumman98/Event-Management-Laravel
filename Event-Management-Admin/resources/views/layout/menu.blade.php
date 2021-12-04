@@ -18,14 +18,14 @@
             <nav class="sidebar-nav">
                 <ul id="sidebarnav">
                     <li class="nav-devider mt-0" style="margin-bottom: 5px"></li>
-                    <li> <a href="{{url('/')}}" ><span> <i class="fas fa-home"></i> </span><span class="hide-menu">Home</span></a></li>
-                    <li> <a href="{{url('/visitor')}}" ><span> <i class="fas fa-users"></i> </span><span class="hide-menu">Visitor</span></a></li>
-                    <li> <a href="{{url('/service')}}" ><span> <i class="fas fa-globe"></i> </span><span class="hide-menu">Services</span></a></li>
-                    <li> <a href="{{url('/courses')}}" ><span> <i class="fas fa-chalkboard-teacher"></i> </span><span class="hide-menu">Courses</span></a></li>
-                    <li> <a href="{{url('/projects')}}" ><span> <i class="fas fa-project-diagram"></i> </span><span class="hide-menu">Projects</span></a></li>
-                    <li> <a href="{{url('/contacts')}}" ><span>  <i class="fas fa-id-badge"></i> </span><span class="hide-menu">Contacts</span></a></li>
-                    <li> <a href="{{url('/review')}}" ><span>  <i class="far fa-comments"></i> </span><span class="hide-menu">Review</span></a></li>
-                    <li> <a href="{{url('/Photo')}}" ><span> <i class="far fa-comments"></i> </span><span class="hide-menu">Photo Gallery</span></a></li>
+                    <li> <a href="{{url('/')}}" ><span> <i class="fas fa-columns"></i></span><span class="hide-menu">Dashboard</span></a></li>
+                    <li> <a href="{{url('/Visitors')}}" ><span> <i class="fas fa-chart-line"></i> </span><span class="hide-menu">Visitors</span></a></li>
+                    <li> <a href="{{url('/Hosts')}}" ><span> <i class="fas fa-id-card-alt"></i></span><span class="hide-menu">Hosts</span></a></li>
+                    <li> <a href="{{url('/Users')}}" ><span> <i class="fas fa-users"></i></span><span class="hide-menu">Users</span></a></li>
+                    <li> <a href="{{url('/Events')}}" ><span> <i class="far fa-calendar-alt"></i></span><span class="hide-menu">Events</span></a></li>
+                    <li> <a href="{{url('/Gallery')}}" ><span> <i class="fas fa-camera-retro"></i></span><span class="hide-menu">Gallery</span></a></li>
+                    <li> <a href="{{url('/Messages')}}" ><span> <i class="fas fa-envelope-open-text"></i></span><span class="hide-menu">Messages</span></a></li>
+                    <li> <a href="{{url('/Reports')}}" ><span> <i class="fas fa-bug"></i></span><span class="hide-menu">Report</span></a></li>
 
 
                 </ul>
