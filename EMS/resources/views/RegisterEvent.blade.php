@@ -7,9 +7,8 @@
 @section('script')
 <script type = "text/javascript">
 
-    // Get the variable
 var eventData = localStorage['eventObject'];
-localStorage.removeItem( 'eventObject' ); // Clear the localStorage
+localStorage.removeItem( 'eventObject' );
 var event_name = JSON.parse(eventData).event_name;
 var event_des = JSON.parse(eventData).event_des;
 var event_type = JSON.parse(eventData).event_type;
