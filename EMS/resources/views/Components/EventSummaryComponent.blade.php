@@ -38,8 +38,9 @@
                                     <th class="column1">User Name</th>
                                     <th class="column2">Phone Number</th>
                                     <th class="column3">Address</th>
+                                    <th class="column3">Payment Method</th>
                                     <th class="column4">Payment Amount</th>
-                                    <th class="column5">Bkash Number</th>
+                                    <th class="column5">Account Number</th>
                                     <th class="column5">Transaction Number</th>
                                     <th class="column5">Action</th>
 
@@ -47,15 +48,16 @@
                             </thead>
                             <tbody id = "user_data">
                                     <tr>
-                                        <td>test 1</td>
-                                        <td>test 2</td>
-                                        <td>test 3</td>
-                                        <td>test 4</td>
-                                        <td>test 5</td>
-                                        <td>test 6</td>
+                                        <td>x</td>
+                                        <td>01220191</td>
+                                        <td>axbahx </td>
+                                        <td>Bkash</td>
+                                        <td>200</td>
+                                        <td>0162772</td>
+                                        <td>0156544</td>
                                         <td>
-                                        <button name="submit" class="btn" style="background-color: green; font-size: 13px;">Approve</button>
-                                        <button name="submit" class="btn" style="background-color: red; font-size: 13px;">Reject</button>
+                                        <button name="submit" class="btn" style="background-color: green; font-size: 9px;">Approve</button>
+                                        <button name="submit" class="btn" style="background-color: red; font-size: 9px;">Reject</button>
                                         </td>
 
                                     </tr>

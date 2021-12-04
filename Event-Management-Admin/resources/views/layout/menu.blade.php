@@ -26,7 +26,7 @@
                     <li> <a href="{{url('/Gallery')}}" ><span> <i class="fas fa-camera-retro"></i></span><span class="hide-menu">Gallery</span></a></li>
                     <li> <a href="{{url('/Messages')}}" ><span> <i class="fas fa-envelope-open-text"></i></span><span class="hide-menu">Messages</span></a></li>
                     <li> <a href="{{url('/Reports')}}" ><span> <i class="fas fa-bug"></i></span><span class="hide-menu">Report</span></a></li>
-                    <li> <a href="{{url('/Clients-Review')}}" ><span> <i class="fas fa-bug"></i></span><span class="hide-menu">Clients Review</span></a></li>
+                    <li> <a href="{{url('/Clients-Review')}}" ><span> <i class="fas fa-comments"></i></span><span class="hide-menu">Clients Review</span></a></li>
                 </ul>
             </nav>
         </div>

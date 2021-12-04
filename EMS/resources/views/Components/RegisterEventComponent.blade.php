@@ -2,7 +2,7 @@
 <div class="profile-info col-md-12">
     <div class="panel">
         <div class="panel-body bio-graph-info">
-           <b> <h1 style="color: white">Payment</h1></b>
+           <center><b> <h1 style="color: white">Confirmation Details</h1></b></center>
 
            @foreach ($userData as $userData)
 
@@ -45,19 +45,28 @@
                     <p style="color: white"><span style="color: rgb(255, 154, 87);; font-size: 18px;">Registration Fee</span>: <span id = "event_fee"></span></p>
                 </div>
 
-
+                <center><b> <h1 style="color: white">Payment</h1></b></center>
                 <div class="row">
-                    <div class="col-md-6">
-                    <span style="color: white">Enter Your Bkash Number</span>
-                    <input id="bkashNumberId" type="text" class="form-control mb-3" placeholder="Bkash Number" style="background-color: #464646; color: white;">
+                    <div class="col-md-4">
+                    <span style="color: white;">Choose Payment Option</span>
+                    <select id="UserPaymentMethodID" class="form-control mb-3" style="background-color: #464646; color: white; margin-top: 5px;">
+                        <option value="Bkash">Bkash</option>
+                        <option value="Nagad">Nagad</option>
+                        <option value="Rocket">Rocket</option>
+                    </select>
+                    </div>
+                    <div class="col-md-4">
+                    <span style="color: white">Enter Your Account Number</span>
+                    <input id="AccountNumberId" type="text" class="form-control mb-3" placeholder="Account Number" style="background-color: #464646; color: white;">
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <span style="color: white">Transaction Number</span>
                     <input id="TransactionId" type="text" class="form-control mb-3" placeholder="Transaction ID" style="background-color: #464646; color: white;">
                 </div>
+
                 </div>
 
-                <button type="button" id="confirmPaymentBtnID" class="btn btn-primary">Confirm Payment</button>
+              <center> <button type="button" id="confirmPaymentBtnID" class="btn btn-primary" style="margin-top: 14px;">Confirm Payment</button></center>
 
             </div>
 
