@@ -32,7 +32,7 @@
               <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message" style="margin-top: 5px; background-color: #212121; color: white;"></textarea>
             </div>
             <div class="form-textbox">
-              <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+              <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5" style="margin-top: 20px;">
             </div>
           </form>
 

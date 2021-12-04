@@ -2,13 +2,14 @@
     <div class="container">
       <div class="row">
 
-        @foreach ($eventData as $eventData)  
-        <div class="col-md-4 col-sm-6 services text-center">
+        @foreach ($eventData as $eventData)
+        <div class="col-md-4 text-center">
           <div class="services-content">
-            <h4>{{$eventData->event_name}}</h4>
-            <h6 style="overflow: hidden;text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 4;line-clamp: 2; -webkit-box-orient: vertical;">{{$eventData->event_description}}</h6>
-            <p>Event time on <time datetime="">{{$eventData->event_time}}</time>.</p>
-            <a id='' class='ViewEventDetailsClass submit'  data-id="{{$eventData->id}}">View Details</a>
+            <h3 style=" font-family: 'Poppins'; color:white;">{{$eventData->event_name}}</h3>
+            <h5>Event Type : {{$eventData->event_type}}</h5>
+            <time>Date : {{$eventData->event_date}}</time>
+            <p>Event time: <time datetime="12:00">{{$eventData->event_time}}</time></p>
+            <a id='' class='ViewEventDetailsClass submit'  data-id="{{$eventData->id}}" style="padding-block: 7px;">View Details</a>
           </div>
         </div>
         @endforeach

@@ -14,27 +14,31 @@ p {
 h1 {
 	font-size: 65px;
 	color: #2d3033;
+    font-family: 'Poppins';
 
 }
 h2 {
 	font-size: 40px;
 	color: #474747;
+    font-family: 'Poppins';
 }
 h3 {
 	font-size: 28px;
 	color: #2d3033;
 	font-weight: 300;
+    font-family: 'Poppins';
 }
 h4 {
 	font-size: 22px;
 	color: #b1b1b1;
 	font-weight: 400;
+    font-family: 'Poppins';
 }
 h5 {
 	font-size: 14px;
 	color: #2d3033;
 	text-transform: uppercase;
-	font-weight: 700;
+    font-family: 'Poppins';
 }
 address{
 
@@ -55,7 +59,6 @@ margin-left: 15px;
 	display: inline-block;
 	text-transform: uppercase;
 	border: 1px solid #3a3a3a;
-	margin-top: 20px;
     border: 1px solid #3a3a3a;
 }
 .btn:hover, .btn:focus {
@@ -448,9 +451,9 @@ color: #fff;
 .services .section-header h2{color: #ff5518;font-weight: bold;}
 .services .section-header p{color: #bcbcbc;}
 .services-content {
-	padding: 30px 30px 20px;
-	border: 1px solid rgb(145 145 145);
-	border-radius: 7px;
+	padding: 10px 0px 32px;
+	border: 20px solid rgb(145 145 145);
+	border-radius: 10px;
 	text-align: center;
 	color: #fff;
 	background: #454444;
@@ -1437,7 +1440,6 @@ transition: all 250ms ease-in-out 0s;
 
   }
   table td, table th {
-    padding-left: 8px;
     text-align: center;
     font-family: "Open Sans", Arial, sans-serif;
     text-align: center;

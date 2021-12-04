@@ -41,6 +41,7 @@
                                     <th class="column4">Payment Amount</th>
                                     <th class="column5">Bkash Number</th>
                                     <th class="column5">Transaction Number</th>
+                                    <th class="column5">Action</th>
 
                                 </tr>
                             </thead>
@@ -52,6 +53,10 @@
                                         <td>test 4</td>
                                         <td>test 5</td>
                                         <td>test 6</td>
+                                        <td>
+                                        <button name="submit" class="btn" style="background-color: green; font-size: 13px;">Approve</button>
+                                        <button name="submit" class="btn" style="background-color: red; font-size: 13px;">Reject</button>
+                                        </td>
 
                                     </tr>
                             </tbody>
