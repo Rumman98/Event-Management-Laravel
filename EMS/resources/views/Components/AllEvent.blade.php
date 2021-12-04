@@ -4,14 +4,19 @@
 
         @foreach ($eventData as $eventData)
         <div class="col-md-4 text-center">
-          <div class="services-content">
+            <div id="container">
+                <div id="monitor">
+                  <div id="monitorscreen">
             <h3 style=" font-family: 'Poppins'; color:white;">{{$eventData->event_name}}</h3>
             <h5>Event Type : {{$eventData->event_type}}</h5>
-            <time>Date : {{$eventData->event_date}}</time>
-            <p>Event time: <time datetime="12:00">{{$eventData->event_time}}</time></p>
+            <time style="color: white;">Date : {{$eventData->event_date}}</time>
+            <p style="color: white">Event time: <time datetime="">{{$eventData->event_time}}</time></p>
             <a id='' class='ViewEventDetailsClass submit'  data-id="{{$eventData->id}}" style="padding-block: 7px;">View Details</a>
           </div>
+                </div>
+            </div>
         </div>
+
         @endforeach
 
       </div>
