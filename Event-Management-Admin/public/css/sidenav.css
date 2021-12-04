@@ -139,7 +139,7 @@ Main sidebar
 }
 
 .fix-sidebar .left-sidebar {
-    position: fixed;
+    position: absolute;
 }
 
 .fix-sidebar .left-sidebar nav li a,
@@ -365,7 +365,7 @@ sidebar navigation
 
     .sidebar-nav #sidebarnav > li:hover {
         /*        width: 260px;*/
-        background: #FCA311;
+        background: #ff6600;
 
     }
 

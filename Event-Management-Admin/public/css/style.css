@@ -57,12 +57,12 @@ padding: 1% 1% 1% 1% ;
   border-radius: 8px !important;
   padding-left: 15px !important;
   padding-right: 15px!important;
-  background-color: #FCA311!important;
+  background-color: #ff6600!important;
   color: white!important;
   font-family: 'Hind Siliguri', sans-serif!important;
   font-weight: 400!important;
-  border: 3px solid  #FCA311;
- 
+  border: 3px solid  #ff6600;
+
 }
 
 
@@ -87,6 +87,6 @@ padding: 1% 1% 1% 1% ;
   font-family: 'Hind Siliguri', sans-serif!important;
   font-weight: 400!important;
   border: 3px solid  #fc3b3b;
- 
+
 }
 
