@@ -8,7 +8,7 @@
             <h4>{{$eventData->event_name}}</h4>
             <h6 style="overflow: hidden;text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 4;line-clamp: 2; -webkit-box-orient: vertical;">{{$eventData->event_description}}</h6>
             <p>Event time on <time datetime="">{{$eventData->event_time}}</time>.</p>
-            <button type="button" id="ViewEventDetailsId" class="btn btn-primary" data-id="{{$eventData->id}}" data-toggle="modal" data-target="#ShowEventDetailsModal">View Details</button>
+            <a id='' class='ViewEventDetailsClass submit'  data-id="{{$eventData->id}}">View Details</a>
           </div>
         </div>
         @endforeach
@@ -63,7 +63,7 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <a href="{{'/register-event'}}"><button type="submit" id="RegisterEventID" class="btn btn-primary">Register This Event</button></a>
+              <a href="{{'/register-event'}}" id="RegisterEventID" class="btn btn-primary">Register This Event</a>
             </div>
           </div>
         </div>
@@ -72,4 +72,3 @@
 
 
   </section>
-

@@ -3,3 +3,11 @@
 @section('content')
 @include('Components.RegisterEventComponent')
 @endsection
+
+@section('script')
+<script type = "text/javascript">
+
+    
+
+</script>
+@endsection

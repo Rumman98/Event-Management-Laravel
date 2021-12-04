@@ -1,21 +1,21 @@
-
 <div class="container bootstrap snippets bootdey">
 <div class="profile-info col-md-12">
     <div class="panel">
         <div class="panel-body bio-graph-info">
            <b> <h1 style="color: white">Payment</h1></b>
 
+           @foreach ($userData as $userData)
+
             <div class="row">
                 <div class="bio-row">
-                    <p style="color: white"><span style="color: rgb(255, 154, 87);; font-size: 18px;">Name </span>: Rumman</p>
+                    <p style="color: white"><span style="color: rgb(255, 154, 87);; font-size: 18px;">Name </span>: {{$userData->name}}</p>
                 </div>
                 <div class="bio-row">
-                    <p style="color: white"><span style="color: rgb(255, 154, 87);; font-size: 18px;">Phone</span>: 01111</p>
+                    <p style="color: white"><span style="color: rgb(255, 154, 87);; font-size: 18px;">Phone</span>: {{$userData->phone_number}}</p>
                 </div>
-
-
             </div>
 
+            @endforeach
 
                 <div>
                     <p style="color: white"><span style="color: rgb(255, 154, 87);; font-size: 18px;">Event Name </span>: batch 13</p>

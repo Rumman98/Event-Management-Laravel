@@ -8,10 +8,19 @@
 
 @section('script')
 <script type = "text/javascript">
-   $('#ViewEventDetailsId').click(function(){
-      var eventDetailsid = $(this).data('id');
 
+   $('.ViewEventDetailsClass').click(function(){
+
+      var eventDetailsid = $(this).data('id');
       ViewEventDetails(eventDetailsid);
+      $('#ShowEventDetailsModal').modal('show');
+
+   })
+
+   $('#RegisterEventID').click(function(){
+
+      var event_name = $('#event_name').val();
+      alert(event_name);
    })
 
    function ViewEventDetails(eventDetailsid)

@@ -7,6 +7,7 @@ Route::get('/', 'HomeController@Index');
 Route::get('/running-events', 'HomeController@RunningEventPage');
 Route::get('/gallery', 'HomeController@AllGalaryPage');
 Route::get('/contact-us', 'HomeController@ContactPage');
+
 Route::get('/register-event', 'EventController@RegisterEventPage');
 Route::get('/event-summary', 'EventController@EventSummary');
 
