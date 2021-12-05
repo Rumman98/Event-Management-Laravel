@@ -49,15 +49,15 @@
                 <div class="row">
                     <div class="col-md-4">
                     <span style="color: white;">Payment Method</span>
-                    <input disabled id="PaymentMethodId" type="text" class="form-control mb-3" placeholder="Bkash" style="background-color: #464646; color: white;">
+                    <input disabled id="EventPaymentMethodId" type="text" class="form-control mb-3" style="background-color: #464646; color: white;">
                     </div>
                     <div class="col-md-4">
                     <span style="color: white">Enter Your Account Number</span>
-                    <input id="AccountNumberId" type="text" class="form-control mb-3" placeholder="Account Number" style="background-color: #464646; color: white;">
+                    <input id="UserAccountNumberId" type="text" class="form-control mb-3" placeholder="Account Number" style="background-color: #464646; color: white;">
                 </div>
                 <div class="col-md-4">
                     <span style="color: white">Transaction Number</span>
-                    <input id="TransactionId" type="text" class="form-control mb-3" placeholder="Transaction ID" style="background-color: #464646; color: white;">
+                    <input id="UserTransactionId" type="text" class="form-control mb-3" placeholder="Transaction ID" style="background-color: #464646; color: white;">
                 </div>
 
                 </div>

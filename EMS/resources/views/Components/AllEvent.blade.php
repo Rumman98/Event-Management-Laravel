@@ -68,7 +68,7 @@
                     </div>
 
                     <div class="">
-                        <p style="color: white"><span style="color: rgb(255, 154, 87);; font-size: 18px;">Account Number</span>: <span id='event_payment_account_number'></p>
+                        <p style="color: white"><span style="color: rgb(255, 154, 87);; font-size: 18px;">Account Number</span>: <span id='event_pay_acc_no'></p>
                     </div>
 
 
