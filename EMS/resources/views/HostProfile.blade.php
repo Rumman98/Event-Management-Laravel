@@ -284,7 +284,7 @@ function editEventDetails(event_id, EventName, EventDes, EventType, EventPayMeth
         EventDes         :EventDes,
         EventType        :EventType,
         EventPayMethod   :EventPayMethod,
-        EventPayAccNo   :EventPayAccNo,
+        EventPayAccNo    :EventPayAccNo,
         EventTime        :EventTime,
         EventDate        :EventDate,
         EventVenue       :EventVenue,

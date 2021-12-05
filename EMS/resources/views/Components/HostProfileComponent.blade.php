@@ -161,7 +161,7 @@
             </div>
             <div class="modal-body" >
                 <input id="EventNameId" type="text" class="form-control mb-3" placeholder="Event Name" style="background-color: #464646; color: white;">
-                <textarea id="EventDesID" class="form-control mb-3" placeholder="Event Description"  maxlength="60" style="min-width: 100%; background-color: #464646; color: white; margin-top: 5px; margin-bottom: 5px;"></textarea>
+                <textarea id="EventDesID" class="form-control mb-3" placeholder="Event Description"  maxlength="3000" style="min-width: 100%; background-color: #464646; color: white; margin-top: 5px; margin-bottom: 5px;"></textarea>
                 <span style="color: white;">Choose Your Event Type</span>
                 <select id="EventTypeId" name="event type" class="form-control mb-3" style="background-color: #464646; color: white; margin-top: 5px; margin-bottom: 5px;">
                     <option value="Reunion">Reunion</option>
@@ -216,7 +216,7 @@
             <div class="modal-body" >
               <input type="hidden" id="event_id">
                 <input id="EditEventNameId" type="text" class="form-control mb-3" placeholder="Event Name" style="background-color: #464646; color: white;">
-                <textarea id="EditEventDesID" class="form-control mb-3" placeholder="Event Description"  maxlength="60" style="min-width: 100%; background-color: #464646; color: white; margin-top: 5px; margin-bottom: 5px;"></textarea>
+                <textarea id="EditEventDesID" class="form-control mb-3" placeholder="Event Description"  maxlength="3000" style="min-width: 100%; background-color: #464646; color: white; margin-top: 5px; margin-bottom: 5px;"></textarea>
                 <span style="color: white;">Update Your Event Type</span>
                 <select id="EditEventTypeId" name="event type" class="form-control mb-3" style="background-color: #464646; color: white; margin-top: 5px; margin-bottom: 5px;">
                     <option value="Reunion">Reunion</option>

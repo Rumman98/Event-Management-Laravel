@@ -8,15 +8,16 @@
 
             <div class="row">
                 <div class="bio-row">
-                    <p style="color: white"><span style="color: rgb(255, 154, 87);; font-size: 18px;">Name </span>: {{$userData->name}}</p>
+                    <p style="color: white"><span style="color: rgb(255, 154, 87);; font-size: 18px;">Name </span>: <span id='user_name'> {{$userData->name}}</span></p>
                 </div>
                 <div class="bio-row">
-                    <p style="color: white"><span style="color: rgb(255, 154, 87);; font-size: 18px;">Phone</span>: {{$userData->phone_number}}</p>
+                    <p style="color: white" ><span style="color: rgb(255, 154, 87);; font-size: 18px;">Phone</span>: <span id='user_phone_no'> {{$userData->phone_number}}</span></p>
                 </div>
             </div>
 
             @endforeach
 
+                <input type="hidden" id = 'event_id'>
                 <div>
                     <p style="color: white"><span style="color: rgb(255, 154, 87);; font-size: 18px;">Event Name </span>: <span id = "event_name"></span></p>
                 </div>
@@ -49,15 +50,15 @@
                 <div class="row">
                     <div class="col-md-4">
                     <span style="color: white;">Payment Method</span>
-                    <input disabled id="PaymentMethodId" type="text" class="form-control mb-3" placeholder="Bkash" style="background-color: #464646; color: white;">
+                    <input disabled id="event_payment_method" type="text" class="form-control mb-3" style="background-color: #464646; color: white;">
                     </div>
                     <div class="col-md-4">
                     <span style="color: white">Enter Your Account Number</span>
-                    <input id="AccountNumberId" type="text" class="form-control mb-3" placeholder="Account Number" style="background-color: #464646; color: white;">
+                    <input id="UserAccountNumberId" type="text" class="form-control mb-3" placeholder="Account Number" style="background-color: #464646; color: white;">
                 </div>
                 <div class="col-md-4">
                     <span style="color: white">Transaction Number</span>
-                    <input id="TransactionId" type="text" class="form-control mb-3" placeholder="Transaction ID" style="background-color: #464646; color: white;">
+                    <input id="UserTransactionId" type="text" class="form-control mb-3" placeholder="Transaction ID" style="background-color: #464646; color: white;">
                 </div>
 
                 </div>
