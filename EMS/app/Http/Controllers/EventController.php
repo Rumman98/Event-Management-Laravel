@@ -154,4 +154,9 @@ class EventController extends Controller
     function EventSummary(){
         return view('EventSummary');
     }
+
+    function UserRegistrationOnEvent(Request $request)
+    {
+        
+    }
 }

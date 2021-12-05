@@ -19,6 +19,7 @@
 
    $('#RegisterEventID').click(function(){
 
+      var event_id = $('#event_id').val();
       var event_name = $('#event_name').html();
       var event_des = $('#event_des').html();
       var event_type = $('#event_type').html();
@@ -29,7 +30,7 @@
       var event_venue = $('#event_venue').html();
       var event_fee = $('#event_fee').html();
 
-      var event_data = {'event_name':event_name, 'event_des':event_des, 'event_type':event_type, event_payment_method:event_payment_method, event_pay_acc_no:event_pay_acc_no, 'event_date':event_date, 'event_time':event_time, 'event_venue':event_venue, 'event_fee':event_fee};
+      var event_data = {'event_id':event_id, 'event_name':event_name, 'event_des':event_des, 'event_type':event_type, event_payment_method:event_payment_method, event_pay_acc_no:event_pay_acc_no, 'event_date':event_date, 'event_time':event_time, 'event_venue':event_venue, 'event_fee':event_fee};
       localStorage.setItem("eventObject", JSON.stringify(event_data));
    })
 
@@ -43,6 +44,7 @@
          if(response.status == 200)
          {
             var JsonData = response.data;
+            $('#event_id').val(JsonData[0].id);
             $('#event_name').html(JsonData[0].event_name);
             $('#event_des').html(JsonData[0].event_description);
             $('#event_type').html(JsonData[0].event_type);

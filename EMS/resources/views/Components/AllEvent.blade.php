@@ -36,6 +36,7 @@
 
                 <div class="row" style="margin-right: 40px; margin-left: 40px;">
                     <div class="">
+                      <input type="hidden" id = "event_id">
                         <p style="color: white"><span style="color: rgb(255, 154, 87);; font-size: 18px;">Event Name </span>: <span id='event_name'></span> </p>
                     </div>
                     <div class="">
