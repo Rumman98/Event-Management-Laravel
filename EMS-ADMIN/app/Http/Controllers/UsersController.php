@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class UsersController extends Controller
 {
-     function UsersIndex(){
+    function UsersIndex(){
         return view('Users');
     }
 }

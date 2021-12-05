@@ -56,7 +56,7 @@
       </div>
 
       <div id="loadMore" style="margin-bottom: -13px;">
-        <a href="{{'/running-events'}}">Load More</a>
+        <a href="{{'/running-events'}}">Check All Events</a>
       </div>
 
 

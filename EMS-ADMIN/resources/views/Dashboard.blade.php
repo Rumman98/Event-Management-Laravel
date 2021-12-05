@@ -7,7 +7,7 @@
         <div class="col-md-3 p-2">
             <div class="small-box bg-red">
                 <div class="inner">
-                  <h3>65</h3>
+                  <h3>0</h3>
 
                   <p>Total Visitors</p>
                 </div>
@@ -24,7 +24,7 @@
         <div class="col-md-3 p-2">
             <div class="small-box bg-yellow">
                 <div class="inner">
-                  <h3>44</h3>
+                  <h3>{{$TotalUsers}}</h3>
 
                   <p>Total User</p>
                 </div>
@@ -41,7 +41,7 @@
         <div class="col-md-3 p-2">
             <div class="small-box bg-yellow">
                 <div class="inner">
-                  <h3>44</h3>
+                  <h3>{{$TotalHosts}}</h3>
 
                   <p>Total Host</p>
                 </div>
@@ -58,7 +58,7 @@
         <div class="col-md-3 p-2">
             <div class="small-box bg-green">
                 <div class="inner">
-                  <h3>53</h3>
+                  <h3>{{$TotalEvents}}</h3>
 
                   <p>Total Running Events</p>
                 </div>
