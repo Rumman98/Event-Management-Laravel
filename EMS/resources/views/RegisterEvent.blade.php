@@ -43,8 +43,13 @@ $('#confirmPaymentBtnID').click(function(){
     var user_acc_no = $('#UserAccountNumberId').val();
     var transaction_no = $('#UserAccountNumberId').val();
 
-    alert(event_type);
+    RegistrationOnEvent(user_name, user_phone_no, event_name, event_type, event_date, event_id, user_acc_no, transaction_no);
 })
+
+function RegistrationOnEvent(user_name, user_phone_no, event_name, event_type, event_date, event_id, user_acc_no, transaction_no)
+{
+    
+}
 
 </script>
 @endsection
