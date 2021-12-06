@@ -301,7 +301,7 @@ function editEventDetails(event_id, EventName, EventDes, EventType, EventPayMeth
             flash('Something Went Wrong. Try Again Later',{'bgColor' : '#f74134'});
         }
     }).catch(function(error){
-        flash('Catch',{'bgColor' : '#cccc00'});
+        flash('Catch 💩',{'bgColor' : '#cccc00'});
     })
 }
 

@@ -24,6 +24,8 @@ class EventRegistrationTable extends Migration
             $table->string('event_id');
             $table->string('user_acc_no');
             $table->string('transaction_no');
+            $table->string('stutus');
+
         });
     }
 

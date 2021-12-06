@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use App\EventInfoTable;
 use App\UserHostModel;
+use App\EventRegistrationModel;
 
 class EventController extends Controller
 {
@@ -151,12 +152,62 @@ class EventController extends Controller
     }
 
 
-    function EventSummary(){
+    function EventSummary()
+    {
         return view('EventSummary');
     }
 
     function UserRegistrationOnEvent(Request $request)
     {
+
+        $value = Session::get('phone_number');
+
+        $user_name = $request->input('user_name');
+        $user_phone_no = $request->input('user_phone_no');
+        $event_name = $request->input('event_name');
+        $event_type = $request->input('event_type');
+        $event_date = $request->input('event_date');
+        $event_id = $request->input('event_id');
+        $user_acc_no = $request->input('user_acc_no');
+        $transaction_no = $request->input('transaction_no');
+        $status = 'pending';
+
+        $check_host = EventInfoTable::where('event_creator_phone_no',$user_phone_no)->where('id', $event_id)->count();
+        if($check_host != 1)
+        {
+            $transaction_check = EventRegistrationModel::where('transaction_no','=', $transaction_no)->count();
+
+            if($transaction_check == 1)
+            {
+                return 2;
+            }
+            else
+            {
+                $result = EventRegistrationModel::insert([
+                    'user_name'=>$user_name,
+                    'user_phone_no'=>$user_phone_no,
+                    'event_name'=>$event_name,
+                    'event_type'=>$event_type,
+                    'event_date'=>$event_date,
+                    'event_id'=>$event_id,
+                    'user_acc_no'=>$user_acc_no,
+                    'transaction_no'=>$transaction_no,
+                    'stutus'=>$status
+                ]);
         
+                if($result == true)
+                {
+                    return 1;
+                }
+                else
+                {
+                    return 0;
+                }
+            }
+        }
+        else
+        {
+            return 3;
+        }
     }
 }
