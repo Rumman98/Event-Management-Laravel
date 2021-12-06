@@ -8,7 +8,7 @@
 <script type = "text/javascript">
 
 var eventData = localStorage['eventObject'];
-localStorage.removeItem( 'eventObject' );
+
 
 var event_id = JSON.parse(eventData).event_id;
 var event_name = JSON.parse(eventData).event_name;
@@ -39,16 +39,44 @@ $('#confirmPaymentBtnID').click(function(){
     var event_name = $('#event_name').html();
     var event_type =$('#event_type').html();
     var event_date = $('#event_date').html();
-    var event_id = $('#event_fee').html();
+    var event_id = $('#event_id').val();
     var user_acc_no = $('#UserAccountNumberId').val();
-    var transaction_no = $('#UserAccountNumberId').val();
+    var transaction_no = $('#UserTransactionId').val();
 
     RegistrationOnEvent(user_name, user_phone_no, event_name, event_type, event_date, event_id, user_acc_no, transaction_no);
 })
 
 function RegistrationOnEvent(user_name, user_phone_no, event_name, event_type, event_date, event_id, user_acc_no, transaction_no)
 {
-    
+    let url = '/register-event-by-user';
+
+    axios.post(url, {
+        user_name:user_name,
+        user_phone_no:user_phone_no,
+        event_name:event_name,
+        event_type:event_type,
+        event_date:event_date,
+        event_id:event_id,
+        user_acc_no:user_acc_no,
+        transaction_no:transaction_no
+    }).then(function(response){
+        if(response.status == 200 && response.data == 1)
+        {
+            flash('Submited for Approval. ',{'bgColor' : '#00b859'});
+            localStorage.removeItem( 'eventObject' );
+            //window.location.href='/hostprofile';
+        }
+        else if(response.status == 200 && response.data == 2)
+        {
+            flash('Oh, snap, This Transition Number Already Used 😱',{'bgColor' : '#f74134'});
+        }
+        else if(response.status == 200 && response.data == 3)
+        {
+            flash('Damn Man, You are the Host of this Event 🤬',{'bgColor' : '#f74134'});
+        }
+    }).catch(function(error){
+        flash('Shit Happens 💩',{'bgColor' : '#cccc00'});
+    })
 }
 
 </script>
