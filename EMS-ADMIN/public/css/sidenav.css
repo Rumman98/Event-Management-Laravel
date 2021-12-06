@@ -139,7 +139,7 @@ Main sidebar
 }
 
 .fix-sidebar .left-sidebar {
-    position: absolute;
+    position: fixed;
 }
 
 .fix-sidebar .left-sidebar nav li a,

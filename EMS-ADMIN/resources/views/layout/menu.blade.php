@@ -19,7 +19,7 @@
                 <ul id="sidebarnav">
                     <li class="nav-devider mt-0" style="margin-bottom: 5px"></li>
                     <li> <a href="{{url('/')}}" ><span> <i class="fas fa-columns"></i></span><span class="hide-menu">Dashboard</span></a></li>
-                    <li> <a href="{{url('/Visitors')}}" ><span> <i class="fas fa-chart-line"></i> </span><span class="hide-menu">Visitors</span></a></li>
+                    <li> <a href="{{url('/visitor')}}" ><span> <i class="fas fa-chart-line"></i> </span><span class="hide-menu">Visitors</span></a></li>
                     <li> <a href="{{url('/Hosts')}}" ><span> <i class="fas fa-id-card-alt"></i></span><span class="hide-menu">Hosts</span></a></li>
                     <li> <a href="{{url('/Users')}}" ><span> <i class="fas fa-users"></i></span><span class="hide-menu">Users</span></a></li>
                     <li> <a href="{{url('/Events')}}" ><span> <i class="far fa-calendar-alt"></i></span><span class="hide-menu">Events</span></a></li>

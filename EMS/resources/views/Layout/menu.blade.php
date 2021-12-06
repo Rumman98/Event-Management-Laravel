@@ -1,5 +1,5 @@
-<header id="header">
-<div class="header-content clearfix"> <span class="logo"><a href="/">Unity<b>Events</b></a></span>
+<header id="header" >
+<div class="header-content clearfix" > <span class="logo"><a href="/">Unity<b>Events</b></a></span>
 <nav class="navigation" role="navigation">
     <ul class="primary-nav">
       <li><a href="{{'/'}}">Home</a></li>

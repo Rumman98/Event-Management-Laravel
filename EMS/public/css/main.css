@@ -1750,6 +1750,7 @@ transition: all 250ms ease-in-out 0s;
     margin: auto;
   }
 
+
   #monitor {
       background: #000;
       position: relative;
@@ -1760,6 +1761,12 @@ transition: all 250ms ease-in-out 0s;
       border-bottom-left-radius: 50% 2%;
       border-bottom-right-radius: 50% 2%;
       transition: margin-right 1s;
+  }
+  #monitor:hover{
+    -webkit-animation: tvflicker .2s infinite alternate;
+    -moz-animation:    tvflicker .5s infinite alternate;
+    -o-animation:      tvflicker .5s infinite alternate;
+    animation:         tvflicker .5s infinite alternate;
   }
 
   #monitor:after {
@@ -1788,14 +1795,7 @@ transition: all 250ms ease-in-out 0s;
 
 
   @media all and (min-width: 960px) {
-      #monitor {
-          -webkit-animation: tvflicker .2s infinite alternate;
-          -moz-animation:    tvflicker .5s infinite alternate;
-          -o-animation:      tvflicker .5s infinite alternate;
-          animation:         tvflicker .5s infinite alternate;
-      }
-
-      @-webkit-keyframes tvflicker {
+        @-webkit-keyframes tvflicker {
         0%   { box-shadow: 0 0 100px 0 rgba(200,235,255,0.4); }
         100% { box-shadow: 0 0 95px 0 rgba(200,230,255,0.45); }
       }

@@ -7,7 +7,7 @@
         <div class="col-md-3 p-2">
             <div class="small-box bg-red">
                 <div class="inner">
-                  <h3>0</h3>
+                  <h3>{{$TotalVisitor}}</h3>
 
                   <p>Total Visitors</p>
                 </div>
