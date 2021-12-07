@@ -53,7 +53,7 @@ function HostChangePassword(host_mobile_no, host_oldPass, host_newPass, host_Con
             flash('Change failed',{'bgColor' : '#f74134'});
         }
     }).catch(function(error){
-        flash('Catch',{'bgColor' : '#f74134'});
+        flash('Shit happens 💩',{'bgColor' : '#f74134'});
     })
 }
 //Host Password Change Finish
@@ -119,7 +119,7 @@ function HostDataUpdate(hostId, HostName, HostEmail, HostAddress, HostPhone)
             flash('Update failed',{'bgColor' : '#f74134'});
         }
     }).catch(function(error){
-        flash('Catch',{'bgColor' : '#cccc00'});
+        flash('Shit happens 💩',{'bgColor' : '#cccc00'});
     })
 }
 //Host Info Edit Finish
@@ -168,7 +168,7 @@ function addNewEvent(eventName, eventDes, eventType, eventPayMethod, eventPayAcc
             flash('Event Add failed',{'bgColor' : '#f74134'});
         }
     }).catch(function(error){
-        flash('Catch',{'bgColor' : '#cccc00'});
+        flash('Shit happens 💩',{'bgColor' : '#cccc00'});
     })
 }
 //Add Event End
@@ -254,7 +254,7 @@ function eventDataShow(event_id)
             flash('Something Went Wrong. Try Again Later',{'bgColor' : '#f74134'});
         }
     }).catch(function(error){
-        flash('Catch',{'bgColor' : '#cccc00'});
+        flash('Shit happens 💩',{'bgColor' : '#cccc00'});
     })
 }
 
@@ -301,7 +301,7 @@ function editEventDetails(event_id, EventName, EventDes, EventType, EventPayMeth
             flash('Something Went Wrong. Try Again Later',{'bgColor' : '#f74134'});
         }
     }).catch(function(error){
-        flash('Catch 💩',{'bgColor' : '#cccc00'});
+        flash('Shit happens 💩',{'bgColor' : '#cccc00'});
     })
 }
 
