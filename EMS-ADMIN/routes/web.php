@@ -9,6 +9,9 @@ Route::get('/visitor','VisitorController@VisitorIndex');
 // Events Route
 Route::get('/Events','EventsController@EventsIndex');
 Route::get('/getEventsdata','EventsController@GetEventsData');
+Route::post('/getEventdetails','EventsController@GetEventDetails');
+Route::post('/EventApprovalUpdate','EventsController@EventApprovalUpdate');
+Route::post('/Eventdelete','EventsController@EventDelete');
 
 
 
@@ -18,7 +21,7 @@ Route::get('/Gallery','GalleryController@GalleryIndex');
 // Host DATA Routes
 Route::get('/Hosts','HostsController@HostsIndex');
 Route::get('/gethostdata','HostsController@GetHostsData');
-Route::get('/hostdelete','HostsController@HostDelete');
+Route::post('/hostdelete','HostsController@HostDelete');
 
 
 
@@ -31,7 +34,7 @@ Route::get('/Reports','ReportController@ReportIndex');
 // Users Data Route
 Route::get('/Users','UsersController@UsersIndex');
 Route::get('/getuserdata','UsersController@GetUserData');
-Route::get('/userdelete','UsersController@UserDelete');
+Route::post('/userdelete','UsersController@UserDelete');
 
 // Visitors Route
 Route::get('/Visitors','VisitorsController@VisitorsIndex');

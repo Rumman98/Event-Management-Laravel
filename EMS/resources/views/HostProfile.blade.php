@@ -337,5 +337,8 @@ function eventDelete(event_id)
     })
 }
 
+
+
+
 </script>
 @endsection

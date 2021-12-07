@@ -180,7 +180,7 @@
             <div class="row">
                 <div class="col-md-6">
                 <span style="color: white">Select Event Time </span>
-                <input id="EventTimeId" type="time" class="form-control mb-3" placeholder="Event Time" style="background-color: #464646; color: white;">
+                <input id="EventTimeId" type="time" name="time" class="form-control mb-3" placeholder="Event Time" style="background-color: #464646; color: white;">
             </div>
             <div class="col-md-6">
                 <span style="color: white">Select Event Date </span>

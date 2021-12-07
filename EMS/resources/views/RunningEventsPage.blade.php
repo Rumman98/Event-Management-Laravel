@@ -63,5 +63,8 @@
 
       })
    }
-</script>   
+
+
+
+</script>
 @endsection

@@ -55,8 +55,11 @@ function getHostdata() {
         .then(function(response) {
 
             if (response.status == 200) {
+                $('#HostTableID').DataTable().destroy();
+                $('#Host_table').empty();
                 var dataJSON = response.data;
                 $.each(dataJSON, function(i, item) {
+
                     $('<tr>').html(
                         "<td>" + dataJSON[i].name + "</td>" +
                         "<td>" + dataJSON[i].phone_number + "</td>" +
@@ -90,7 +93,7 @@ function getHostdata() {
 
     $('#Hostdeleteconfirm').click(function() {
         var id = $('#HostDeleteID').html();
-        getHostdelete(deleteID);
+        getHostdelete(id);
         })
 
         function getHostdelete(deleteID) {
