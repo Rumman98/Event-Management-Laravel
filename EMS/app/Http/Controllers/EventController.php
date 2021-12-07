@@ -162,15 +162,15 @@ class EventController extends Controller
 
         $value = Session::get('phone_number');
 
-        $user_name = $request->input('user_name');
-        $user_phone_no = $request->input('user_phone_no');
-        $event_name = $request->input('event_name');
-        $event_type = $request->input('event_type');
-        $event_date = $request->input('event_date');
-        $event_id = $request->input('event_id');
-        $user_acc_no = $request->input('user_acc_no');
+        $user_name      = $request->input('user_name');
+        $user_phone_no  = $request->input('user_phone_no');
+        $event_name     = $request->input('event_name');
+        $event_type     = $request->input('event_type');
+        $event_date     = $request->input('event_date');
+        $event_id       = $request->input('event_id');
+        $user_acc_no    = $request->input('user_acc_no');
         $transaction_no = $request->input('transaction_no');
-        $status = 'pending';
+        $status         = 'pending';
 
         $check_host = EventInfoTable::where('event_creator_phone_no',$user_phone_no)->where('id', $event_id)->count();
         if($check_host != 1)
@@ -184,15 +184,15 @@ class EventController extends Controller
             else
             {
                 $result = EventRegistrationModel::insert([
-                    'user_name'=>$user_name,
-                    'user_phone_no'=>$user_phone_no,
-                    'event_name'=>$event_name,
-                    'event_type'=>$event_type,
-                    'event_date'=>$event_date,
-                    'event_id'=>$event_id,
-                    'user_acc_no'=>$user_acc_no,
+                    'user_name'     =>$user_name,
+                    'user_phone_no' =>$user_phone_no,
+                    'event_name'    =>$event_name,
+                    'event_type'    =>$event_type,
+                    'event_date'    =>$event_date,
+                    'event_id'      =>$event_id,
+                    'user_acc_no'   =>$user_acc_no,
                     'transaction_no'=>$transaction_no,
-                    'stutus'=>$status
+                    'stutus'        =>$status
                 ]);
         
                 if($result == true)

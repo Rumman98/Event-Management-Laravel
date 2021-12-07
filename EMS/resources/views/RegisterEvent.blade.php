@@ -62,9 +62,9 @@ function RegistrationOnEvent(user_name, user_phone_no, event_name, event_type, e
     }).then(function(response){
         if(response.status == 200 && response.data == 1)
         {
-            flash('Submited for Approval. ',{'bgColor' : '#00b859'});
+            flash('Submited for Approval 📬',{'bgColor' : '#00b859'});
             localStorage.removeItem( 'eventObject' );
-            //window.location.href='/hostprofile';
+            window.location.href='/running-events';
         }
         else if(response.status == 200 && response.data == 2)
         {
@@ -75,7 +75,7 @@ function RegistrationOnEvent(user_name, user_phone_no, event_name, event_type, e
             flash('Damn Man, You are the Host of this Event 🤬',{'bgColor' : '#f74134'});
         }
     }).catch(function(error){
-        flash('Shit Happens 💩',{'bgColor' : '#cccc00'});
+        flash('Shit happens 💩',{'bgColor' : '#cccc00'});
     })
 }
 
