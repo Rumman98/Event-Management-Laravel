@@ -48,7 +48,8 @@
 
         {{-- Event Details Modal --}}
 
-        <div class="modal fade" id="EventDetailsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="EventDetailsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+aria-hidden="true">
 <div class="modal-dialog modal-lg" role="document">
   <div class="modal-content">
   <div class="modal-header">
@@ -57,11 +58,12 @@
         <span aria-hidden="true">&times;</span>
       </button>
     </div>
-    <div class="modal-body ">
+    <div class="modal-body  text-center">
      <div id="EventApproveForm" class="container">
       <h5 id="EventApproveID" class="d-none"></h5>
        <div class="row">
          <div class="col-md-6">
+             {{-- <p style="text-align: start;">Name</p> --}}
         <input disabled id="EventNameId" type="text" class="form-control mb-3" placeholder="Course Name">
         <input disabled id="EventDesId" type="text" class="form-control mb-3" placeholder="Course Description">
          <input disabled id="EventTypeId" type="text" class="form-control mb-3" placeholder="Course Fee">
@@ -75,17 +77,17 @@
         <input disabled id="EventCreatorId" type="text" class="form-control mb-3" placeholder="Course Fee">
         <input disabled id="EventPaymentMethodId" type="text" class="form-control mb-3" placeholder="Total Enroll">
         <input disabled id="EventPayAccountId" type="text" class="form-control mb-3" placeholder="Total Enroll">
-        {{-- <select id="EventApprovalStatusId" class="form-control mb-3">
-            <option value="Reject">Reject</option>
+        <div class="row">
+        <div class="col-md-6">
+        <input disabled id="EventApprovalStatusId" type="text" class="form-control mb-3" placeholder="Total Enroll">
+    </div>
+        <div class="col-md-6">
+        <select id="EventApprovalStatusUpdate" class="browser-default custom-select">
+            <option value="Rejected">Rejected</option>
             <option value="Approved">Approved</option>
-        </select> --}}
-
-        <select name="cars" id="cars">
-            <option value="volvo">Volvo</option>
-            <option value="saab">Saab</option>
-            <option value="mercedes">Mercedes</option>
-            <option value="audi">Audi</option>
-          </select>
+        </select>
+    </div>
+</div>
          </div>
        </div>
      </div>
@@ -190,7 +192,7 @@ function getEventdata() {
 
         $('#EventApproveConfirmBtn').click(function() {
             var EventID = $('#EventApproveID').html();
-            var StatusID = $('#EventApprovalStatusId').val();
+            var StatusID = $('#EventApprovalStatusUpdate').val();
             ApprovalUpdate(EventID,StatusID);
             })
 
@@ -237,11 +239,11 @@ function getEventdata() {
                 .then(function(response) {
                     if (response.data == 1) {
                         $('#Eventdeletemodal').modal('hide');
-                        toastr.success('Delete Success');
+                        toastr.success('Approved Successfully');
                         getEventdata();
                     } else {
                         $('#Eventdeletemodal').modal('hide');
-                        toastr.error('Delete Failed');
+                        toastr.error('Approved Failed');
                         getEventdata();
                     }
                 })
