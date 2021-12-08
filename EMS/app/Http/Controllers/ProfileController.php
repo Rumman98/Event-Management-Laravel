@@ -15,7 +15,6 @@ class ProfileController extends Controller
         $value = Session::get('phone_number');
 
             $userData = UserHostModel::where('phone_number', '=', $value)->get();
-            //$registerdEvents = EventRegistrationModel::where('user_phone_no', $value)->get();
 
             $registerdEvents = EventRegistrationModel
             ::join('eventinfotable', 'eventregistration.event_id', '=', 'eventinfotable.id')
