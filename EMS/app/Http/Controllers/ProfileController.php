@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
-use Illuminate\Support\Facades\DB;
 use App\UserHostModel;
 use App\EventRegistrationModel;
 
@@ -15,10 +14,9 @@ class ProfileController extends Controller
         $value = Session::get('phone_number');
 
             $userData = UserHostModel::where('phone_number', '=', $value)->get();
-            //$registerdEvents = EventRegistrationModel::where('user_phone_no', $value)->get();
 
-            $registerdEvents = EventRegistrationModel::
-            join('eventinfotable', 'eventregistration.event_id', '=', 'eventinfotable.id')
+            $registerdEvents = EventRegistrationModel
+            ::join('eventinfotable', 'eventregistration.event_id', '=', 'eventinfotable.id')
             ->where('user_phone_no', $value)
             ->get();
 
