@@ -12,9 +12,8 @@
 
           <th class="th-sm">Event Name</th>
           <th class="th-sm">Type</th>
-          <th class="th-sm">Time</th>
+          <th class="th-sm">Event Creator Number</th>
           <th class="th-sm">Date</th>
-          <th class="th-sm">Venue</th>
           <th class="th-sm">Approval</th>
           <th class="th-sm">Action</th>
 
@@ -48,8 +47,7 @@
 
         {{-- Event Details Modal --}}
 
-        <div class="modal fade" id="EventDetailsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-aria-hidden="true">
+        <div class="modal fade" id="EventDetailsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
 <div class="modal-dialog modal-lg" role="document">
   <div class="modal-content">
   <div class="modal-header">
@@ -58,28 +56,39 @@ aria-hidden="true">
         <span aria-hidden="true">&times;</span>
       </button>
     </div>
-    <div class="modal-body  text-center">
+    <div class="modal-body  text-center" style="overflow-y: auto; max-height: calc(100vh - 210px);">
      <div id="EventApproveForm" class="container">
       <h5 id="EventApproveID" class="d-none"></h5>
        <div class="row">
          <div class="col-md-6">
-             {{-- <p style="text-align: start;">Name</p> --}}
-        <input disabled id="EventNameId" type="text" class="form-control mb-3" placeholder="Course Name">
-        <input disabled id="EventDesId" type="text" class="form-control mb-3" placeholder="Course Description">
-         <input disabled id="EventTypeId" type="text" class="form-control mb-3" placeholder="Course Fee">
-         <input disabled id="EventTimeId" type="text" class="form-control mb-3" placeholder="Total Enroll">
-         <input disabled id="EventDateId" type="text" class="form-control mb-3" placeholder="Total Enroll">
-         <input disabled id="EventVenueId" type="text" class="form-control mb-3" placeholder="Total Enroll">
+        <label style="float: left;">Event Name</label>
+        <input disabled id="EventNameId" type="text" class="form-control mb-3">
+        <label style="float: left;">Event Description</label>
+        <input disabled id="EventDesId" type="text" class="form-control mb-3">
+        <label style="float: left;">Event Type</label>
+         <input disabled id="EventTypeId" type="text" class="form-control mb-3">
+         <label style="float: left;">Event Time</label>
+         <input disabled id="EventTimeId" type="text" class="form-control mb-3">
+         <label style="float: left;">Event Date</label>
+         <input disabled id="EventDateId" type="text" class="form-control mb-3">
+         <label style="float: left;">Venue</label>
+         <input disabled id="EventVenueId" type="text" class="form-control mb-3">
          </div>
          <div class="col-md-6">
-            <input disabled id="EventFeeId" type="text" class="form-control mb-3" placeholder="Course Name">
-            <input disabled id="EventLastDateId" type="text" class="form-control mb-3" placeholder="Course Description">
-        <input disabled id="EventCreatorId" type="text" class="form-control mb-3" placeholder="Course Fee">
-        <input disabled id="EventPaymentMethodId" type="text" class="form-control mb-3" placeholder="Total Enroll">
-        <input disabled id="EventPayAccountId" type="text" class="form-control mb-3" placeholder="Total Enroll">
+            <label style="float: left;">Fee</label>
+        <input disabled id="EventFeeId" type="text" class="form-control mb-3">
+        <label style="float: left;">Reg Last Date</label>
+        <input disabled id="EventLastDateId" type="text" class="form-control mb-3">
+        <label style="float: left;">Creator Number</label>
+        <input disabled id="EventCreatorId" type="text" class="form-control mb-3">
+        <label style="float: left;">Payment Method</label>
+        <input disabled id="EventPaymentMethodId" type="text" class="form-control mb-3">
+        <label style="float: left;">Account For Payment</label>
+        <input disabled id="EventPayAccountId" type="text" class="form-control mb-3">
+        <label style="float: left;">Status</label>
         <div class="row">
         <div class="col-md-6">
-        <input disabled id="EventApprovalStatusId" type="text" class="form-control mb-3" placeholder="Total Enroll">
+        <input disabled id="EventApprovalStatusId" type="text" class="form-control mb-3">
     </div>
         <div class="col-md-6">
         <select id="EventApprovalStatusUpdate" class="browser-default custom-select">
@@ -119,9 +128,8 @@ function getEventdata() {
                     $('<tr>').html(
                         "<td>" + dataJSON[i].event_name + "</td>" +
                         "<td>" + dataJSON[i].event_type + "</td>" +
-                        "<td>" + dataJSON[i].event_time + "</td>" +
+                        "<td>" + dataJSON[i].event_creator_phone_no + "</td>" +
                         "<td>" + dataJSON[i].event_date + "</td>" +
-                        "<td>" + dataJSON[i].event_venue + "</td>" +
                         "<td>" + dataJSON[i].event_approval + "</td>" +
                         "<td><a class='Eventdeletebtn' data-id=" + dataJSON[i].id + "><i class='fas fa-trash-alt'></i></a> <a class='EventDetailsbtn' data-id=" + dataJSON[i].id + "><i class='fas fa-check-square' style='padding:7px;'></i></a></td>"
                         ).appendTo('#Event_table');

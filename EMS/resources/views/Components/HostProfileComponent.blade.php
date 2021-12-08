@@ -152,7 +152,7 @@
 
 {{-- Add Event Modal --}}
 
-    <div class="modal fade" id="AddEventModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal fade" id="AddEventModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle">
         <div class="modal-dialog" role="document">
           <div class="modal-content" style="background-color: #464646">
             <div class="modal-header">
