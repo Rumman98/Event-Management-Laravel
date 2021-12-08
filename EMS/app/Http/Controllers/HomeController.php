@@ -20,7 +20,7 @@ class HomeController extends Controller
 
     function RunningEventPage()
     {
-        $eventData = EventInfoTable::where('event_approval', 'Approved')->get();
+        $eventData = EventInfoTable::where('event_approval', 'Approved')->orderBy('id','DESC')->get();
 
         return view('RunningEventsPage', ['eventData'=>$eventData]);
     }
