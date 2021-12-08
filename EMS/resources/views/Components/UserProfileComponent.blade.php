@@ -73,37 +73,18 @@
                                         <th class="column6">Invitation Card</th>
                                     </tr>
                                 </thead>
-                                <tbody id = "user_data">
-                                        <tr>
-                                            <td>Batch 13 Reunion</td>
-                                            <td>11 january 2021</td>
-                                            <td>Grand Sultan restaurant</td>
-                                            <td>200tk</td>
-                                            <td>Pending</td>
-                                            <td><button type="submit" class="submit">Download Invitation Card</button></td>
+                                <tbody>
 
+                                  @foreach ($RegisterdEvents as $RegisterdEvents)
+                                        <tr>
+                                            <td>{{$RegisterdEvents->event_name}}</td>
+                                            <td>{{$RegisterdEvents->event_date}}</td>
+                                            <td>{{$RegisterdEvents->event_venue}}</td>
+                                            <td>{{$RegisterdEvents->event_registration_fee}}</td>
+                                            <td>{{$RegisterdEvents->event_approval}}</td>
+                                            <td><button type="submit" class="submit">Download Invitation Card</button></td>
                                         </tr>
-                                        <tr>
-                                            <td>Batch 13 Reunion</td>
-                                            <td>11 january 2021</td>
-                                            <td>Grand Sultan restaurant</td>
-                                            <td>200tk</td>
-                                            <td>Pending</td>
-                                            <td><button type="submit" class="submit">Download Invitation Card</button></td>                                        </tr>
-                                        <tr>
-                                            <td>Batch 13 Reunion</td>
-                                            <td>11 january 2021</td>
-                                            <td>Grand Sultan restaurant</td>
-                                            <td>200tk</td>
-                                            <td>Approved</td>
-                                            <td><button type="submit" class="submit">Download Invitation Card</button></td>                                        </tr>
-                                        <tr>
-                                            <td>Batch 13 Reunion</td>
-                                            <td>11 january 2021</td>
-                                            <td>Grand Sultan restaurant</td>
-                                            <td>200tk</td>
-                                            <td>Approved</td>
-                                            <td><button type="submit" class="submit">Download Invitation Card</button></td>                                        </tr>
+                                  @endforeach
 
                                 </tbody>
                             </table>
