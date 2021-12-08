@@ -216,7 +216,7 @@ function getEventdata() {
                     if (response.status == 200){
                         if (response.data == 1) {
                             $('#EventDetailsModal').modal('hide');
-                            toastr.success('Update Success');
+                            toastr.success('Status Updated Successfully');
                             getEventdata();
                         } else {
                             $('#EventDetailsModal').modal('hide');
@@ -247,11 +247,11 @@ function getEventdata() {
                 .then(function(response) {
                     if (response.data == 1) {
                         $('#Eventdeletemodal').modal('hide');
-                        toastr.success('Approved Successfully');
+                        toastr.success('Delete Successfully');
                         getEventdata();
                     } else {
                         $('#Eventdeletemodal').modal('hide');
-                        toastr.error('Approved Failed');
+                        toastr.error('Delete Failed');
                         getEventdata();
                     }
                 })
