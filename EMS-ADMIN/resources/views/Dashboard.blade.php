@@ -15,7 +15,7 @@
                   <i class="ion ion-pie-graph"></i>
                 </div>
                 <a href="#" class="small-box-footer">
-                  More info <i class="fa fa-arrow-circle-right"></i>
+                    <i class="fas fa-chart-line"></i>
                 </a>
               </div>
         </div>
@@ -32,7 +32,7 @@
                   <i class="ion ion-person-add"></i>
                 </div>
                 <a href="#" class="small-box-footer">
-                  More info <i class="fa fa-arrow-circle-right"></i>
+                    <i class="fas fa-users"></i>
                 </a>
               </div>
         </div>
@@ -49,7 +49,7 @@
                   <i class="ion ion-person-add"></i>
                 </div>
                 <a href="#" class="small-box-footer">
-                  More info <i class="fa fa-arrow-circle-right"></i>
+                    <i class="fas fa-smile-wink"></i>
                 </a>
               </div>
         </div>
@@ -66,7 +66,7 @@
                   <i class="ion ion-stats-bars"></i>
                 </div>
                 <a href="#" class="small-box-footer">
-                  More info <i class="fa fa-arrow-circle-right"></i>
+                    <i class="fas fa-list-alt"></i>
                 </a>
               </div>
         </div>
