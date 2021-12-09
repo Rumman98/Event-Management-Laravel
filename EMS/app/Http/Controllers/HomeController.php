@@ -15,7 +15,12 @@ class HomeController extends Controller
         $timeDate = date("Y-m-d h:i:sa");
         VisitorModel::insert(['ip_address'=>$UserIP,'visit_time'=>$timeDate]);
 
-        return view('Home');
+        $HomeEventData = EventInfoTable::where('event_approval', 'Approved')
+        ->orderBy('id','DESC')
+        ->limit(3)
+        ->get();
+
+        return view('Home',['HomeEventData'=>$HomeEventData]);
     }
 
     function RunningEventPage()
