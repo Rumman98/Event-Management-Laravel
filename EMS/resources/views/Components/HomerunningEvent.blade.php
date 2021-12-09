@@ -2,17 +2,17 @@
   <div class="container">
     <div class="section-header">
       <h2 class="wow fadeInDown animated">Running Events</h2>
-    </div>        
+    </div>
     <div class="row">
       @foreach ($HomeEventData as $HomeEventData)
-      <div class="col-md-4 col-sm-6 text-center">
+      <div class="col-md-4 text-center">
         <div id="container">
           <div id="monitor">
             <div id="monitorscreen">
-              <h4>{{$HomeEventData->event_name}}</h4>
-              <h6 style="overflow: hidden;text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 4;line-clamp: 2; -webkit-box-orient: vertical;">
-                {{$HomeEventData->event_description}}</h6>
-              <p>Event Time and Date: <time datetime="">{{$HomeEventData->event_time}} {{$HomeEventData->event_date}}</time>.</p>
+              <h3 style=" font-family: 'Poppins'; color:white; margin-top: revert;">{{$HomeEventData->event_name}}</h3>
+              <h5>Event Type : {{$HomeEventData->event_type}}</h5>
+              <time style="color: white;">Date : {{$HomeEventData->event_date}}</time>
+              <p style="color: white">Event time: <time datetime="">{{$HomeEventData->event_time}}</time></p>
               {{-- <button type="button" id="ViewEventDetailsId" class="btn btn-primary" data-toggle="modal" data-target="#ShowEventDetailsModal">View Details</button> --}}
             </div>
           </div>
