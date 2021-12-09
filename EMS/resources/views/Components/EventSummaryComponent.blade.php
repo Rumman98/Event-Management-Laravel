@@ -56,8 +56,7 @@
                                         <td>0162772</td>
                                         <td>0156544</td>
                                         <td>
-                                        <a><i style="color: rgb(255, 0, 0); padding-inline: 5px;" class="fas fa-times-circle"></i></a>
-                                        <a><i style="color: rgb(0, 255, 0); padding-inline: 5px;" class="fas fa-check-circle"></i></a>
+                                            <button name="submit" type="submit" data-toggle="modal" data-target="#PaymentApproveModal" class="submit" style="padding: 2px;">Update Status</button>
                                         </td>
 
                                     </tr>
@@ -66,7 +65,36 @@
                     </div>
         </div>
 
+
+
     </div>
 </div>
 </div>
 </div>
+
+
+<div class="modal fade" id="PaymentApproveModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" style="background-color: #464646">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Update status</h5>
+        <div class="modal-body text-center">
+          <h5 id="PaymentApproveID" class="d-none"></h5>
+                <label style="float: left;">Status</label>
+            <input disabled id="PaymentApprovalStatusId" type="text" class="form-control mb-3">
+                <label style="float: left;">Update</label>
+            <select id="PaymentApprovalStatusUpdate" class="form-control mb-3" aria-label="Default select example">
+                <option value="Rejected">Rejected</option>
+                <option value="Approved">Approved</option>
+            </select>
+           </div>
+         </div>
+
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" id="PaymentStatussUpdateConfirm" class="btn btn-primary">Update</button>
+        </div>
+    </div>
+      </div>
+</div>
+
