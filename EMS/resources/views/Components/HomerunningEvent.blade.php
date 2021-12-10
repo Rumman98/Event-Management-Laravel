@@ -13,7 +13,6 @@
               <h5>Event Type : {{$HomeEventData->event_type}}</h5>
               <time style="color: white;">Date : {{$HomeEventData->event_date}}</time>
               <p style="color: white">Event time: <time datetime="">{{$HomeEventData->event_time}}</time></p>
-              {{-- <button type="button" id="ViewEventDetailsId" class="btn btn-primary" data-toggle="modal" data-target="#ShowEventDetailsModal">View Details</button> --}}
             </div>
           </div>
         </div>
