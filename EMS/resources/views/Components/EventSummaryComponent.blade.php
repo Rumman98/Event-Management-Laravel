@@ -6,26 +6,27 @@
         <b> <h1 style="color: white">Event Summary</h1></b>
 
         <div class="row">
+            @foreach ($EventInfo as $EventInfo)
             <div class="bio-row">
-                <p style="color: white"><span style="color: rgb(255, 154, 87);">Event Name</span>: Rumman</p>
+                <p style="color: white"><span style="color: rgb(255, 154, 87);">Event Name</span>: {{$EventInfo->event_name}}</p>
             </div>
             <div class="bio-row">
-                <p style="color: white"><span style="color: rgb(255, 154, 87);">Event Type</span>: 01111</p>
-            </div>
-
-            <div class="bio-row">
-                <p style="color: white"><span style="color: rgb(255, 154, 87);">Event Date</span>: 01111</p>
-            </div>
-            <div class="bio-row">
-                <p style="color: white"><span style="color: rgb(255, 154, 87);">Event Time</span>: 01111</p>
-            </div>
-            <div class="bio-row">
-                <p style="color: white"><span style="color: rgb(255, 154, 87);">Event Venue</span>: 01111</p>
-            </div>
-            <div class="bio-row">
-                <p style="color: white"><span style="color: rgb(255, 154, 87);">Pay Amount</span>: 01111</p>
+                <p style="color: white"><span style="color: rgb(255, 154, 87);">Event Type</span>: {{$EventInfo->event_type}}</p>
             </div>
 
+            <div class="bio-row">
+                <p style="color: white"><span style="color: rgb(255, 154, 87);">Event Date</span>: {{$EventInfo->event_date}}</p>
+            </div>
+            <div class="bio-row">
+                <p style="color: white"><span style="color: rgb(255, 154, 87);">Event Time</span>: {{$EventInfo->event_time}}</p>
+            </div>
+            <div class="bio-row">
+                <p style="color: white"><span style="color: rgb(255, 154, 87);">Event Venue</span>: {{$EventInfo->event_venue}}</p>
+            </div>
+            <div class="bio-row">
+                <p style="color: white"><span style="color: rgb(255, 154, 87);">Pay Amount</span>: {{$EventInfo->event_registration_fee}}</p>
+            </div>
+            @endforeach
         </div>
 
         <div class="limiter">
@@ -47,19 +48,21 @@
                                 </tr>
                             </thead>
                             <tbody id = "user_data">
+                                @foreach ($EventMemberDetails as $EventMemberDetails)
                                     <tr>
-                                        <td>x</td>
-                                        <td>01220191</td>
-                                        <td>axbahx </td>
-                                        <td>Bkash</td>
-                                        <td>200</td>
-                                        <td>0162772</td>
-                                        <td>0156544</td>
+                                        <td>{{$EventMemberDetails->user_name}}</td>
+                                        <td>{{$EventMemberDetails->user_phone_no}}</td>
+                                        <td>{{$EventMemberDetails->event_venue}} </td>
+                                        <td>{{$EventMemberDetails->event_payment_method}}</td>
+                                        <td>{{$EventMemberDetails->event_registration_fee}}</td>
+                                        <td>{{$EventMemberDetails->user_acc_no}}</td>
+                                        <td>{{$EventMemberDetails->transaction_no}}</td>
                                         <td>
-                                            <button name="submit" type="submit" data-toggle="modal" data-target="#PaymentApproveModal" class="submit" style="padding: 2px;">Update Status</button>
+                                            <button name="submit" type="submit" data-id="{{$EventMemberDetails->user_phone_no}}" data-toggle="modal" data-target="#PaymentApproveModal" class="submit status" style="padding: 2px;">Update Status</button>
                                         </td>
 
                                     </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>
@@ -80,7 +83,8 @@
             <h5 class="modal-title" id="exampleModalLongTitle">Update status</h5>
         <div class="modal-body text-center">
           <h5 id="PaymentApproveID" class="d-none"></h5>
-                <label style="float: left;">Status</label>
+          <input type='hidden' id='user_phone_no'>
+                <label style="float: left;">Current Status</label>
             <input disabled id="PaymentApprovalStatusId" type="text" class="form-control mb-3">
                 <label style="float: left;">Update</label>
             <select id="PaymentApprovalStatusUpdate" class="form-control mb-3" aria-label="Default select example">

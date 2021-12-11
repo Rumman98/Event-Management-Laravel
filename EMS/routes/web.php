@@ -38,7 +38,10 @@ Route::post("/event-details", 'EventController@EventDetailsforEdit')->middleware
 Route::post("/event-details-modal", 'EventController@EventDetailsforModal');
 Route::post("/event-update", 'EventController@EventUpdate')->middleware('loginCheck');
 Route::post("/event-delete", 'EventController@EventDelete')->middleware('loginCheck');
-Route::post('/register-event-by-user','EventController@UserRegistrationOnEvent')->middleware('loginCheck');;
+Route::post('/register-event-by-user','EventController@UserRegistrationOnEvent')->middleware('loginCheck');
+Route::post('/status','EventController@userStatus')->middleware('loginCheck');
+Route::post('/updateUserStatus','EventController@updateUserStatus')->middleware('loginCheck');
+
 
 
 

@@ -202,7 +202,7 @@ function getEventdata() {
             var EventID = $('#EventApproveID').html();
             var StatusID = $('#EventApprovalStatusUpdate').val();
             ApprovalUpdate(EventID,StatusID);
-            })
+          });
 
 
             function ApprovalUpdate(EventID,StatusID) {

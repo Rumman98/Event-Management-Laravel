@@ -81,7 +81,7 @@
                                             <td>{{$RegisterdEvents->event_date}}</td>
                                             <td>{{$RegisterdEvents->event_venue}}</td>
                                             <td>{{$RegisterdEvents->event_registration_fee}}</td>
-                                            <td>{{$RegisterdEvents->event_approval}}</td>
+                                            <td>{{$RegisterdEvents->stutus}}</td>
                                             <td><button type="submit" class="submit">Download Invitation Card</button></td>
                                         </tr>
                                   @endforeach

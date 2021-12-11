@@ -154,7 +154,19 @@ class EventController extends Controller
 
     function EventSummary()
     {
-        return view('EventSummary');
+        $eid =  $_GET['event-id'];
+
+        $eventInfo = EventInfoTable::where('id', $eid)->get();     
+        
+        $eventMemberDetails = EventRegistrationModel
+        ::join('eventinfotable', 'eventregistration.event_id', '=', 'eventinfotable.id')
+        ->where('event_id', $eid)
+        ->get();
+
+        return view('EventSummary',[
+            'EventInfo'=>$eventInfo,
+            'EventMemberDetails'=>$eventMemberDetails
+        ]);
     }
 
     function UserRegistrationOnEvent(Request $request)
@@ -208,6 +220,32 @@ class EventController extends Controller
         else
         {
             return 3;
+        }
+    }
+
+    function userStatus(Request $request)
+    {
+        $phone_no = $request->input('phone_no');
+
+        $userStatus = EventRegistrationModel::where('user_phone_no', $phone_no)->get();
+
+        return $userStatus;
+    }
+
+    function updateUserStatus(Request $request)
+    {
+        $user_phone_no = $request->input('user_phone_no');
+        $userStatus = $request->input('userStatus');
+
+        $result = EventRegistrationModel::where('user_phone_no', $user_phone_no)->update(['stutus'=>$userStatus]);
+
+        if($result == true)
+        {
+            return 1;
+        }
+        else
+        {
+            return 0;
         }
     }
 }
