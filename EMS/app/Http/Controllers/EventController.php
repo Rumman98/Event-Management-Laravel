@@ -226,8 +226,9 @@ class EventController extends Controller
     function userStatus(Request $request)
     {
         $phone_no = $request->input('phone_no');
+        $transaction_no = $request->input('transaction_no');
 
-        $userStatus = EventRegistrationModel::where('user_phone_no', $phone_no)->get();
+        $userStatus = EventRegistrationModel::where('user_phone_no', $phone_no)->where('transaction_no', $transaction_no)->get();
 
         return $userStatus;
     }
@@ -235,9 +236,10 @@ class EventController extends Controller
     function updateUserStatus(Request $request)
     {
         $user_phone_no = $request->input('user_phone_no');
+        $transaction_no = $request->input('transaction_no');
         $userStatus = $request->input('userStatus');
 
-        $result = EventRegistrationModel::where('user_phone_no', $user_phone_no)->update(['stutus'=>$userStatus]);
+        $result = EventRegistrationModel::where('user_phone_no', $user_phone_no)->where('transaction_no', $transaction_no)->update(['stutus'=>$userStatus]);
 
         if($result == true)
         {

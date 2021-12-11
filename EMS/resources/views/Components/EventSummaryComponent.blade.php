@@ -58,7 +58,7 @@
                                         <td>{{$EventMemberDetails->user_acc_no}}</td>
                                         <td>{{$EventMemberDetails->transaction_no}}</td>
                                         <td>
-                                            <button name="submit" type="submit" data-id="{{$EventMemberDetails->user_phone_no}}" data-toggle="modal" data-target="#PaymentApproveModal" class="submit status" style="padding: 2px;">Update Status</button>
+                                            <button name="submit" type="submit" data-id="{{$EventMemberDetails->user_phone_no}}" data-name="{{$EventMemberDetails->transaction_no}}" data-toggle="modal" data-target="#PaymentApproveModal" class="submit status" style="padding: 2px;">Update Status</button>
                                         </td>
 
                                     </tr>
@@ -84,6 +84,8 @@
         <div class="modal-body text-center">
           <h5 id="PaymentApproveID" class="d-none"></h5>
           <input type='hidden' id='user_phone_no'>
+          <input type='hidden' id='transactionNoId'>
+
                 <label style="float: left;">Current Status</label>
             <input disabled id="PaymentApprovalStatusId" type="text" class="form-control mb-3">
                 <label style="float: left;">Update</label>
