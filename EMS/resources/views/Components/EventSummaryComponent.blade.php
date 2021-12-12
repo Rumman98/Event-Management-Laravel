@@ -38,11 +38,10 @@
                                 <tr class="table100-head">
                                     <th class="column1">User Name</th>
                                     <th class="column2">Phone Number</th>
-                                    <th class="column3">Address</th>
                                     <th class="column3">Payment Method</th>
-                                    <th class="column4">Payment Amount</th>
                                     <th class="column5">Account Number</th>
                                     <th class="column5">Transaction Number</th>
+                                    <th class="column5">Status</th>
                                     <th class="column5">Action</th>
 
                                 </tr>
@@ -52,13 +51,12 @@
                                     <tr>
                                         <td>{{$EventMemberDetails->user_name}}</td>
                                         <td>{{$EventMemberDetails->user_phone_no}}</td>
-                                        <td>{{$EventMemberDetails->event_venue}} </td>
                                         <td>{{$EventMemberDetails->event_payment_method}}</td>
-                                        <td>{{$EventMemberDetails->event_registration_fee}}</td>
                                         <td>{{$EventMemberDetails->user_acc_no}}</td>
                                         <td>{{$EventMemberDetails->transaction_no}}</td>
+                                        <td>{{$EventMemberDetails->stutus}}</td>
                                         <td>
-                                            <button name="submit" type="submit" data-id="{{$EventMemberDetails->user_phone_no}}" data-name="{{$EventMemberDetails->transaction_no}}" data-toggle="modal" data-target="#PaymentApproveModal" class="submit status" style="padding: 2px;">Update Status</button>
+                                            <button name="submit" type="submit" data-id="{{$EventMemberDetails->user_phone_no}}" data-name="{{$EventMemberDetails->transaction_no}}" data-toggle="modal" data-target="#PaymentApproveModal" class="submit status" >Update Status</button>
                                         </td>
 
                                     </tr>

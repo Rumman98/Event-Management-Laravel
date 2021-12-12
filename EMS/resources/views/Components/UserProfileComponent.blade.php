@@ -69,6 +69,8 @@
                                         <th class="column2">Event Time</th>
                                         <th class="column3">Venue</th>
                                         <th class="column4">Payment Amount</th>
+                                        <th class="column4">Host Name</th>
+                                        <th class="column4">Host Number</th>
                                         <th class="column5">Confirmation Status</th>
                                         <th class="column6">Invitation Card</th>
                                     </tr>
@@ -81,6 +83,8 @@
                                             <td>{{$RegisterdEvents->event_date}}</td>
                                             <td>{{$RegisterdEvents->event_venue}}</td>
                                             <td>{{$RegisterdEvents->event_registration_fee}}</td>
+                                            <td>Host Name</td>
+                                            <td>Number</td>
                                             <td>{{$RegisterdEvents->stutus}}</td>
                                             <td><button type="submit" class="submit">Download Invitation Card</button></td>
                                         </tr>
