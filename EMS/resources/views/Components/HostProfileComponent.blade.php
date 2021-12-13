@@ -61,7 +61,7 @@
     <div class="panel">
         <div class="panel-body bio-graph-info">
            <center><button type="submit" class="submit" data-toggle="modal" data-target="#AddEventModal" style="width: 30%; margin-bottom: 8px;">Add Events</button></center>
-
+           <b> <h1 style="color: white">Your Hosted Events</h1></b>
             <div class="limiter">
                 <div class="row">
                     <div class="col-md-12 p-3">
@@ -89,6 +89,38 @@
             </div>
 
 
+
+        </div>
+    </div>
+
+    <div class="panel">
+        <div class="panel-body bio-graph-info">
+            <b> <h1 style="color: white">Your Registered Events</h1></b>
+
+            <div class="limiter">
+
+                        <div class="table100">
+                            <table id="RegisteredEventShowTableforHost">
+                                <thead>
+                                    <tr class="table100-head">
+                                        <th class="column1">Event Name</th>
+                                        <th class="column2">Event Time</th>
+                                        <th class="column3">Venue</th>
+                                        <th class="column4">Payment Amount</th>
+                                        <th class="column4">Host Name</th>
+                                        <th class="column4">Host Number</th>
+                                        <th class="column5">Confirmation Status</th>
+                                        <th class="column6">Invitation Card</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+
+
+                                </tbody>
+                            </table>
+                        </div>
+            </div>
 
         </div>
     </div>

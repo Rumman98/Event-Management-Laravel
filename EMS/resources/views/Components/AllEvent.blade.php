@@ -37,7 +37,7 @@
                 <div class="row" style="margin-right: 40px; margin-left: 40px;">
                     <div class="">
                       <input type="hidden" id = "event_id">
-                        <p style="color: white"><span style="color: rgb(255, 154, 87);; font-size: 18px;">Event Name </span>: <span id='event_name'></span> </p>
+                        <p style="color: white"><span style="color: rgb(255, 154, 87); font-size: 18px;">Event Name </span>: <span id='event_name'></span> </p>
                     </div>
                     <div class="">
                         <span style="color: rgb(255, 154, 87); font-size: 18px;">Description </span>
@@ -45,33 +45,34 @@
                     </div>
 
                     <div class="">
-                      <p style="color: white"><span style="color: rgb(255, 154, 87);; font-size: 18px;">Event Type</span>: <span id='event_type'></span></p>
+                      <p style="color: white"><span style="color: rgb(255, 154, 87); font-size: 18px;">Event Type</span>: <span id='event_type'></span></p>
                   </div>
 
                     <div class="">
-                        <p style="color: white"><span style="color: rgb(255, 154, 87);; font-size: 18px;">Date</span>: <span id='event_date'></p>
+                        <p style="color: white"><span style="color: rgb(255, 154, 87); font-size: 18px;">Date</span>: <span id='event_date'></p>
                     </div>
 
                     <div class="">
-                        <p style="color: white"><span style="color: rgb(255, 154, 87);; font-size: 18px;">Time</span>: <span id='event_time'></p>
+                        <p style="color: white"><span style="color: rgb(255, 154, 87); font-size: 18px;">Time</span>: <span id='event_time'></p>
                     </div>
 
                     <div class="">
-                        <p style="color: white"><span style="color: rgb(255, 154, 87);; font-size: 18px;">Venue</span>: <span id='event_venue'></p>
+                        <p style="color: white"><span style="color: rgb(255, 154, 87); font-size: 18px;">Venue</span>: <span id='event_venue'></p>
                     </div>
 
                     <div class="">
-                        <p style="color: white"><span style="color: rgb(255, 154, 87);; font-size: 18px;">Registration Fee</span>: <span id='event_fee'></p>
+                        <p style="color: white"><span style="color: rgb(255, 154, 87); font-size: 18px;">Registration Fee</span>: <span id='event_fee'></p>
                     </div>
 
                     <div class="">
-                        <p style="color: white"><span style="color: rgb(255, 154, 87);; font-size: 18px;">Payment Method</span>: <span id='event_payment_method'></p>
+                        <p style="color: white"><span style="color: rgb(255, 154, 87); font-size: 18px;">Payment Method</span>: <span id='event_payment_method'></p>
                     </div>
 
                     <div class="">
-                        <p style="color: white"><span style="color: rgb(255, 154, 87);; font-size: 18px;">Account Number</span>: <span id='event_pay_acc_no'></p>
+                        <p style="color: white"><span style="color: rgb(255, 154, 87); font-size: 18px;">Payment Account Number</span>: <span id='event_pay_acc_no'></p>
                     </div>
 
+                   <center><p style="color: white; font-family: monospace;font-style: italic; ">This Event Is Hosted By <span style="color: rgb(255, 154, 87); font-size: 18px;">Host Name</span></p></center>
 
 
 

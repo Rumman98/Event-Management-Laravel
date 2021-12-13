@@ -211,7 +211,9 @@ function getEventDetails()
                 })
 
                 $('#EventShowTable').DataTable({"order":false});
+                $('#RegisteredEventShowTableforHost').DataTable({"order":false});
                 $('.dataTables_length').addClass('bs-select');
+
 
         }
         else
