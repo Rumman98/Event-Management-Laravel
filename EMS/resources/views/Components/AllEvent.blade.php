@@ -72,7 +72,7 @@
                         <p style="color: white"><span style="color: rgb(255, 154, 87); font-size: 18px;">Payment Account Number</span>: <span id='event_pay_acc_no'></p>
                     </div>
 
-                   <center><p style="color: white; font-family: monospace;font-style: italic; ">This Event Is Hosted By <span style="color: rgb(255, 154, 87); font-size: 18px;">Host Name</span></p></center>
+                   <center><p style="color: white; font-family: monospace;font-style: italic; ">This Event Is Hosted By <span id = 'event_host_name' style="color: rgb(255, 154, 87); font-size: 18px;"></span></p></center>
 
 
 

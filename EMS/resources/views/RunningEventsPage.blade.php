@@ -54,6 +54,7 @@
             $('#event_date').html(JsonData[0].event_date);
             $('#event_venue').html(JsonData[0].event_venue);
             $('#event_fee').html(JsonData[0].event_registration_fee);
+            $('#event_host_name').html(JsonData[0].name);
          }
          else
          {
