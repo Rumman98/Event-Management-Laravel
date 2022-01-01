@@ -83,8 +83,8 @@
                                             <td>{{$RegisterdEvents->event_date}}</td>
                                             <td>{{$RegisterdEvents->event_venue}}</td>
                                             <td>{{$RegisterdEvents->event_registration_fee}}</td>
-                                            <td>Host Name</td>
-                                            <td>Number</td>
+                                            <td>{{$RegisterdEvents->name}}</td>
+                                            <td>{{$RegisterdEvents->phone_number}}</td>
                                             <td>{{$RegisterdEvents->stutus}}</td>
                                             <td><button type="submit" class="submit">Download Invitation Card</button></td>
                                         </tr>
