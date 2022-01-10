@@ -6,12 +6,13 @@
                   <a href="#">
                       <img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="">
                   </a>
+                  <button name="submit" type="submit" class="submit" style="width: 100%; margin-top: 9px;">Update Profile Picture</button>
               </div>
           </div>
       </div>
       <div class="profile-info col-md-9">
           <div class="panel">
-              <div class="panel-body bio-graph-info">
+              <div class="panel-body bio-graph-info" style="padding: 55px;">
 
                  <b> <h1 style="color: white">Profile Type<span>: Host</span></h1></b>
 
@@ -141,9 +142,9 @@
           <input id="HostAddressUpdateId" type="text" class="form-control mb-3" placeholder="Address" style="background-color: #464646; color: white;">
           <input id="HostPhoneUpdateId" onclick="notify()" type="text" class="form-control mb-3" placeholder="Phone Number" style="background-color: #464646; color: white;" readonly>
          <br>
-         <center><span style="color: white">Upload Profile Picture </span></center>
+         {{-- <center><span style="color: white">Upload Profile Picture </span></center>
          <input class="form-control mb-3" id="imgInput" type="file" style="background-color: #464646; color: white;">
-        <img class="imgPreview mt-3" id="imgPreview" src="{{asset('images/default-image.png')}}">
+        <img class="imgPreview mt-3" id="imgPreview" src="{{asset('images/default-image.png')}}"> --}}
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -313,14 +314,14 @@
             flash('Successfully Logout',{'bgColor' : '#00b859'});
         }
 
-        $('#imgInput').change(function () {
-            var reader=new FileReader();
-            reader.readAsDataURL(this.files[0]);
-            reader.onload=function (event) {
-               var ImgSource= event.target.result;
-                $('#imgPreview').attr('src',ImgSource)
-            }
-        })
+        // $('#imgInput').change(function () {
+        //     var reader=new FileReader();
+        //     reader.readAsDataURL(this.files[0]);
+        //     reader.onload=function (event) {
+        //        var ImgSource= event.target.result;
+        //         $('#imgPreview').attr('src',ImgSource)
+        //     }
+        // })
 
         function notify()
         {
