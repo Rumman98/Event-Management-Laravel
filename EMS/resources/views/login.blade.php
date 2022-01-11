@@ -30,14 +30,14 @@
             {
                 var mobile_number = response.data;
                 window.location.href="/hostprofile";
-                flash('Login Successfull',{'bgColor' : '#00b859'});
+                flash('Login Successfull ✔️',{'bgColor' : '#00b859'});
             }
             else
             {
-                flash('Wrong Login Cardinals',{'bgColor' : '#f74134'});
+                flash('Wrong Login Cardinals 🔒',{'bgColor' : '#f74134'});
             }
         }).catch(function(error){
-            console.log("Catch");
+            flash('Shit happens 💩',{'bgColor' : '#cccc00'});
         })
     })
 

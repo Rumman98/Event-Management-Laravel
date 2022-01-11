@@ -61,7 +61,7 @@
             flash('Something Went Wrong. Try Again Later',{'bgColor' : '#f74134'});
          }
       }).catch(function(error){
-
+            flash('Shit happens 💩',{'bgColor' : '#cccc00'});
       })
    }
 
