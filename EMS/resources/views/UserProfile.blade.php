@@ -47,10 +47,10 @@ function ChangePassword(mobile_no, oldPass, newPass, ConNewPass)
         }
         else
         {
-            flash('Change failed',{'bgColor' : '#f74134'});
+            flash('Change Failed',{'bgColor' : '#f74134'});
         }
     }).catch(function(error){
-        flash('Catch',{'bgColor' : '#cccc00'});
+        flash('Shit happens 💩',{'bgColor' : '#cccc00'});
     })
 }
 //User Password Reset Close
@@ -111,10 +111,10 @@ function UserDataUpdate(user_id, NameUpdateId, EmailUpdateId, AddressUpdateId)
         }
         else
         {
-            flash('Update failed',{'bgColor' : '#f74134'});
+            flash('Update Failed',{'bgColor' : '#f74134'});
         }
     }).catch(function(error){
-        flash('Catch',{'bgColor' : '#cccc00'});
+        flash('Shit happens 💩',{'bgColor' : '#cccc00'});
     })
 }
 // User Info Update End

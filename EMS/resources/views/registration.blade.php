@@ -41,10 +41,10 @@
             }
             else
             {
-                iqwerty.toast.toast("Random Error");
+                iqwerty.toast.toast("Random Error 🤔");
             }
         }).catch(function(error){
-            alert('Catch');
+            flash('Shit happens 💩',{'bgColor' : '#cccc00'});
         });
     }
 

@@ -83,7 +83,7 @@ function HostDetails(user_id)
             $('#HostPhoneUpdateId').val(JsonData[0].phone_number);
         }
     }).catch(function(error){
-
+        flash('Shit happens 💩',{'bgColor' : '#cccc00'});
     })
 }
 
@@ -221,7 +221,7 @@ function getEventDetails()
 
         }
     }).catch(function(error){
-
+        flash('Shit happens 💩',{'bgColor' : '#cccc00'});
     })
 }
 //Event Data Show End
@@ -335,7 +335,7 @@ function eventDelete(event_id)
             flash('Something Went Wrong. Try Again Later',{'bgColor' : '#f74134'});
         }
     }).catch(function(error){
-        flash('Catch',{'bgColor' : '#cccc00'});
+        flash('Shit happens 💩',{'bgColor' : '#cccc00'});
     })
 }
 
