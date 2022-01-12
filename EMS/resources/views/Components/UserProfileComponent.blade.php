@@ -7,7 +7,7 @@
                   <a href="#">
                       <img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="">
                   </a>
-                  <button name="submit" type="submit" class="submit" style="width: 100%; margin-top: 9px;">Update Profile Picture</button>
+                  <button name="submit" type="submit" class="submit" style="width: 100%; margin-top: 9px;" data-toggle="modal" data-target="#UserProfilePictureModal" >Update Profile Picture</button>
               </div>
           </div>
       </div>
@@ -126,6 +126,29 @@
   </div>
 
 
+  {{--User Profile picture Update Modal --}}
+<div class="modal fade" id="UserProfilePictureModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content" style="background-color: #464646">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Update Profile Picture</h5>
+
+        </div>
+        <div class="modal-body" >
+         <br>
+         <center><span style="color: white">Upload Profile Picture </span></center>
+         <input class="form-control mb-3" id="imgInput" type="file" style="background-color: #464646; color: white;">
+        <img class="imgPreview mt-3" id="imgPreview" src="{{asset('images/default-image.png')}}">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" id="UpdateConfirmBtn" class="btn btn-primary">Upload</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
   {{-- Change Password Modal --}}
   @foreach ($UserData as $UserData)
   <div class="modal fade" id="UserChngPasswordModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
@@ -159,14 +182,14 @@
             flash('Successfully Logout',{'bgColor' : '#00b859'});
         }
 
-        // $('#imgInput').change(function () {
-        //     var reader=new FileReader();
-        //     reader.readAsDataURL(this.files[0]);
-        //     reader.onload=function (event) {
-        //        var ImgSource= event.target.result;
-        //         $('#imgPreview').attr('src',ImgSource)
-        //     }
-        // })
+        $('#imgInput').change(function () {
+            var reader=new FileReader();
+            reader.readAsDataURL(this.files[0]);
+            reader.onload=function (event) {
+               var ImgSource= event.target.result;
+                $('#imgPreview').attr('src',ImgSource)
+            }
+        })
 
         function notify()
         {
