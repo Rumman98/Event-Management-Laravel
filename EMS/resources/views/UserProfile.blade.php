@@ -117,6 +117,30 @@ function UserDataUpdate(user_id, NameUpdateId, EmailUpdateId, AddressUpdateId)
         flash('Shit happens 💩',{'bgColor' : '#cccc00'});
     })
 }
+
+
+//User Profile Photo Upload
+$('#SaveProfilePhoto').on('click', function(){
+    var profile_photo = $('#imgInput').prop('files')[0];
+    var formData = new FormData();
+
+    formData.append('photo', profile_photo);
+
+    axios.post("/photoUpload", formData).then(function(response){
+        if(response.status == 200)
+        {
+            alert('Ok');
+        }
+        else
+        {
+            alert('Issue');
+        }
+    }).catch(function(error){
+
+    })
+})
+
+
 // User Info Update End
 $('#RegisteredEventShowTable').DataTable({"order":false});
 $('.dataTables_length').addClass('bs-select');

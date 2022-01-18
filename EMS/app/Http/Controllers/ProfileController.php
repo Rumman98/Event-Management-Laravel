@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use App\UserHostModel;
 use App\EventRegistrationModel;
+use App\PhotoModel;
 
 class ProfileController extends Controller
 {
@@ -146,6 +147,24 @@ class ProfileController extends Controller
         {
             return 0;
         }
+    }
+
+    function UserProfilePhotoUpdate(Request $request)
+    {
+
+        $value = Session::get('phone_number');
+        $photoPath = $request->file('photo')->store('public');
+        $photoName = (explode('/',$photoPath))[1];
+
+        $host = $_SERVER['HTTP_HOST'];
+        $location = "http://".$host."/storage/".$photoName;
+
+        $result = PhotoModel::insert([
+            'photo_location'=>$location,
+            'user_phone_no'=>$value
+        ]);
+
+        return 1;
     }
 
     function HostDetails(Request $request)

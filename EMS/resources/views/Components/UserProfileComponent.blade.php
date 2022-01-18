@@ -142,7 +142,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" id="UpdateConfirmBtn" class="btn btn-primary">Upload</button>
+          <button type="button" id="SaveProfilePhoto" class="btn btn-primary">Upload</button>
         </div>
       </div>
     </div>
