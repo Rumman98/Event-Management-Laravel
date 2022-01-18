@@ -1,0 +1,7 @@
+body{
+    cursor: url("../images/cursor/RedGlow.cur"), default;
+}
+
+a{
+    cursor: url("../images/cursor/RedGlow - link select.cur"), default;
+}
