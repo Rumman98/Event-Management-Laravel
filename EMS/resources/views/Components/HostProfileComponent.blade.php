@@ -3,9 +3,11 @@
       <div class="profile-nav col-md-3">
           <div class="panel">
               <div class="user-heading round">
+                @foreach($hostPhoto as $hostPhoto)
                   <a href="#">
-                      <img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="">
+                      <img src="{{$hostPhoto->photo_location}}" alt="">
                   </a>
+                @endforeach  
                   <button name="submit" type="submit" class="submit" style="width: 100%; margin-top: 9px;" data-toggle="modal" data-target="#HostProfilePictureModal" >Update Profile Picture</button>
               </div>
           </div>
@@ -171,7 +173,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" id="UpdateConfirmBtn" class="btn btn-primary">Upload</button>
+          <button type="button" id="SaveProfilePhoto" class="btn btn-primary">Upload</button>
         </div>
       </div>
     </div>

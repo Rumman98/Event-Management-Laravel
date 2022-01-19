@@ -30,6 +30,7 @@ Route::post("/photoUpload", 'ProfileController@UserProfilePhotoUpdate')->middlew
 
 Route::post("/host-details", 'ProfileController@HostDetails')->middleware('loginCheck');
 Route::post("/host-update", 'ProfileController@UpdateHostDetails')->middleware('loginCheck');
+Route::post("/photoUploadHost", 'ProfileController@HostProfilePhotoUpdate')->middleware('loginCheck');
 
 Route::post("/add-event", 'EventController@AddEvent')->middleware('loginCheck');
 

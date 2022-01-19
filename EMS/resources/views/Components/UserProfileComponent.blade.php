@@ -4,9 +4,11 @@
       <div class="profile-nav col-md-3">
           <div class="panel">
               <div class="user-heading round">
+                @foreach($userPhoto as $userPhoto)
                   <a href="#">
-                      <img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="">
+                      <img src="{{$userPhoto->photo_location}}" alt="">
                   </a>
+                @endforeach
                   <button name="submit" type="submit" class="submit" style="width: 100%; margin-top: 9px;" data-toggle="modal" data-target="#UserProfilePictureModal" >Update Profile Picture</button>
               </div>
           </div>

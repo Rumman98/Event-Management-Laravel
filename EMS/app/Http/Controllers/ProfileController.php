@@ -16,6 +16,8 @@ class ProfileController extends Controller
 
             $userData = UserHostModel::where('phone_number', '=', $value)->get();
 
+            $userPhoto = PhotoModel::where('user_phone_no', '=', $value)->orderBy('id', 'desc')->take(1)->get();
+
             $registerdEvents = EventRegistrationModel
             ::join('eventinfotable', 'eventregistration.event_id', '=', 'eventinfotable.id')
             ->join('userhosttable', 'eventinfotable.event_creator_phone_no', '=', 'userhosttable.phone_number')
@@ -27,6 +29,7 @@ class ProfileController extends Controller
             return View('UserProfile',[
                 'UserData'=>$userData,
                 'RegisterdEvents'=> $registerdEvents,
+                'userPhoto'=>$userPhoto,
                 'value'=>$value
             ]);
     }
@@ -34,10 +37,14 @@ class ProfileController extends Controller
     { 
         $value = Session::get('phone_number');
 
-            $hostData = UserHostModel::where('phone_number', '=', $value)->get();
-            return View('HostProfile',[
-                'HostData'=>$hostData,
-                'value'=>$value
+
+        $hostData = UserHostModel::where('phone_number', '=', $value)->get();
+        $hostPhoto = PhotoModel::where('user_phone_no', '=', $value)->orderBy('id', 'desc')->take(1)->get();
+        
+        return View('HostProfile',[
+            'HostData'=>$hostData,
+            'hostPhoto'=>$hostPhoto,
+            'value'=>$value
             ]);
     }
 
@@ -197,5 +204,22 @@ class ProfileController extends Controller
         {
             return 0;
         }
+    }
+
+    function HostProfilePhotoUpdate(Request $request)
+    {
+        $value = Session::get('phone_number');
+        $photoPath = $request->file('photo')->store('public');
+        $photoName = (explode('/',$photoPath))[1];
+
+        $host = $_SERVER['HTTP_HOST'];
+        $location = "http://".$host."/storage/".$photoName;
+
+        $result = PhotoModel::insert([
+            'photo_location'=>$location,
+            'user_phone_no'=>$value
+        ]);
+
+        return 1;
     }
 }

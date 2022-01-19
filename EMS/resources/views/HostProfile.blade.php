@@ -339,7 +339,26 @@ function eventDelete(event_id)
     })
 }
 
+//Host Profile Photo Upload
+$('#SaveProfilePhoto').on('click', function(){
+    var profile_photo = $('#imgInput').prop('files')[0];
+    var formData = new FormData();
 
+    formData.append('photo', profile_photo);
+
+    axios.post("/photoUploadHost", formData).then(function(response){
+        if(response.status == 200)
+        {
+            alert('Ok');
+        }
+        else
+        {
+            alert('Issue');
+        }
+    }).catch(function(error){
+
+    })
+})
 
 
 </script>
