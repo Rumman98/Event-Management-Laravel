@@ -16,7 +16,7 @@
       <div class="profile-info col-md-9">
           <div class="panel">
               <div class="panel-body bio-graph-info" style="padding: 55px;">
-                 <b> <h1 style="color: white">Profile Type<span>: User</span></h1></b>
+                 <b> <h1 style="color: white; font-weight: bolder;">Profile Type :<span style="color: #ff5518;font-weight: bolder;"> Participant</span></h1></b>
                  @foreach ($UserData as $UserData)
                   <div class="row">
                       <div class="bio-row">
@@ -88,7 +88,7 @@
                                             <td>{{$RegisterdEvents->name}}</td>
                                             <td>{{$RegisterdEvents->phone_number}}</td>
                                             <td>{{$RegisterdEvents->stutus}}</td>
-                                            <td><button type="submit" class="submit">Download Invitation Card</button></td>
+                                            <td><button type="submit" class="submit" style="padding: 10px;">Download Invitation Card</button></td>
                                         </tr>
                                   @endforeach
 

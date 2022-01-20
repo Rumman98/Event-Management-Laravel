@@ -7,7 +7,7 @@
                   <a href="#">
                       <img src="{{$hostPhoto->photo_location}}" alt="">
                   </a>
-                @endforeach  
+                @endforeach
                   <button name="submit" type="submit" class="submit" style="width: 100%; margin-top: 9px;" data-toggle="modal" data-target="#HostProfilePictureModal" >Update Profile Picture</button>
               </div>
           </div>
@@ -16,7 +16,7 @@
           <div class="panel">
               <div class="panel-body bio-graph-info" style="padding: 55px;">
 
-                 <b> <h1 style="color: white">Profile Type<span>: Host</span></h1></b>
+                 <b> <h1 style="color: white; font-weight: bolder;">Profile Type :<span style="color: #ff5518;font-weight: bolder;"> Host</span></h1></b>
 
                  @foreach ($HostData as $HostData)
 
