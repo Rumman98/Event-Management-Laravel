@@ -6,7 +6,7 @@
             </div>
             <div class="w-100"></div>
             <div class="col-md-4" style="margin-bottom: 14px;">
-              <p style="color: white;font-weight: 500;"><span>Address:</span> 198 West 21th Street, Suite 721 New York</p>
+              <p style="color: white;font-weight: 500;"><span>Address:</span> Nikunja 2, Dhaka </p>
             </div>
             <div class="col-md-4" style="margin-bottom: 14px;">
               <p style="color: white;font-weight: 500;"><span>Phone:</span> <a style="color: white;" href="tel://1234567920">+ 1235 2355 98</a></p>
