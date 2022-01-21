@@ -148,7 +148,8 @@ class EventController extends Controller
         $event_info = EventInfoTable
         ::join('userhosttable', 'eventinfotable.event_creator_phone_no', '=', 'userhosttable.phone_number')
         ->where('eventinfotable.id', $id)
-        ->get();
+        ->select('eventinfotable.*', 'userhosttable.name')
+        ->get();/////////////////////////////////////CULPRIT
 
         $result = json_encode($event_info);
 
