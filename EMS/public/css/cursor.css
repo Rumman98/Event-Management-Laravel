@@ -1,7 +1,11 @@
 body{
-    cursor: url("../images/cursor/RedGlow.cur"), default;
+    cursor: url("../images/cursor/select.cur"), default;
 }
 
 .btn, a, button{
-    cursor: url("../images/cursor/RedGlow - link select.cur"), default;
+    cursor: url("../images/cursor/link.cur"), default;
+}
+
+input{
+    cursor: url("../images/cursor/input.cur"), default;
 }
