@@ -44,11 +44,5 @@ Route::post('/register-event-by-user','EventController@UserRegistrationOnEvent')
 Route::post('/status','EventController@userStatus')->middleware('loginCheck');
 Route::post('/updateUserStatus','EventController@updateUserStatus')->middleware('loginCheck');
 
-
-
-
-
-Route::get('/pdf', function () {
-    return view('pdf');
-});
+Route::get('/generate-pdf','PDFController@generatePDF');
 
