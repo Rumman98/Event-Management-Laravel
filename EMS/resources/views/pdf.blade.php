@@ -1,13 +1,168 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Invitation Card</title>
+    <style>
+        body{
+            background-color: #F6F6F6;
+            margin: 0;
+            padding: 0;
+        }
+        h1,h2,h3,h4,h5,h6{
+            margin: 0;
+            padding: 0;
+        }
+        p{
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container{
+            width: 80%;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        .brand-section{
+           background-color: #ff5518;
+           padding: 10px 40px;
+        }
 
+        .row{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .col-6{
+            width: 50%;
+            flex: 0 0 auto;
+        }
+        .col-12{
+            width: 100%;
+            flex: 0 0 auto;
+            text-align: center;
+        }
+        .text-white{
+            color: #fff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .body-section{
+            padding: 16px;
+            border: 1px solid gray;
+        }
+        .heading{
+            font-size: 20px;
+            margin-bottom: 08px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .sub-heading{
+            color: #262626;
+            margin-bottom: 05px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        table{
+            width: 100%;
+            border-collapse: collapse;
+
+        }
+        table thead tr{
+            border: 1px solid #111;
+            background-color: #f2f2f2;
+        }
+
+        table th, table td {
+            padding-top: 08px;
+            padding-bottom: 08px;
+            text-align-last: start;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .table-bordered{
+            box-shadow: 0px 0px 5px 0.5px gray;
+        }
+        .table-bordered td, .table-bordered th {
+            border: 1px solid #dee2e6;
+        }
+        .text-right{
+            text-align: end;
+        }
+        .w-20{
+            width: 20%;
+        }
+        .float-right{
+            float: right;
+        }
+    </style>
+</head>
 <body>
-	<div class="header-content clearfix" > <span class="logo"><a href="/">Unity<b>Events</b></a></span></div>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    <div class="container">
+        <div class="brand-section">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="text-white">Unity Events</h1>
+                    <h1 class="text-white">Invitation Card</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="body-section">
+            <div class="row">
+                <div class="col-6">
+                    <h3 class="sub-heading">Participant Name: <span>Rumman</span> </h3>
+                    <h3 class="sub-heading">Phone Number: <span>123344</span>  </h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="body-section">
+            <h3 class="heading">Event Information</h3>
+            <br>
+            <table>
+                <tbody>
+                    <tr>
+                        <td style="font-weight: bolder;">Event Name :</td>
+                        <td>Event Name</td>
+                    </tr>
+
+                    <tr>
+                        <td style="font-weight: bolder;">Event Type :</td>
+                        <td>Event Type</td>
+                    </tr>
+
+                    <tr>
+                        <td style="font-weight: bolder;">Venue :</td>
+                        <td>Venue</td>
+                    </tr>
+
+                    <tr>
+                        <td style="font-weight: bolder;">Payment Amount :</td>
+                        <td>Payment Amount</td>
+                    </tr>
+
+                    <tr>
+                        <td style="font-weight: bolder;">Event Hosted By :</td>
+                        <td>Event Hosted By</td>
+                    </tr>
+
+                    <tr>
+                        <td style="font-weight: bolder;">Host Contact :</td>
+                        <td>Host Contact</td>
+                    </tr>
+
+
+                </tbody>
+            </table>
+            <br>
+            <h3 class="heading">Payment Status: Paid</h3>
+            <h3 class="heading">Payment Method: Bkash/Rocket</h3>
+        </div>
+
+        <div class="body-section">
+            <p>&copy; Copyright 2021 - UnityEvents.com All rights reserved.
+            </p>
+        </div>
+    </div>
+
 </body>
 </html>
