@@ -349,7 +349,9 @@ $('#SaveProfilePhoto').on('click', function(){
     axios.post("/photoUploadHost", formData).then(function(response){
         if(response.status == 200)
         {
-            alert('Ok');
+            $('#HostProfilePictureModal').modal("hide");
+            flash('Photo Uploaded',{'bgColor' : '#00b859'});
+            window.location.href='/hostprofile';
         }
         else
         {
