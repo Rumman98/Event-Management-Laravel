@@ -3,7 +3,7 @@ body{
 }
 
 .btn, a, button{
-    cursor: url("../images/cursor/link.cur"), default;
+    cursor: url("../images/cursor/linkv2.cur"), default;
 }
 
 input{
