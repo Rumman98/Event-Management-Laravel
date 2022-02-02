@@ -96,6 +96,7 @@
 </head>
 <body>
 
+    @foreach ($info as $info)
     <div class="container">
         <div class="brand-section">
             <div class="row">
@@ -122,22 +123,17 @@
                 <tbody>
                     <tr>
                         <td style="font-weight: bolder;">Event Name :</td>
-                        <td>Event Name</td>
+                        <td>{{$info->event_name}}</td>
                     </tr>
 
                     <tr>
                         <td style="font-weight: bolder;">Event Type :</td>
-                        <td>Event Type</td>
+                        <td>{{$info->event_type}}</td>
                     </tr>
 
                     <tr>
                         <td style="font-weight: bolder;">Venue :</td>
-                        <td>Venue</td>
-                    </tr>
-
-                    <tr>
-                        <td style="font-weight: bolder;">Payment Amount :</td>
-                        <td>Payment Amount</td>
+                        <td>{{$info->event_venue}}</td>
                     </tr>
 
                     <tr>
@@ -163,6 +159,7 @@
             </p>
         </div>
     </div>
+    @endforeach
 
 </body>
 </html>

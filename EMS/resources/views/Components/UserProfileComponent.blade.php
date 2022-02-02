@@ -88,7 +88,7 @@
                                             <td>{{$RegisterdEvents->name}}</td>
                                             <td>{{$RegisterdEvents->phone_number}}</td>
                                             <td>{{$RegisterdEvents->stutus}}</td>
-                                            <td><a href="{{'/generate-pdf'}}" class="submit" style="padding: 10px;">Download Invitation Card</a></td>
+                                            <td><a href="{{'/generate-pdf'}}?id={{$RegisterdEvents->event_id}}" class="submit" style="padding: 10px;">Download Invitation Card</a></td>
                                         </tr>
                                   @endforeach
 
