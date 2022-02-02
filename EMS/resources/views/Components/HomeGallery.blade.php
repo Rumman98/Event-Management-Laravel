@@ -5,7 +5,6 @@
       </div>
       <div class="row no-gutter">
         <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="images/portfolio/01.jpg" class="work-box"> <img src="images/portfolio/01.jpg" alt="">
-
           <div class="overlay">
             <div class="overlay-caption">
                <p>image description</p>

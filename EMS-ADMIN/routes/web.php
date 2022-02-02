@@ -15,8 +15,12 @@ Route::post('/Eventdelete','EventsController@EventDelete');
 
 
 
+
+
+
 // Gallery Routes
 Route::get('/Gallery','GalleryController@GalleryIndex');
+Route::post("/galleryphotoUpload", 'GalleryController@GalleryPhotoUpload');
 
 // Host DATA Routes
 Route::get('/Hosts','HostsController@HostsIndex');
