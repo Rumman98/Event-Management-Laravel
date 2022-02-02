@@ -96,7 +96,6 @@
 </head>
 <body>
 
-    @foreach ($info as $info)
     <div class="container">
         <div class="brand-section">
             <div class="row">
@@ -106,16 +105,19 @@
                 </div>
             </div>
         </div>
-
+        
+        @foreach ($user_info as $user_info)
         <div class="body-section">
             <div class="row">
                 <div class="col-6">
-                    <h3 class="sub-heading">Participant Name: <span>Rumman</span> </h3>
-                    <h3 class="sub-heading">Phone Number: <span>123344</span>  </h3>
+                    <h3 class="sub-heading">Participant Name: <span>{{$user_info->name}}</span> </h3>
+                    <h3 class="sub-heading">Phone Number: <span>{{$user_info->phone_number}}</span>  </h3>
                 </div>
             </div>
         </div>
+        @endforeach
 
+        @foreach ($event_info as $info)
         <div class="body-section">
             <h3 class="heading">Event Information</h3>
             <br>
@@ -138,28 +140,28 @@
 
                     <tr>
                         <td style="font-weight: bolder;">Event Hosted By :</td>
-                        <td>Event Hosted By</td>
+                        <td>{{$info->name}}</td>
                     </tr>
 
                     <tr>
                         <td style="font-weight: bolder;">Host Contact :</td>
-                        <td>Host Contact</td>
+                        <td>{{$info->phone_number}}</td>
                     </tr>
 
 
                 </tbody>
             </table>
             <br>
-            <h3 class="heading">Payment Status: Paid</h3>
-            <h3 class="heading">Payment Method: Bkash/Rocket</h3>
+            <h3 class="heading">Status: {{$info->stutus}}</h3>
+            <h3 class="heading">Payment Method: {{$info->event_payment_method}}</h3>
         </div>
+        @endforeach
 
         <div class="body-section">
             <p>&copy; Copyright 2021 - UnityEvents.com All rights reserved.
             </p>
         </div>
     </div>
-    @endforeach
 
 </body>
 </html>
