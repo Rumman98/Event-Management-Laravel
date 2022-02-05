@@ -88,7 +88,15 @@
                                             <td>{{$RegisterdEvents->name}}</td>
                                             <td>{{$RegisterdEvents->phone_number}}</td>
                                             <td>{{$RegisterdEvents->stutus}}</td>
-                                            <td><a href="{{'/generate-pdf'}}?id={{$RegisterdEvents->event_id}}" class="submit" style="padding: 10px;">Download Invitation Card</a></td>
+                                            <td>
+                                              @if($RegisterdEvents->stutus == "Approved")
+                                              <a href="{{'/generate-pdf'}}?id={{$RegisterdEvents->event_id}}" class="submit" style="padding: 10px;">Download Invitation Card</a> 
+                                              @elseif ($RegisterdEvents->stutus == "Rejected")
+                                              <p>Request Rejected</p>
+                                              @else
+                                              <p>Request Pending</p>
+                                              @endif
+                                            </td>
                                         </tr>
                                   @endforeach
 
