@@ -21,6 +21,7 @@ class PDFController extends Controller
                 ::join('eventinfotable', 'eventregistration.event_id', '=', 'eventinfotable.id')
                 ->join('userhosttable', 'eventinfotable.event_creator_phone_no', '=', 'userhosttable.phone_number')
                 ->where('eventinfotable.id', '=', $id)
+                ->where('eventregistration.stutus', '=', 'Approved')
                 ->where('eventregistration.user_phone_no','=', $value)
                 ->get();
 
