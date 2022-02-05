@@ -15,12 +15,13 @@ class PDFController extends Controller
 
         $value = Session::get('phone_number');
 
-        $user_info = UserHostModel::where('phone_number', $value)->get();
+        $user_info = UserHostModel::where('phone_number','=', $value)->get();
 
         $event_info = EventRegistrationModel
                 ::join('eventinfotable', 'eventregistration.event_id', '=', 'eventinfotable.id')
                 ->join('userhosttable', 'eventinfotable.event_creator_phone_no', '=', 'userhosttable.phone_number')
-                ->where('event_id', '=', $id)
+                ->where('eventinfotable.id', '=', $id)
+                ->where('eventregistration.user_phone_no','=', $value)
                 ->get();
 
         $pdf = PDF::loadView('pdf', ['event_info' => $event_info, 'user_info' => $user_info]);

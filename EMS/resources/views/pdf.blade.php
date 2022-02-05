@@ -106,7 +106,7 @@
             </div>
         </div>
         
-        @foreach ($user_info as $user_info)
+        @foreach ($user_info as $user_info) 
         <div class="body-section">
             <div class="row">
                 <div class="col-6">
@@ -117,7 +117,7 @@
         </div>
         @endforeach
 
-        @foreach ($event_info as $info)
+        @foreach ($event_info as $event_info)
         <div class="body-section">
             <h3 class="heading">Event Information</h3>
             <br>
@@ -125,35 +125,35 @@
                 <tbody>
                     <tr>
                         <td style="font-weight: bolder;">Event Name :</td>
-                        <td>{{$info->event_name}}</td>
+                        <td>{{$event_info->event_name}}</td>
                     </tr>
 
                     <tr>
                         <td style="font-weight: bolder;">Event Type :</td>
-                        <td>{{$info->event_type}}</td>
+                        <td>{{$event_info->event_type}}</td>
                     </tr>
 
                     <tr>
                         <td style="font-weight: bolder;">Venue :</td>
-                        <td>{{$info->event_venue}}</td>
+                        <td>{{$event_info->event_venue}}</td>
                     </tr>
 
                     <tr>
                         <td style="font-weight: bolder;">Event Hosted By :</td>
-                        <td>{{$info->name}}</td>
+                        <td>{{$event_info->name}}</td>
                     </tr>
 
                     <tr>
                         <td style="font-weight: bolder;">Host Contact :</td>
-                        <td>{{$info->phone_number}}</td>
+                        <td>{{$event_info->phone_number}}</td>
                     </tr>
 
 
                 </tbody>
             </table>
             <br>
-            <h3 class="heading">Status: {{$info->stutus}}</h3>
-            <h3 class="heading">Payment Method: {{$info->event_payment_method}}</h3>
+            <h3 class="heading">Status: {{$event_info->stutus}}</h3>
+            <h3 class="heading">Payment Method: {{$event_info->event_payment_method}}</h3>
         </div>
         @endforeach
 
