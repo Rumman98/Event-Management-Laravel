@@ -105,8 +105,13 @@
                 </div>
             </div>
         </div>
+<<<<<<< Updated upstream
         
         @foreach ($user_info as $user_info) 
+=======
+
+        @foreach ($user_info as $user_info)
+>>>>>>> Stashed changes
         <div class="body-section">
             <div class="row">
                 <div class="col-6">

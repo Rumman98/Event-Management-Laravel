@@ -8,7 +8,7 @@
 <meta name="author" content="webthemez.com">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Events Management</title>
-<link rel="icon" href="{{asset('images/favicon.png')}}">
+<link rel="icon" href="{{asset('images/logo.png')}}">
 <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
 <link rel="stylesheet" href="{{asset('css/flexslider.css')}}">
 <link rel="stylesheet" href="{{asset('css/jquery.fancybox.css')}}">
