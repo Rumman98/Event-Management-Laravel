@@ -40,10 +40,17 @@ class ProfileController extends Controller
 
         $hostData = UserHostModel::where('phone_number', '=', $value)->get();
         $hostPhoto = PhotoModel::where('user_phone_no', '=', $value)->orderBy('id', 'desc')->take(1)->get();
+
+        $hostRegisterdEvents = EventRegistrationModel
+            ::join('eventinfotable', 'eventregistration.event_id', '=', 'eventinfotable.id')
+            ->join('userhosttable', 'eventinfotable.event_creator_phone_no', '=', 'userhosttable.phone_number')
+            ->where('user_phone_no', $value)
+            ->get();
         
         return View('HostProfile',[
             'HostData'=>$hostData,
             'hostPhoto'=>$hostPhoto,
+            'hostRegisterdEvents'=> $hostRegisterdEvents,
             'value'=>$value
             ]);
     }

@@ -117,9 +117,26 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-
-
-
+                                  @foreach ($hostRegisterdEvents as $hostRegisterdEvents)
+                                        <tr>
+                                            <td>{{$hostRegisterdEvents->event_name}}</td>
+                                            <td>{{$hostRegisterdEvents->event_date}}</td>
+                                            <td>{{$hostRegisterdEvents->event_venue}}</td>
+                                            <td>{{$hostRegisterdEvents->event_registration_fee}}</td>
+                                            <td>{{$hostRegisterdEvents->name}}</td>
+                                            <td>{{$hostRegisterdEvents->phone_number}}</td>
+                                            <td>{{$hostRegisterdEvents->stutus}}</td>
+                                            <td>
+                                              @if($hostRegisterdEvents->stutus == "Approved")
+                                              <a href="{{'/generate-pdf'}}?id={{$hostRegisterdEvents->event_id}}" class="submit" style="padding: 10px;">Download Invitation Card</a> 
+                                              @elseif ($hostRegisterdEvents->stutus == "Rejected")
+                                              <p><abbr title="Your Request is Rejected. Please contact with Host if you hink this is a mistake" class="initialism">Request Rejected</abbr></p>
+                                              @else
+                                              <p>Request Pending</p>
+                                              @endif
+                                            </td>
+                                        </tr>
+                                  @endforeach
                                 </tbody>
                             </table>
                         </div>

@@ -78,7 +78,6 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-
                                   @foreach ($RegisterdEvents as $RegisterdEvents)
                                         <tr>
                                             <td>{{$RegisterdEvents->event_name}}</td>
@@ -92,14 +91,13 @@
                                               @if($RegisterdEvents->stutus == "Approved")
                                               <a href="{{'/generate-pdf'}}?id={{$RegisterdEvents->event_id}}" class="submit" style="padding: 10px;">Download Invitation Card</a> 
                                               @elseif ($RegisterdEvents->stutus == "Rejected")
-                                              <p>Request Rejected</p>
+                                              <p><abbr title="Your Request is Rejected. Please contact with Host if you hink this is a mistake" class="initialism">Request Rejected</abbr></p>
                                               @else
                                               <p>Request Pending</p>
                                               @endif
                                             </td>
                                         </tr>
                                   @endforeach
-
                                 </tbody>
                             </table>
                         </div>
