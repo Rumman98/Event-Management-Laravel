@@ -130,7 +130,7 @@
                                               @if($hostRegisterdEvents->stutus == "Approved")
                                               <a href="{{'/generate-pdf'}}?id={{$hostRegisterdEvents->event_id}}" class="submit" style="padding: 10px;">Download Invitation Card</a> 
                                               @elseif ($hostRegisterdEvents->stutus == "Rejected")
-                                              <p><abbr title="Your Request is Rejected. Please contact with Host if you hink this is a mistake" class="initialism">Request Rejected</abbr></p>
+                                              <p><abbr title="Your Request is Rejected. Please contact with Host if You Think this is a Mistake" class="initialism">Request Rejected</abbr></p>
                                               @else
                                               <p>Request Pending</p>
                                               @endif
